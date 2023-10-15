@@ -1,0 +1,38 @@
+.intro {
+    display: flex;    
+    gap:20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.intro-photo {
+    width: 200px;
+    height:200px;
+    background-image: url(./../../../assets/Perfil.png);
+    background-size:cover;
+    background-position: -4px -5px;     
+    border-radius: 50%;     
+}
+
+.intro-text {
+    align-self: center;    
+}
+
+.intro-text-cheering {    
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.intro-text-occupation {  
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: orange;
+    display:flex;
+    gap:5px;      
+}
+
+.intro-text-learn {
+    font-size: 15px;
+    font-weight: bold;
+}
+
