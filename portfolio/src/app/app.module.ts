@@ -5,10 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
+import { NavComponent } from './header/nav/nav.component';
+import { FooterComponent } from './footer/footer/footer.component';
+import { IntroComponent } from './introduction/intro/intro.component';
+import { WhoComponent } from './informations/who/who.component';
+import { SkillsComponent } from './skills/skills/skills.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    FooterComponent,
+    IntroComponent,
+    WhoComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
