@@ -1,0 +1,14 @@
+.skills {
+  display: grid;
+  grid-template-columns: 170px 170px 170px;
+  justify-content: space-around;  
+}
+
+.material-symbols-outlined.orange600 {
+  color: #fb8c00;  
+}
+
+.centralize {
+    display:block;
+    text-align: center;
+}
