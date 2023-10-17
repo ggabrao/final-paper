@@ -2,7 +2,9 @@
   display: grid;
   grid-template-columns: 170px 170px 170px;
   row-gap: 30px;
-  justify-content: space-around;  
+  column-gap: 30px;
+  justify-content: center;  
+  margin-bottom: 50px;
 }
 
 .material-symbols-outlined.orange600 {
