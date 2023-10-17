@@ -1,6 +1,11 @@
 .nav {
     display: flex;    
     justify-content: center;
-    gap: 30px;      
+    gap: 100px;      
     background-color: orange;
+    margin-bottom: 30px;     
+}
+
+.nav-button {
+    font-size: 17px;
 }
