@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer/footer.component';
 import { IntroComponent } from './informations/intro/intro.component';
 import { WhoComponent } from './introduction/who/who.component';
 import { SkillsComponent } from './skills/skills/skills.component';
+import { FormsDemoModule } from './forms/forms-demo.module';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,10 @@ import { SkillsComponent } from './skills/skills/skills.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule    
+    SharedModule,
+    FormsDemoModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
-
+export class AppModule {}
