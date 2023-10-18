@@ -11,6 +11,8 @@ import { IntroComponent } from './informations/intro/intro.component';
 import { WhoComponent } from './introduction/who/who.component';
 import { SkillsComponent } from './skills/skills/skills.component';
 import { FormsDemoModule } from './forms/forms-demo.module';
+import { PageNotFoundComponent } from './page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,15 @@ import { FormsDemoModule } from './forms/forms-demo.module';
     FooterComponent,
     IntroComponent,
     WhoComponent,
-    SkillsComponent
+    SkillsComponent,
+    PageNotFoundComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule,
-    FormsDemoModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],
