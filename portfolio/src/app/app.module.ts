@@ -7,8 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { NavComponent } from './header/nav/nav.component';
 import { FooterComponent } from './footer/footer/footer.component';
-import { IntroComponent } from './introduction/intro/intro.component';
-import { WhoComponent } from './informations/who/who.component';
+import { IntroComponent } from './informations/intro/intro.component';
+import { WhoComponent } from './introduction/who/who.component';
 import { SkillsComponent } from './skills/skills/skills.component';
 
 @NgModule({
