@@ -8,15 +8,16 @@ const routes: Routes = [
       {
         path: '',
         component: FormsIntroComponent,
-      },
-      {
-        path: 'td',
-        component: FormsTdComponent,
-      },
-      {
-        path: 'reactive',
-        component: FormsReactiveComponent,
-      },
+        children: [{
+          path: 'template-driven',
+          component: FormsTdComponent,
+        },
+        {
+          path: 'reactive',
+          component: FormsReactiveComponent,
+        }          
+        ]
+      }      
 ];
 
 @NgModule({
