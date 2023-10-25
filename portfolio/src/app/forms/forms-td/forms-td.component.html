@@ -1,1 +1,22 @@
-<p>forms-td works!</p>
+<h1>Template Driven Form Example</h1>
+<main class="container">
+    <form class="form" (ngSubmit)="signUp()">
+        <input type="text" name="userName">
+        <input type="number" name="age">        
+        <input type="tel" name="phone">
+        <input type="email" name="email">
+        <input type="text" name="adress"> 
+        <input type="password" name="password">
+        <div class="notifications">Receive notifications on:
+            <input type="radio">Email
+            <input type="radio">Phone
+        </div>
+        <input type="checkbox" name="notifications"> I agree with the terms
+        <button type="submit">Sign Up</button>
+    </form>  
+
+
+
+
+
+</main>
