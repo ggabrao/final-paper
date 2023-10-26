@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IUser } from '../user.model';
 
 @Component({
   selector: 'frm-td',
@@ -7,8 +8,20 @@ import { Component } from '@angular/core';
 })
 export class FormsTdComponent {
 
+  user:IUser = {
+    userName: "",
+    age: 18,
+    phone: 0,
+    email: "",
+    adress: "",
+    password: "",
+    notifications: "",
+    agreement: false
+  }
+
+  submitted = false;
 
   signUp() {
-   
+    this.submitted = true;   
   }
 }
