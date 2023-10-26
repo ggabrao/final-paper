@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IUser } from '../user.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'frm-td',
@@ -13,7 +14,7 @@ export class FormsTdComponent {
     age: 18,
     phone: 0,
     email: "",
-    adress: "",
+    address: "",
     password: "",
     notifications: "",
     agreement: false
@@ -21,7 +22,8 @@ export class FormsTdComponent {
 
   submitted = false;
 
-  signUp() {
+  onSubmit(f: NgForm) {
+    console.log(f.form.value);
     this.submitted = true;   
   }
 }

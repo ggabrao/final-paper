@@ -1,26 +1,27 @@
 <h1>Template Driven Form Example</h1>
 <main class="container">
-  <form class="form" #signUpForm="ngForm" (ngSubmit)="signUp()">
+  <form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm)">
     <label for="userName">Username:</label>
-    <input 
+    <input
       type="text"
       name="userName"
       [(ngModel)]="user.userName"
       id="userName"
-    /><br>
+      required
+    /><br />
 
     <label for="age">Age:</label>
-    <input type="number" name="age" [(ngModel)]="user.age" id="age" />
-    <br>
+    <input type="number" name="age" [(ngModel)]="user.age" id="age" /> 
+    <br />
     <label for="phone">Phone number:</label>
     <input type="tel" name="phone" [(ngModel)]="user.phone" id="phone" />
-    <br>
+    <br />
     <label for="email">Email:</label>
     <input type="email" name="email" [(ngModel)]="user.email" id="email" />
-    <br>
-    <label for="adress">Adress:</label>
-    <input type="text" name="adress" [(ngModel)]="user.adress" id="adress" />
-    <br>
+    <br />
+    <label for="address">Adress:</label>
+    <input type="text" name="address" [(ngModel)]="user.address" id="address" />
+    <br />
     <label for="password">Password: </label>
     <input
       type="password"
@@ -28,7 +29,7 @@
       [(ngModel)]="user.password"
       id="password"
     />
-    <br>
+    <br />
     <label for="notifications">Receive notifications on:</label>
     <input
       type="radio"
@@ -42,7 +43,7 @@
       value="phone"
       [(ngModel)]="user.notifications"
     />Phone
-    <br>
+    <br />
     <label for="agreement">I agree with the terms</label>
     <input
       type="checkbox"
@@ -50,7 +51,8 @@
       [(ngModel)]="user.agreement"
       id="agreement"
     />
-    <br>
-    <button type="submit" [disabled]="!signUpForm.form.valid">Sign Up</button>
+    <br />
+    <button type="submit" [disabled]="!frm.form.valid">Sign Up</button>
   </form>
 </main>
+
