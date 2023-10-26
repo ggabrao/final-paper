@@ -16,7 +16,7 @@ export class FormsTdComponent {
     email: "",
     address: "",
     password: "",
-    notifications: "",
+    notifications: "email",
     agreement: false
   }
 
