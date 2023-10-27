@@ -1,10 +1,11 @@
 export interface IUser {
-    userName: string;
-    age: number;
-    phone: number;
+    name: string;
+    age: string;
+    phone: string;
     email: string;
     address: string;
     password: string;
+    confirmPassword: string;
     notifications: string;
     agreement: boolean;   
 }
