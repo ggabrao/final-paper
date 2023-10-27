@@ -11,7 +11,6 @@ export class FormsTdComponent {
 
   user:IUser = {
     name: "",
-    age: "",
     phone: "",
     email: "",
     address: "",
@@ -25,6 +24,7 @@ export class FormsTdComponent {
 
   onSubmit(f: NgForm): void {
     console.log(f.form.value);
-    this.submitted = true;     
+    this.submitted = true;   
+   
   }
 }
