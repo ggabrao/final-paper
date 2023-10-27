@@ -2,23 +2,28 @@
 <main class="container">
   <form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm)">
     <mat-form-field class="full-width">
-      <mat-label for="userName">Username</mat-label>
+      <mat-label for="name" >Name</mat-label>
       <input
         type="text"
-        name="userName"
-        [(ngModel)]="user.userName"
-        id="userName"
+        name="name"
+        [(ngModel)]="user.name"
+        id="name"
         matInput
+        required
     /></mat-form-field>
     <mat-form-field class="full-width">
-      <mat-label for="age">Age:</mat-label>
+      <mat-label for="age">Age</mat-label>
       <input
         type="number"
         name="age"
         [(ngModel)]="user.age"
         id="age"
         matInput
+        required    
+        min="18"    
+        max="99"
       />
+      <mat-hint>Must be over 18!</mat-hint>
     </mat-form-field>
     <mat-form-field class="full-width"
       ><mat-label for="phone">Phone number</mat-label>
@@ -28,7 +33,11 @@
         [(ngModel)]="user.phone"
         id="phone"
         matInput
+        required        
       />
+       <!-- IMPLEMENT REGEX WITH NUMBERS ONLY AND NO SPACES-->  
+      <mat-hint>Only numbers! For +1 408 555 5555, enter 14085555555</mat-hint><br>
+      <mat-hint></mat-hint>
     </mat-form-field>
     <mat-form-field class="full-width"
       ><mat-label for="email">Email</mat-label>
@@ -38,6 +47,8 @@
         [(ngModel)]="user.email"
         id="email"
         matInput
+        required
+        placeholder="name@domain.com"
       />
     </mat-form-field>
     <mat-form-field class="full-width"
@@ -48,6 +59,7 @@
         [(ngModel)]="user.address"
         id="address"
         matInput
+        required
       />
     </mat-form-field>
     <mat-form-field class="full-width"
@@ -58,6 +70,23 @@
         [(ngModel)]="user.password"
         id="password"
         matInput
+        required
+        minlength="8"
+        maxlength="12"
+      />
+    </mat-form-field>
+    <mat-form-field class="full-width"
+      ><mat-label for="confirmPassword">Confirm Password </mat-label>
+      <input
+        type="password"
+        name="confirmPassword"
+        [(ngModel)]="user.confirmPassword"
+        id="confirmPassword"
+        matInput
+        required
+        minlength="8"
+        maxlength="12"
+
       />
     </mat-form-field>
 
