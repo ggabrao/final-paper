@@ -111,8 +111,16 @@
         matInput
         required
       />
+      <mat-error *ngIf="confirmPassword.errors?.['required']"
+        >This field is required</mat-error
+      >
     </mat-form-field>
-    <!-- IMPLEMENT CROSS FIELD VALIDATION-->
+    <mat-error *ngIf="frm.errors?.['passwordCompare'] && password.dirty && confirmPassword.dirty">
+      Passwords do not match</mat-error
+    >
+
+
+  
 
     <label id="notifications">Notifications:</label>
     <mat-radio-group

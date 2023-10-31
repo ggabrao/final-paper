@@ -1,5 +1,19 @@
 import { Directive, Input } from '@angular/core';
-import { AbstractControl, FormGroup, NG_VALIDATORS, NgForm, ValidationErrors, Validator } from '@angular/forms';
+import {
+  AbstractControl,
+  FormGroup,
+  NG_VALIDATORS,
+  NgForm,
+  ValidationErrors,
+  Validator,
+  ValidatorFn,
+} from '@angular/forms';
+
+export const passwordCompareValidator: ValidatorFn = (c: AbstractControl): ValidationErrors | null => {
+  const password = c.get('password');
+  const confirm = c.get('confirmPassword');
+  return password && confirm && password.value !== confirm.value ? { passwordCompare: true } : null;
+};
 
 @Directive({
   selector: '[appConfirmPassword]',
@@ -11,11 +25,9 @@ import { AbstractControl, FormGroup, NG_VALIDATORS, NgForm, ValidationErrors, Va
     },
   ],
 })
-export class ConfirmPasswordDirective implements Validator {
+export class ConfirmPasswordDirective implements Validator {  
 
-const password = 
-  
   validate(control: AbstractControl): ValidationErrors | null {
-    if
+    return passwordCompareValidator(control);
   }
 }
