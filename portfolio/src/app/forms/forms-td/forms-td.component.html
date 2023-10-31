@@ -1,6 +1,6 @@
 <main class="container">
   <h1 class="form-title">Template Driven Form Example</h1>
-  <form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm)">
+  <form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm)" appConfirmPassword>
     <mat-form-field class="full-width">
       <mat-label for="name">Name</mat-label>
       <input
