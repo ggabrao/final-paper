@@ -9,10 +9,20 @@ import {
   ValidatorFn,
 } from '@angular/forms';
 
-export const passwordCompareValidator: ValidatorFn = (c: AbstractControl): ValidationErrors | null => {
+export const passwordCompareValidator: ValidatorFn = (
+  c: AbstractControl
+): ValidationErrors | null => {
   const password = c.get('password');
   const confirm = c.get('confirmPassword');
-  return password && confirm && password.value !== confirm.value ? { passwordCompare: true } : null;
+
+  if (password?.pristine || confirm?.pristine) {
+    return null;
+  }
+
+  if (password?.value === confirm?.value) {
+    return null;
+  }
+  return { passwordCompare: true };
 };
 
 @Directive({
@@ -25,8 +35,7 @@ export const passwordCompareValidator: ValidatorFn = (c: AbstractControl): Valid
     },
   ],
 })
-export class ConfirmPasswordDirective implements Validator {  
-
+export class ConfirmPasswordDirective implements Validator {
   validate(control: AbstractControl): ValidationErrors | null {
     return passwordCompareValidator(control);
   }
