@@ -15,16 +15,15 @@ export class FormsTdComponent {
     email: "",
     address: "",
     password: "",
-    confirmPassword: "",
-    notifications: "email",
+    confirmPassword: "",   
     agreement: false
   }
 
   submitted = false;
 
-
   onSubmit(f: NgForm): void {
     console.log(f.form.value);
+    console.log("Form was submitted");   
     this.submitted = true;   
    
   }
