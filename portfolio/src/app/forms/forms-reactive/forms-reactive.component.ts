@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { IUser } from '../user.model';
 
 @Component({
@@ -11,8 +11,18 @@ export class FormsReactiveComponent implements OnInit {
   user:IUser | undefined;
   userForm!: FormGroup; 
 
+  constructor(private fb:FormBuilder) {}
+
   ngOnInit(): void {
-    this.userForm = new FormGroup({});
+    this.userForm = this.fb.group({
+      name: null,
+      phone: null,
+      email: null,
+      address: null,
+      password: null,
+      confirmPassword: null,   
+      agreement: false
+    })
   } 
 
 
