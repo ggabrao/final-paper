@@ -12,12 +12,12 @@
           formControlName="name"
           type="text"
           id="name"
-          matInput
-        <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
+          matInput>
+<!--        <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
         <mat-error *ngIf="name.errors?.['pattern']"
           >Name must contain only letters</mat-error
         >
-      </mat-form-field>
+ -->      </mat-form-field>
   
       <mat-form-field class="full-width"
         ><mat-label for="phone">Phone number</mat-label>
@@ -26,15 +26,15 @@
           type="tel"
           id="phone"
           matInput
-          placeholder="1 555 5555555"
-        <mat-hint *ngIf="!phone.valid">Only numbers and spaces</mat-hint>
+          placeholder="1 555 5555555">
+<!--         <mat-hint *ngIf="!phone.valid">Only numbers and spaces</mat-hint>
         <mat-error *ngIf="phone.errors?.['required']"
           >Phone number is required</mat-error
         >
         <mat-error *ngIf="phone.errors?.['pattern'] "
           >Phone number must follow the pattern</mat-error
         >
-      </mat-form-field>
+ -->      </mat-form-field>
   
       <mat-form-field class="full-width"
         ><mat-label for="email">Email</mat-label>
@@ -45,13 +45,13 @@
           matInput
           placeholder="name@domain.com"
         />
-        <mat-error *ngIf="email.errors?.['required']"
+<!--         <mat-error *ngIf="email.errors?.['required']"
           >Email is required</mat-error
         >
         <mat-error *ngIf="email.errors?.['email']">
           Email must be valid</mat-error
         >
-      </mat-form-field>
+ -->      </mat-form-field>
   
       <mat-form-field class="full-width"
         ><mat-label for="address">Address</mat-label>
@@ -72,7 +72,7 @@
           id="password"
           matInput
         />
-        <mat-hint *ngIf="!password.valid"
+<!--         <mat-hint *ngIf="!password.valid"
           >Lenght must be between 4 and 6 characteres</mat-hint
         >
         <mat-error *ngIf="password.errors?.['required']"
@@ -81,7 +81,7 @@
         <mat-error *ngIf="password.errors?.['minlength']">
           Password must have at least 4 characteres</mat-error
         >
-      </mat-form-field>
+ -->      </mat-form-field>
   
       <mat-form-field class="full-width"
         ><mat-label for="confirmPassword">Confirm Password</mat-label>
@@ -91,15 +91,15 @@
           id="confirmPassword"
           matInput
         />
-        <mat-error *ngIf="confirmPassword.errors?.['required']"
+<!--          <mat-error *ngIf="confirmPassword.errors?.['required']"
           >This field is required</mat-error
         >
-      </mat-form-field>
-      <mat-error *ngIf="frm.errors?.['passwordCompare']">
+ -->      </mat-form-field>
+<!--       <mat-error *ngIf="frm.errors?.['passwordCompare']">
         The confirmation does not match the password</mat-error
       >
-  
-      <label id="notifications">Notifications:</label>
+ --> 
+<!--       <label id="notifications">Notifications:</label>
       <mat-radio-group
         formControlName="notifications"
         aria-labelledby="notifications"
@@ -107,7 +107,7 @@
         <mat-radio-button value="email">Email</mat-radio-button>
         <mat-radio-button value="phone">Phone</mat-radio-button>
       </mat-radio-group>
-  
+ -->  
       <mat-checkbox
       formControlName="agreement"
         class="agreement-checkbox"
@@ -122,6 +122,15 @@
       >
         Sign Up
       </button>
+      <button
+      type="button"
+      mat-raised-button
+      color="accent"
+      (click)="populateTest()"   
+    >
+      Test Data
+    </button>
+
     </form>
   </main>
 
