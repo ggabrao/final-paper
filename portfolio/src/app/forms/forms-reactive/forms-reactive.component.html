@@ -3,12 +3,13 @@
   <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
     <mat-form-field class="full-width">
       <mat-label for="name">Name</mat-label>
-      <input formControlName="name" type="text" id="name" matInput  />
-      <!--        <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
-        <mat-error *ngIf="name.errors?.['pattern']"
-          >Name must contain only letters</mat-error
-        >
- -->
+      <input formControlName="name" type="text" id="name" matInput />
+      <mat-error *ngIf="userForm.get('name')?.errors?.['required']"
+        >Name is required</mat-error
+      >
+      <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']"
+        >Name must contain only letters</mat-error
+      >
     </mat-form-field>
 
     <mat-form-field class="full-width"
@@ -20,13 +21,12 @@
         matInput
         placeholder="name@domain.com"
       />
-      <!--         <mat-error *ngIf="email.errors?.['required']"
-          >Email is required</mat-error
-        >
-        <mat-error *ngIf="email.errors?.['email']">
-          Email must be valid</mat-error
-        >
- -->
+      <mat-error *ngIf="userForm.get('email')?.errors?.['required']"
+        >Email is required</mat-error
+      >
+      <mat-error *ngIf="userForm.get('email')?.errors?.['email']">
+        Email must be valid</mat-error
+      >
     </mat-form-field>
     <mat-form-field class="full-width"
       ><mat-label for="phone">Phone number</mat-label>
@@ -37,14 +37,12 @@
         matInput
         placeholder="1 555 5555555"
       />
-      <!--         <mat-hint *ngIf="!phone.valid">Only numbers and spaces</mat-hint>
- <mat-error *ngIf="phone.errors?.['required']"
-   >Phone number is required</mat-error
- >
- <mat-error *ngIf="phone.errors?.['pattern'] "
-   >Phone number must follow the pattern</mat-error
- >
--->
+      <mat-hint *ngIf="!userForm.get('phone')?.valid"
+        >Only numbers and spaces</mat-hint
+      >
+      <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']"
+        >Phone number must follow the pattern</mat-error
+      >
     </mat-form-field>
 
     <mat-form-field class="full-width"
@@ -61,18 +59,16 @@
         id="password"
         matInput
         maxlength="6"
-
       />
-      <!--         <mat-hint *ngIf="!password.valid"
-          >Lenght must be between 4 and 6 characteres</mat-hint
-        >
-        <mat-error *ngIf="password.errors?.['required']"
-          >Password is required</mat-error
-        >
-        <mat-error *ngIf="password.errors?.['minlength']">
-          Password must have at least 4 characteres</mat-error
-        >
- -->
+      <mat-hint *ngIf="!userForm.get('password')?.valid"
+        >Lenght must be between 4 and 6 characteres</mat-hint
+      >
+      <mat-error *ngIf="userForm.get('password')?.errors?.['required']"
+        >Password is required</mat-error
+      >
+      <mat-error *ngIf="userForm.get('password')?.errors?.['minlength']">
+        Password must have at least 4 characteres</mat-error
+      >
     </mat-form-field>
 
     <mat-form-field class="full-width"
@@ -83,10 +79,9 @@
         id="confirmPassword"
         matInput
       />
-      <!--          <mat-error *ngIf="confirmPassword.errors?.['required']"
+        <mat-error *ngIf="userForm.get('confirmPassword')?.errors?.['required']"
           >This field is required</mat-error
         >
- -->
     </mat-form-field>
     <!--       <mat-error *ngIf="frm.errors?.['passwordCompare']">
         The confirmation does not match the password</mat-error

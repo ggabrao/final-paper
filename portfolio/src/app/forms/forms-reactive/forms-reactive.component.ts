@@ -15,12 +15,12 @@ export class FormsReactiveComponent implements OnInit {
 
   ngOnInit(): void {
     this.userForm = this.fb.group({
-      name: [null, [Validators.required, Validators.pattern("[a-zA-Z ]*")]],
+      name: [null, [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       email: [null, [Validators.required, Validators.email]],
-      phone: [null, Validators.pattern("[0-9]{1,3} [0-9]{1,3} [0-9]{7,10}")],
+      phone: [null, Validators.pattern('[0-9]{1,3} [0-9]{1,3} [0-9]{7,10}')],
       address: null,
       password: [null, [Validators.required, Validators.minLength(4)]],
-      confirmPassword: null,
+      confirmPassword: [null, [Validators.required]] ,
       agreement: [false, Validators.requiredTrue],
     });
   }
