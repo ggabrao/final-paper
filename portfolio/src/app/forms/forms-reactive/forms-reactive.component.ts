@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IUser } from '../user.model';
 
 @Component({
@@ -15,13 +15,13 @@ export class FormsReactiveComponent implements OnInit {
 
   ngOnInit(): void {
     this.userForm = this.fb.group({
-      name: null,
-      phone: null,
-      email: null,
+      name: [null, [Validators.required, Validators.pattern("[a-zA-Z ]*")]],
+      email: [null, [Validators.required, Validators.email]],
+      phone: [null, Validators.pattern("[0-9]{1,3} [0-9]{1,3} [0-9]{7,10}")],
       address: null,
-      password: null,
+      password: [null, [Validators.required, Validators.minLength(4)]],
       confirmPassword: null,
-      agreement: false,
+      agreement: [false, Validators.requiredTrue],
     });
   }
 
