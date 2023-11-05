@@ -87,15 +87,14 @@
         The confirmation does not match the password</mat-error
       >
  -->
-    <!--       <label id="notifications">Notifications:</label>
+      <label id="notifications">Receive notifications:</label>
       <mat-radio-group
-        formControlName="notifications"
-        aria-labelledby="notifications"
+        formControlName="notifications"  
       >
-        <mat-radio-button value="email">Email</mat-radio-button>
-        <mat-radio-button value="phone">Phone</mat-radio-button>
+        <mat-radio-button value="email" (click)="setNotification('email')">Email</mat-radio-button>
+        <mat-radio-button value="text" (click)="setNotification('text')">Phone</mat-radio-button>
       </mat-radio-group>
- -->
+
     <mat-checkbox formControlName="agreement" class="agreement-checkbox"
       >I agree with the terms</mat-checkbox
     >
