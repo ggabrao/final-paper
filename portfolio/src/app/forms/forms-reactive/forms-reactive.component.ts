@@ -53,6 +53,13 @@ export class FormsReactiveComponent implements OnInit {
       agreement: [false, Validators.requiredTrue],
       notifications: 'email',
     });
+
+    this.userForm.get('notifications')?.valueChanges.subscribe(
+      value => this.setNotification(value)
+    );
+
+
+
   }
 
   onSubmit() {
