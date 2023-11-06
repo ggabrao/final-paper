@@ -43,6 +43,9 @@
       <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']"
         >Phone number must follow the pattern</mat-error
       >
+      <mat-error *ngIf="userForm.get('phone')?.errors?.['required']"
+      >Phone number is required</mat-error
+    >
     </mat-form-field>
 
     <mat-form-field class="full-width"
@@ -97,10 +100,10 @@
 
     <label id="notifications">Receive notifications:</label>
     <mat-radio-group formControlName="notifications">
-      <mat-radio-button value="email" (click)="setNotification('email')"
+      <mat-radio-button value="email" 
         >Email</mat-radio-button
       >
-      <mat-radio-button value="text" (click)="setNotification('text')"
+      <mat-radio-button value="text"
         >Phone</mat-radio-button
       >
     </mat-radio-group>
