@@ -51,49 +51,59 @@
       <mat-error>Address is required</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="full-width"
-      ><mat-label for="password">Password</mat-label>
-      <input
-        formControlName="password"
-        type="password"
-        id="password"
-        matInput
-        maxlength="6"
-      />
-      <mat-hint *ngIf="!userForm.get('password')?.valid"
-        >Lenght must be between 4 and 6 characteres</mat-hint
-      >
-      <mat-error *ngIf="userForm.get('password')?.errors?.['required']"
-        >Password is required</mat-error
-      >
-      <mat-error *ngIf="userForm.get('password')?.errors?.['minlength']">
-        Password must have at least 4 characteres</mat-error
-      >
-    </mat-form-field>
+    <div formGroupName="passwordGroup">
+      <mat-form-field class="full-width"
+        ><mat-label for="password">Password</mat-label>
+        <input
+          formControlName="password"
+          type="password"
+          id="password"
+          matInput
+          maxlength="6"
+        />
+        <mat-hint *ngIf="!userForm.get('passwordGroup.password')?.valid"
+          >Lenght must be between 4 and 6 characteres</mat-hint
+        >
+        <mat-error
+          *ngIf="userForm.get('passwordGroup.password')?.errors?.['required']"
+          >Password is required</mat-error
+        >
+        <mat-error
+          *ngIf="userForm.get('passwordGroup.password')?.errors?.['minlength']"
+        >
+          Password must have at least 4 characteres</mat-error
+        >
+      </mat-form-field>
 
-    <mat-form-field class="full-width"
-      ><mat-label for="confirmPassword">Confirm Password</mat-label>
-      <input
-        formControlName="confirmPassword"
-        type="password"
-        id="confirmPassword"
-        matInput
-      />
-        <mat-error *ngIf="userForm.get('confirmPassword')?.errors?.['required']"
+      <mat-form-field class="full-width"
+        ><mat-label for="confirmPassword">Confirm Password</mat-label>
+        <input
+          formControlName="confirmPassword"
+          type="password"
+          id="confirmPassword"
+          matInput
+        />
+        <mat-error
+          *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']"
           >This field is required</mat-error
         >
-    </mat-form-field>
-    <!--       <mat-error *ngIf="frm.errors?.['passwordCompare']">
+      </mat-form-field>
+      <mat-error
+        *ngIf="userForm.get('passwordGroup')?.errors?.['passwordCompare']"
+      >
         The confirmation does not match the password</mat-error
       >
- -->
-      <label id="notifications">Receive notifications:</label>
-      <mat-radio-group
-        formControlName="notifications"  
+    </div>
+
+    <label id="notifications">Receive notifications:</label>
+    <mat-radio-group formControlName="notifications">
+      <mat-radio-button value="email" (click)="setNotification('email')"
+        >Email</mat-radio-button
       >
-        <mat-radio-button value="email" (click)="setNotification('email')">Email</mat-radio-button>
-        <mat-radio-button value="text" (click)="setNotification('text')">Phone</mat-radio-button>
-      </mat-radio-group>
+      <mat-radio-button value="text" (click)="setNotification('text')"
+        >Phone</mat-radio-button
+      >
+    </mat-radio-group>
 
     <mat-checkbox formControlName="agreement" class="agreement-checkbox"
       >I agree with the terms</mat-checkbox
