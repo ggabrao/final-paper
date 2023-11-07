@@ -2,8 +2,8 @@
   <h1 class="form-title">Reactive Form Example</h1>
   <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
     <mat-form-field class="full-width">
-      <mat-label for="name">Name</mat-label>
-      <input formControlName="name" type="text" id="name" matInput />
+      <mat-label>Name</mat-label>
+      <input formControlName="name" type="text" matInput />
       <mat-error *ngIf="userForm.get('name')?.errors?.['required']"
         >Name is required</mat-error
       >
@@ -13,11 +13,10 @@
     </mat-form-field>
 
     <mat-form-field class="full-width"
-      ><mat-label for="email">Email</mat-label>
+      ><mat-label>Email</mat-label>
       <input
         formControlName="email"
         type="email"
-        id="email"
         matInput
         placeholder="name@domain.com"
       />
@@ -30,11 +29,10 @@
     </mat-form-field>
 
     <mat-form-field class="full-width"
-      ><mat-label for="phone">Phone number</mat-label>
+      ><mat-label>Phone number</mat-label>
       <input
         formControlName="phone"
         type="tel"
-        id="phone"
         matInput
         placeholder="1 555 5555555"
       />
@@ -49,19 +47,31 @@
       >
     </mat-form-field>
 
-    <mat-form-field class="full-width"
-      ><mat-label for="address">Address</mat-label>
-      <input formControlName="address" type="text" id="address" matInput />
-      <mat-error>Address is required</mat-error>
-    </mat-form-field>
+    <button
+      type="button"
+      (click)="addAddress()"
+      mat-raised-button
+      color="accent"
+    >
+      Add another Address
+    </button>
+
+    <div formArrayName="addresses">
+      <mat-form-field
+        class="full-width"
+        *ngFor="let address of addresses.controls; let i = index"
+      >
+        <mat-label>Address {{i+1}}</mat-label>
+        <input [formControlName]="i" type="text" matInput />
+      </mat-form-field>
+    </div>
 
     <div formGroupName="passwordGroup">
       <mat-form-field class="full-width"
-        ><mat-label for="password">Password</mat-label>
+        ><mat-label>Password</mat-label>
         <input
           formControlName="password"
           type="password"
-          id="password"
           matInput
           maxlength="6"
         />
@@ -80,11 +90,10 @@
       </mat-form-field>
 
       <mat-form-field class="full-width"
-        ><mat-label for="confirmPassword">Confirm Password</mat-label>
+        ><mat-label>Confirm Password</mat-label>
         <input
           formControlName="confirmPassword"
           type="password"
-          id="confirmPassword"
           matInput
         />
         <mat-error
@@ -92,10 +101,11 @@
           >This field is required</mat-error
         >
       </mat-form-field>
-      <mat-error>{{confirmMessage}}</mat-error> <!-- This validation is reactive -->
+      <mat-error>{{ confirmMessage }}</mat-error>
+      <!-- This validation is reactive -->
     </div>
 
-    <label id="notifications">Receive notifications:</label>
+    <mat-label>Receive notifications:</mat-label>
     <mat-radio-group formControlName="notifications">
       <mat-radio-button value="email">Email</mat-radio-button>
       <mat-radio-button value="text">Phone</mat-radio-button>

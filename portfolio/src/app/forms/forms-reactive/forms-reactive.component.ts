@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   AbstractControlOptions,
+  Form,
+  FormArray,
   FormBuilder,
+  FormControl,
   FormGroup,
   ValidationErrors,
   ValidatorFn,
@@ -38,8 +41,12 @@ export class FormsReactiveComponent implements OnInit {
   confirmMessage!: string;
 
   private validationMessage: any = {
-    passwordCompare: 'Passwords do not match'
+    passwordCompare: 'Passwords do not match',
   };
+
+  get addresses(): FormArray {
+    return <FormArray>this.userForm.get('addresses');
+  }
 
   constructor(private fb: FormBuilder) {}
 
@@ -48,7 +55,7 @@ export class FormsReactiveComponent implements OnInit {
       name: [null, [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       email: [null, [Validators.required, Validators.email]],
       phone: [null, Validators.pattern('[0-9]{1,3} [0-9]{1,3} [0-9]{7,10}')],
-      address: null,
+      addresses: this.fb.array([this.fb.control('')]),
       passwordGroup: this.fb.group(
         {
           password: [null, [Validators.required, Validators.minLength(4)]],
@@ -79,7 +86,6 @@ export class FormsReactiveComponent implements OnInit {
       name: 'Gabriel',
       email: 'gabriel@test.com',
       phone: null,
-      address: null,
       passwordGroup: { password: '1234', confirmPassword: '1234' },
       agreement: false,
       notifications: 'email',
@@ -98,16 +104,20 @@ export class FormsReactiveComponent implements OnInit {
 
   setMessage(c: AbstractControl): void {
     this.confirmMessage = '';
-    
-    if (c.dirty && (c.get('password')?.value !== '' && c.get('confirmPassword')?.value !=='') && c.errors) {
+
+    if (
+      c.dirty &&
+      c.get('password')?.value !== '' &&
+      c.get('confirmPassword')?.value !== '' &&
+      c.errors
+    ) {
       this.confirmMessage = Object.keys(c.errors)
         .map((key) => this.validationMessage[key])
         .join(' ');
     }
-  };
+  }
 
-
-
-
-
+  addAddress(): void {
+    this.addresses.push(this.fb.control(''));
+  }
 }
