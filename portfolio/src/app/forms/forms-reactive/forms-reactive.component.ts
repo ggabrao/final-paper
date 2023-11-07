@@ -35,10 +35,10 @@ export const passwordCompareValidator: ValidatorFn = (
 export class FormsReactiveComponent implements OnInit {
   user: IUser | undefined;
   userForm!: FormGroup;
-  emailMessage!: string;
+  confirmMessage!: string;
 
-  private confirmPasswordValidation: any = {
-     
+  private validationMessages: any = {
+    passwordCompare: 'The confirmation does not match the password'
   };
 
   constructor(private fb: FormBuilder) {}
@@ -64,10 +64,10 @@ export class FormsReactiveComponent implements OnInit {
       .get('notifications')
       ?.valueChanges.subscribe((value) => this.setNotification(value));
 
-    const emailControl = this.userForm.get('email');
-    emailControl?.valueChanges
+    const confirmControl = this.userForm.get('passwordGroup');
+    confirmControl?.valueChanges
       .pipe(debounceTime(1000))
-      .subscribe((value) => this.setMessage(emailControl));
+      .subscribe(value => this.setMessage(confirmControl));
   }
 
   onSubmit() {
@@ -97,10 +97,10 @@ export class FormsReactiveComponent implements OnInit {
   }
 
   setMessage(c: AbstractControl): void {
-    this.emailMessage = '';
+    this.confirmMessage = '';
     if ((c.touched || c.dirty) && c.errors) {
-      this.emailMessage = Object.keys(c.errors)
-        .map((key) => this.emailValidations[key])
+      this.confirmMessage = Object.keys(c.errors)
+        .map((key) => this.validationMessages[key])
         .join(' ');
     }
   }
