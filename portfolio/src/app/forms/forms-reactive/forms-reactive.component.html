@@ -92,9 +92,7 @@
           >This field is required</mat-error
         >
       </mat-form-field>
-      <span>
-        {{confirmMessage}}</span
-      >
+      <mat-error>{{confirmMessage}}</mat-error> <!-- This validation is reactive -->
     </div>
 
     <label id="notifications">Receive notifications:</label>

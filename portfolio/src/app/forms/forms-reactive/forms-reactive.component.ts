@@ -35,7 +35,7 @@ export const passwordCompareValidator: ValidatorFn = (
 export class FormsReactiveComponent implements OnInit {
   user: IUser | undefined;
   userForm!: FormGroup;
-  confirmMessage:string = '';
+  confirmMessage!: string;
 
   private validationMessage: any = {
     passwordCompare: 'Passwords do not match'
@@ -67,7 +67,7 @@ export class FormsReactiveComponent implements OnInit {
     const confirmControl = this.userForm.get('passwordGroup');
     confirmControl?.valueChanges
       .pipe(debounceTime(1000))
-      .subscribe(value => this.setMessage(confirmControl));
+      .subscribe(() => this.setMessage(confirmControl));
   }
 
   onSubmit() {
@@ -98,10 +98,16 @@ export class FormsReactiveComponent implements OnInit {
 
   setMessage(c: AbstractControl): void {
     this.confirmMessage = '';
-    if ((c.touched || c.dirty) && c.errors) {
+    
+    if (c.dirty && (c.get('password')?.value !== '' && c.get('confirmPassword')?.value !=='') && c.errors) {
       this.confirmMessage = Object.keys(c.errors)
         .map((key) => this.validationMessage[key])
         .join(' ');
     }
-  }
+  };
+
+
+
+
+
 }
