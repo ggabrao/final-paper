@@ -7,13 +7,12 @@
     appConfirmPassword
   >
     <mat-form-field class="full-width">
-      <mat-label for="name">Name</mat-label>
+      <mat-label>Name</mat-label>
       <input
         #name="ngModel"
         type="text"
         name="name"
         [(ngModel)]="user.name"
-        id="name"
         matInput
         required
         pattern="[a-zA-Z ]*"
@@ -25,13 +24,12 @@
     </mat-form-field>
 
     <mat-form-field class="full-width"
-      ><mat-label for="email">Email</mat-label>
+      ><mat-label>Email</mat-label>
       <input
         #email="ngModel"
         type="email"
         name="email"
         [(ngModel)]="user.email"
-        id="email"
         matInput
         required
         email
@@ -46,13 +44,12 @@
     </mat-form-field>
 
     <mat-form-field class="full-width"
-      ><mat-label for="phone">Phone number</mat-label>
+      ><mat-label>Phone number</mat-label>
       <input
         #phone="ngModel"
         type="tel"
         name="phone"
         [(ngModel)]="user.phone"
-        id="phone"
         matInput
         pattern="[0-9]{1,3} [0-9]{1,3} [0-9]{7,10}"
         placeholder="1 555 5555555"
@@ -64,25 +61,23 @@
     </mat-form-field>
 
     <mat-form-field class="full-width"
-      ><mat-label for="address">Address</mat-label>
+      ><mat-label>Address</mat-label>
       <input
         #address="ngModel"
         type="text"
         name="address"
         [(ngModel)]="user.address"
-        id="address"
         matInput
       />
     </mat-form-field>
 
     <mat-form-field class="full-width"
-      ><mat-label for="password">Password</mat-label>
+      ><mat-label>Password</mat-label>
       <input
         #password="ngModel"
         type="password"
         name="password"
         [(ngModel)]="user.password"
-        id="password"
         matInput
         required
         minlength="4"
@@ -100,13 +95,12 @@
     </mat-form-field>
 
     <mat-form-field class="full-width"
-      ><mat-label for="confirmPassword">Confirm Password</mat-label>
+      ><mat-label>Confirm Password</mat-label>
       <input
         #confirmPassword="ngModel"
         type="password"
         name="confirmPassword"
         [(ngModel)]="user.confirmPassword"
-        id="confirmPassword"
         matInput
         required
       />
