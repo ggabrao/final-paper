@@ -37,9 +37,8 @@ export class FormsReactiveComponent implements OnInit {
   userForm!: FormGroup;
   emailMessage!: string;
 
-  private emailValidations: any = {
-    required: 'Email is required',
-    email: 'Email must be valid',
+  private confirmPasswordValidation: any = {
+     
   };
 
   constructor(private fb: FormBuilder) {}

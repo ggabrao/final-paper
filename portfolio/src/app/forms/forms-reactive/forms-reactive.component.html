@@ -21,10 +21,13 @@
         matInput
         placeholder="name@domain.com"
       />
-      <mat-error>{{emailMessage}}</mat-error>
+      <mat-error *ngIf="userForm.get('email')?.errors?.['required']"
+        >Email is required</mat-error
+      >
+      <mat-error *ngIf="userForm.get('email')?.errors?.['email']"
+        >Email must be valid</mat-error
+      >
     </mat-form-field>
-
-    <!-- Email field has validation messages on code -->
 
     <mat-form-field class="full-width"
       ><mat-label for="phone">Phone number</mat-label>
