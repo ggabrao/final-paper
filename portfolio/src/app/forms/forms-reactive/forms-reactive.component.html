@@ -92,10 +92,8 @@
           >This field is required</mat-error
         >
       </mat-form-field>
-      <mat-error
-        *ngIf="userForm.get('passwordGroup')?.errors?.['passwordCompare']"
-      >
-        The confirmation does not match the password</mat-error
+      <span>
+        {{confirmMessage}}</span
       >
     </div>
 
