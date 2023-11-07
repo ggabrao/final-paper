@@ -35,10 +35,10 @@ export const passwordCompareValidator: ValidatorFn = (
 export class FormsReactiveComponent implements OnInit {
   user: IUser | undefined;
   userForm!: FormGroup;
-  confirmMessage!: string;
+  confirmMessage:string = '';
 
-  private validationMessages: any = {
-    passwordCompare: 'The confirmation does not match the password'
+  private validationMessage: any = {
+    passwordCompare: 'Passwords do not match'
   };
 
   constructor(private fb: FormBuilder) {}
@@ -100,7 +100,7 @@ export class FormsReactiveComponent implements OnInit {
     this.confirmMessage = '';
     if ((c.touched || c.dirty) && c.errors) {
       this.confirmMessage = Object.keys(c.errors)
-        .map((key) => this.validationMessages[key])
+        .map((key) => this.validationMessage[key])
         .join(' ');
     }
   }
