@@ -9,6 +9,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { IUser } from '../user.model';
+import { debounceTime } from 'rxjs';
 
 export const passwordCompareValidator: ValidatorFn = (
   c: AbstractControl
@@ -34,6 +35,12 @@ export const passwordCompareValidator: ValidatorFn = (
 export class FormsReactiveComponent implements OnInit {
   user: IUser | undefined;
   userForm!: FormGroup;
+  emailMessage!: string;
+
+  private emailValidations: any = {
+    required: 'Email is required',
+    email: 'Email must be valid',
+  };
 
   constructor(private fb: FormBuilder) {}
 
@@ -54,12 +61,14 @@ export class FormsReactiveComponent implements OnInit {
       notifications: 'email',
     });
 
-    this.userForm.get('notifications')?.valueChanges.subscribe(
-      value => this.setNotification(value)
-    );
+    this.userForm
+      .get('notifications')
+      ?.valueChanges.subscribe((value) => this.setNotification(value));
 
-
-
+    const emailControl = this.userForm.get('email');
+    emailControl?.valueChanges
+      .pipe(debounceTime(1000))
+      .subscribe((value) => this.setMessage(emailControl));
   }
 
   onSubmit() {
@@ -71,8 +80,8 @@ export class FormsReactiveComponent implements OnInit {
       name: 'Gabriel',
       email: 'gabriel@test.com',
       phone: null,
-      address: null,  
-      passwordGroup: {password:'1234', confirmPassword:'1234'},
+      address: null,
+      passwordGroup: { password: '1234', confirmPassword: '1234' },
       agreement: false,
       notifications: 'email',
     });
@@ -86,5 +95,14 @@ export class FormsReactiveComponent implements OnInit {
       phoneControl?.removeValidators(Validators.required);
     }
     phoneControl?.updateValueAndValidity();
+  }
+
+  setMessage(c: AbstractControl): void {
+    this.emailMessage = '';
+    if ((c.touched || c.dirty) && c.errors) {
+      this.emailMessage = Object.keys(c.errors)
+        .map((key) => this.emailValidations[key])
+        .join(' ');
+    }
   }
 }
