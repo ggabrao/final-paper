@@ -21,13 +21,11 @@
         matInput
         placeholder="name@domain.com"
       />
-      <mat-error *ngIf="userForm.get('email')?.errors?.['required']"
-        >Email is required</mat-error
-      >
-      <mat-error *ngIf="userForm.get('email')?.errors?.['email']">
-        Email must be valid</mat-error
-      >
+      <mat-error>{{emailMessage}}</mat-error>
     </mat-form-field>
+
+    <!-- Email field has validation messages on code -->
+
     <mat-form-field class="full-width"
       ><mat-label for="phone">Phone number</mat-label>
       <input
@@ -44,8 +42,8 @@
         >Phone number must follow the pattern</mat-error
       >
       <mat-error *ngIf="userForm.get('phone')?.errors?.['required']"
-      >Phone number is required</mat-error
-    >
+        >Phone number is required</mat-error
+      >
     </mat-form-field>
 
     <mat-form-field class="full-width"
@@ -100,12 +98,8 @@
 
     <label id="notifications">Receive notifications:</label>
     <mat-radio-group formControlName="notifications">
-      <mat-radio-button value="email" 
-        >Email</mat-radio-button
-      >
-      <mat-radio-button value="text"
-        >Phone</mat-radio-button
-      >
+      <mat-radio-button value="email">Email</mat-radio-button>
+      <mat-radio-button value="text">Phone</mat-radio-button>
     </mat-radio-group>
 
     <mat-checkbox formControlName="agreement" class="agreement-checkbox"
