@@ -12,6 +12,10 @@ import { WhoComponent } from './introduction/who/who.component';
 import { SkillsComponent } from './skills/skills/skills.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './courses/in-memory-data.service';
+import { MatIconRegistry } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -26,9 +30,12 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent],
