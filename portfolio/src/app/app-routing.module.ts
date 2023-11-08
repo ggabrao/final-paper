@@ -10,6 +10,12 @@ const routes: Routes = [
     loadChildren: () =>
       import('./forms/forms-demo.module').then((m) => m.FormsDemoModule),
   },
+  {
+    path: 'courses',
+    loadChildren: () =>
+      import('./courses/courses.module').then((m) => m.CoursesModule),
+  },
+
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
