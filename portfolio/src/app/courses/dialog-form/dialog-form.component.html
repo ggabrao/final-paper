@@ -1,33 +1,43 @@
 <h1 mat-dialog-title>Add a new course</h1>
-<form class="form" (ngSubmit)="onSubmit()" [formGroup]="courseForm">
+<form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm)">
   <mat-form-field>
     <mat-label>Id</mat-label>
-    <input formControlName="id" type="number" matInput />
-    <mat-error *ngIf="courseForm.get('id')?.errors?.['required']">Id is required</mat-error>
+    <input #id="ngModel" type="number" name="id" [(ngModel)]="course.id" matInput required min="1" max="99"
+      pattern="[0-9]*" />
+    <mat-error *ngIf="id.errors?.['required']">Id is required</mat-error>
+    <mat-error *ngIf="id.errors?.['min']">Id must be between 1 and 99</mat-error>
+    <mat-error *ngIf="id.errors?.['max']">Id must be between 1 and 99</mat-error>
   </mat-form-field>
+
   <mat-form-field>
     <mat-label>Name</mat-label>
-    <input formControlName="name" type="text" matInput />
-    <mat-error *ngIf="courseForm.get('name')?.errors?.['required']">Name is required</mat-error>
+    <input #name="ngModel" type="text" name="name" [(ngModel)]="course.name" matInput required maxlength="15" />
+    <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
   </mat-form-field>
+
   <mat-form-field>
     <mat-label>Duration</mat-label>
-    <input formControlName="duration" type="number" matInput />
-    <mat-error *ngIf="courseForm.get('duration')?.errors?.['required']">Duration is required</mat-error>
+    <input #duration="ngModel" type="number" name="duration" [(ngModel)]="course.duration" matInput required min="1"
+      max="99" pattern="[0-9]*" />
+    <mat-error *ngIf="duration.errors?.['required']">Duration is required</mat-error>
+    <mat-error *ngIf="duration.errors?.['min']">Duration must be between 1 and 99</mat-error>
+    <mat-error *ngIf="duration.errors?.['max']">Duration must be between 1 and 99</mat-error>
   </mat-form-field>
+
   <mat-form-field>
     <mat-label>Rating</mat-label>
-    <input formControlName="rating" type="number" matInput />
-    <mat-error *ngIf="courseForm.get('rating')?.errors?.['required']">Rating is required</mat-error>
+    <input #rating="ngModel" type="number" name="rating" [(ngModel)]="course.rating" matInput required
+      min="0" max="5" pattern="[0-9]*"/>
+    <mat-error *ngIf="rating.errors?.['required']">Rating is required</mat-error>
+    <mat-error *ngIf="rating.errors?.['min']">Rating must be between 0 and 5</mat-error>
+    <mat-error *ngIf="rating.errors?.['max']">Rating must be between 0 and 5</mat-error>
   </mat-form-field>
-  <div mat-dialog-actions>
-    <button
-      type="submit"
-      mat-raised-button
-      color="primary"
-      [disabled]="!courseForm.valid"
-    >
-      Save
-    </button>
-    <button mat-button (click)="onNoClick()">Cancel</button>
-  </div>
+
+  <button type="submit" [disabled]="!frm.form.valid" mat-raised-button color="primary">
+    Submit
+  </button>
+  <button type="button" mat-raised-button color="warn">
+    Cancel
+  </button>
+
+</form>
