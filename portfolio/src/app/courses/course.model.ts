@@ -1,6 +1,6 @@
 export interface ICourse {
-    id: number,
+    id?: number;
     name: string;
-    duration: number;
-    rating: number
+    duration?: number;
+    rating?: number;
 }
