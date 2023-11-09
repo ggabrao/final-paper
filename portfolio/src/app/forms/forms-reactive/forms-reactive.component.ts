@@ -11,7 +11,6 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
-import { IUser } from '../user.model';
 import { debounceTime } from 'rxjs';
 
 export const passwordCompareValidator: ValidatorFn = (
@@ -36,7 +35,6 @@ export const passwordCompareValidator: ValidatorFn = (
   styleUrls: ['./forms-reactive.component.scss'],
 })
 export class FormsReactiveComponent implements OnInit {
-  user: IUser | undefined;
   userForm!: FormGroup;
   confirmMessage!: string;
 
