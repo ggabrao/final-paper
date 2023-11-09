@@ -14,10 +14,9 @@ export class CoursesService {
     return this.http.get<ICourse[]>('api/courses');
   }
 
- /*  getCourse(id: number): Observable<ICourse> {
-    const url = `api/courses/${id}`;
-    return this.http.get<ICourse>(url);
-  } */
+  getCourse(id: number): Observable<ICourse> {
+    return this.http.get<ICourse>(`api/courses/${id}`);
+  }
 
   
 
