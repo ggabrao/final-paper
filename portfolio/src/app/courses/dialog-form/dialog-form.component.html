@@ -27,7 +27,7 @@
   <mat-form-field>
     <mat-label>Rating</mat-label>
     <input #rating="ngModel" type="number" name="rating" [(ngModel)]="course.rating" matInput required
-      min="0" max="5" pattern="[0-9]*"/>
+      min="0" max="5" pattern="[0-5]*"/>
     <mat-error *ngIf="rating.errors?.['required']">Rating is required</mat-error>
     <mat-error *ngIf="rating.errors?.['min']">Rating must be between 0 and 5</mat-error>
     <mat-error *ngIf="rating.errors?.['max']">Rating must be between 0 and 5</mat-error>
