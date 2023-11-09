@@ -16,7 +16,7 @@ export class CoursesComponent implements OnInit {
   }
 
   ngOnInit() {
-    return this.dataService.getCourses().subscribe(data => this.courses = data);
+    return this.dataService.getCourses().subscribe((data: ICourse[]) => this.courses = data);
   }
 
   addData() {
