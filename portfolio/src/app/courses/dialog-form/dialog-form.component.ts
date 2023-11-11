@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ICourse } from '../course.model';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { CoursesService } from '../courses.service';
 
 @Component({
   selector: 'crs-dialog',
@@ -18,16 +19,18 @@ export class DialogFormComponent {
   };
 
   constructor(
-    public dialogRef: MatDialogRef<DialogFormComponent>) { }
+    public dialogRef: MatDialogRef<DialogFormComponent>, private dataService:CoursesService) { }
 
 
-  onSubmit(f: NgForm): void {
-    console.log(f.form.value);
-    console.log("Form was submitted");
-  }
+  onSubmit(newCourse: ICourse): void {   
+    this.dataService.addCourse(newCourse).subscribe((data:ICourse) => {
+      console.log("New course posted");
+      this.dialogRef.close(); });           
+  };
 
-  onNoClick() {
-    throw new Error('Method not implemented.');
-  }
+  onCancel() {
+      this.dialogRef.close();
+    };
+  
 
 }

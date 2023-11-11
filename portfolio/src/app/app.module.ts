@@ -31,7 +31,7 @@ import { MatIconRegistry } from '@angular/material/icon';
   imports: [
     BrowserModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,

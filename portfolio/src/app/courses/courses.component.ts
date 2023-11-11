@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CoursesService } from './courses.service';
 import { ICourse } from './course.model';
 import { DialogFormComponent } from './dialog-form/dialog-form.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'crs-courses',
@@ -12,31 +13,35 @@ import { MatDialog } from '@angular/material/dialog';
 export class CoursesComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove'];
-  courses: ICourse[] = [];
+
+  dataSource = new MatTableDataSource<ICourse>();
 
   constructor(private dataService: CoursesService, public dialog: MatDialog) {
   }
 
   ngOnInit() {
-    return this.dataService.getCourses().subscribe((data: ICourse[]) => this.courses = data);
-  }
+    this.dataService.getCourses().subscribe((data: ICourse[]) => this.dataSource.data = data);
+  };
 
-  addData() {
-  }
+  @ViewChild(MatTable)
+  table!: MatTable<ICourse>;
 
-  removeData() {
-  }
+  removeData(id: number) {
+    this.dataService.deleteCourse(id).subscribe(data => console.log(data));
+    console.log("deletado");
+  };
+
 
   updateData() {
     throw new Error('Method not implemented.');
   }
 
+
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogFormComponent);
-    dialogRef.afterClosed().subscribe();
+    dialogRef.afterClosed().subscribe(result => {
+      console.log("Dialog Closed");
+    });
   }
-
-
-
 
 }
