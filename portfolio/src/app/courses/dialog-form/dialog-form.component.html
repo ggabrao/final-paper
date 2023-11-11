@@ -1,5 +1,5 @@
 <h1 mat-dialog-title>Add a new course</h1>
-<form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm)">
+<form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm.value)">
   <mat-form-field>
     <mat-label>Id</mat-label>
     <input #id="ngModel" type="number" name="id" [(ngModel)]="course.id" matInput required min="1" max="99"
@@ -34,9 +34,9 @@
   </mat-form-field>
 
   <button type="submit" [disabled]="!frm.form.valid" mat-raised-button color="primary">
-    Submit
+    Save
   </button>
-  <button type="button" mat-raised-button color="warn">
+  <button type="button" mat-raised-button color="warn" (click)="onCancel()">
     Cancel
   </button>
 
