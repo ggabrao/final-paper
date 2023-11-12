@@ -11,9 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class CoursesComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove'];
-
-  // dataSource = new MatTableDataSource<ICourse>();
+  displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove']; 
 
   courses:ICourse[] = [];
 
@@ -27,8 +25,7 @@ export class CoursesComponent implements OnInit {
 
   delete(course: ICourse): void {
     this.courses = this.courses.filter(c => c !== course);    
-    this.dataService.deleteCourse(course.id).subscribe();
-  
+    this.dataService.deleteCourse(course.id).subscribe();  
   };
 
 
