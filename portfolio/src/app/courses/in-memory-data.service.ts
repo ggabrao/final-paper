@@ -8,7 +8,7 @@ import { ICourse } from './course.model';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const courses: ICourse[] = [
+    const courses = [
       { id: 1, name: 'HTML', duration: 5, rating: 5.0 },
       { id: 2, name: 'CSS', duration: 8, rating: 3.0 },
       { id: 3, name: 'Javascript', duration: 15, rating: 1.2 },
@@ -16,5 +16,9 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 5, name: 'Angular', duration: 30, rating: 3.8 }
     ];
     return {courses};
+  }
+
+  genId(courses: ICourse[]): number {
+    return courses.length > 0 ? Math.max(...courses.map(course => course.id)) + 1 : 11;
   }
 }

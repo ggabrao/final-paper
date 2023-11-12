@@ -12,7 +12,7 @@ import { CoursesService } from '../courses.service';
 export class DialogFormComponent {
 
   course: ICourse = {
-    id: undefined,
+    id: 0,
     name: "",
     duration: undefined,
     rating: undefined
