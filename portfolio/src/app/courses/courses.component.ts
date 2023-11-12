@@ -3,7 +3,6 @@ import { CoursesService } from './courses.service';
 import { ICourse } from './course.model';
 import { DialogFormComponent } from './dialog-form/dialog-form.component';
 import { MatDialog } from '@angular/material/dialog';
-import { MatTable, MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'crs-courses',
