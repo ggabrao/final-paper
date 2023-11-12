@@ -8,6 +8,10 @@ import { Observable, catchError, of, tap } from 'rxjs';
 })
 export class CoursesService {
 
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
+
   constructor(private http: HttpClient) { }
 
   getCourses(): Observable<ICourse[]> {
@@ -27,11 +31,8 @@ export class CoursesService {
   };
 
   deleteCourse(id: number): Observable<ICourse> {
-    return this.http.delete<ICourse>(`api/courses`).pipe(tap(_ => console.log(`deleted course id=${id}`)),)
-   
+    
+    return this.http.delete<ICourse>(`api/courses/${id}`, 
+      this.httpOptions)
+    }
   }
-
-}
-
-
-

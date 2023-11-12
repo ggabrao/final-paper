@@ -14,21 +14,22 @@ export class CoursesComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove'];
 
-  dataSource = new MatTableDataSource<ICourse>();
+  // dataSource = new MatTableDataSource<ICourse>();
+
+  courses:ICourse[] = [];
 
   constructor(private dataService: CoursesService, public dialog: MatDialog) {
   }
 
   ngOnInit() {
-    this.dataService.getCourses().subscribe((data: ICourse[]) => this.dataSource.data = data);
+    this.dataService.getCourses().subscribe(data => this.courses = data);
   };
 
-  @ViewChild(MatTable)
-  table!: MatTable<ICourse>;
 
-  removeData(id: number) {
-    this.dataService.deleteCourse(id).subscribe(data => console.log(data));
-    console.log("deletado");
+  delete(course: ICourse): void {
+    this.courses = this.courses.filter(c => c !== course);    
+    this.dataService.deleteCourse(course.id).subscribe();
+  
   };
 
 
