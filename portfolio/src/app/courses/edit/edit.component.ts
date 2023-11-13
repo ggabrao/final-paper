@@ -10,13 +10,13 @@ import { ICourse } from '../course.model';
 })
 export class EditComponent implements OnInit{
 
-  course!: ICourse;
+  selectedCourse!: ICourse;
 
   constructor(private route:ActivatedRoute, private dataService: CoursesService) {}
 
   ngOnInit():void {
-    const id = +this.route.params.paramMap.get('id');
-    this.dataService.getCourse(id).subscribe(data => this.course = data);
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.dataService.getCourse(id).subscribe(data => this.selectedCourse = data);
   }
 
 
