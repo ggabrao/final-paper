@@ -14,9 +14,7 @@ export class CoursesComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove'];
 
-  courses: ICourse[] = [];
-
-
+  courses!: ICourse[];
 
   @ViewChild(MatTable)
   table!: MatTable<ICourse>;
@@ -35,10 +33,9 @@ export class CoursesComponent implements OnInit {
   };
 
 
-  updateData() {
-    throw new Error('Method not implemented.');
+  updateData(id:number) {
+    
   }
-
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogFormComponent);

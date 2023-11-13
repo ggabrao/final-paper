@@ -23,16 +23,17 @@ export class CoursesService {
   }
 
   addCourse(newCourse: ICourse): Observable<ICourse> {
-    return this.http.post<ICourse>('api/courses', newCourse, {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    })
+    return this.http.post<ICourse>('api/courses', newCourse, this.httpOptions
+    )
   };
 
-  deleteCourse(id: number): Observable<ICourse> {
-    
-    return this.http.delete<ICourse>(`api/courses/${id}`, 
-      this.httpOptions)
-    }
+  updateCourse(course: ICourse): Observable<any> {
+    return this.http.put('api/courses', course, this.httpOptions)
   }
+
+  deleteCourse(id: number): Observable<ICourse> {
+
+    return this.http.delete<ICourse>(`api/courses/${id}`,
+      this.httpOptions)
+  }
+}
