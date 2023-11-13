@@ -2,12 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CoursesComponent } from './courses.component';
 import { EditComponent } from './edit/edit.component';
-import { courseResolver } from './courses.service';
+import { courseResolver, coursesResolver } from './courses.service';
 
 const routes: Routes = [
   {
     path: '',
-    component: CoursesComponent
+    component: CoursesComponent,
+    resolve: { coursesResolver : coursesResolver}
   },
   {
     path: ':id/edit',

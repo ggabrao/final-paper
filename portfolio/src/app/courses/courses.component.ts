@@ -4,6 +4,7 @@ import { ICourse } from './course.model';
 import { DialogFormComponent } from './dialog-form/dialog-form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'crs-courses',
@@ -19,11 +20,11 @@ export class CoursesComponent implements OnInit {
   @ViewChild(MatTable)
   table!: MatTable<ICourse>;
 
-  constructor(private dataService: CoursesService, public dialog: MatDialog) {
+  constructor(private dataService: CoursesService, public dialog: MatDialog, private route:ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.dataService.getCourses().subscribe(data => this.courses = data);
+    this.route.data.subscribe(({ coursesResolver }) => this.courses = coursesResolver);
   };
 
 

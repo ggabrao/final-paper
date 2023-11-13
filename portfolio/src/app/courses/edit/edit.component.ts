@@ -9,23 +9,24 @@ import { NgForm } from '@angular/forms';
   templateUrl: './edit.component.html',
   styleUrl: './edit.component.scss'
 })
-export class EditComponent implements OnInit{
+export class EditComponent implements OnInit {
 
   selectedCourse!: ICourse;
 
-  constructor(private route:ActivatedRoute, private dataService: CoursesService, private router:Router) {}
+  constructor(private route: ActivatedRoute, private dataService: CoursesService, private router: Router) { }
 
-  ngOnInit():void {
-    this.route.data.subscribe(({courseResolver}) => this.selectedCourse = courseResolver); }
+  ngOnInit(): void {
+    this.route.data.subscribe(({ courseResolver }) => this.selectedCourse = courseResolver);
+  }
 
   onCancel() {
-      this.router.navigate(['/courses']);
-    }
+    this.router.navigate(['/courses']);
+  }
 
-  onSubmit():void {    
+  onSubmit(): void {
     this.dataService.updateCourse(this.selectedCourse).subscribe(() => this.router.navigate(['/courses']));
   }
-    
 
-  
+
+
 }
