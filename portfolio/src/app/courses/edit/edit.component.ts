@@ -16,9 +16,7 @@ export class EditComponent implements OnInit{
   constructor(private route:ActivatedRoute, private dataService: CoursesService, private router:Router) {}
 
   ngOnInit():void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.dataService.getCourse(id).subscribe(data => this.selectedCourse = data);
-  }
+    this.route.data.subscribe(({courseResolver}) => this.selectedCourse = courseResolver); }
 
   onCancel() {
       this.router.navigate(['/courses']);

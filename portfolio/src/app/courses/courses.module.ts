@@ -14,5 +14,6 @@ import { EditComponent } from './edit/edit.component';
     SharedModule,
     CoursesRoutingModule
   ]
+  
 })
 export class CoursesModule { }

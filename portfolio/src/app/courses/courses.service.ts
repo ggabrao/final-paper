@@ -1,7 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ICourse } from './course.model';
 import { Observable, catchError, of, tap } from 'rxjs';
+import { ActivatedRouteSnapshot, ResolveFn, RouterStateSnapshot } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -37,3 +38,8 @@ export class CoursesService {
       this.httpOptions)
   }
 }
+
+export const courseResolver: ResolveFn<ICourse> =
+    (route: ActivatedRouteSnapshot) => {
+      return inject(CoursesService).getCourse(+route.paramMap.get('id')!);
+    };
