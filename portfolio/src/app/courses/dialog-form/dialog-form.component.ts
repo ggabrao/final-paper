@@ -11,12 +11,11 @@ import { CoursesService } from '../courses.service';
 })
 export class DialogFormComponent {
 
-  course: ICourse = {
-    id: 6,
-    name: "teste",
-    duration: 20,
-    rating: 3
-  };
+  course: any = {
+    name: "",
+    duration: "",
+    rating: ""
+  }
 
   constructor(
     public dialogRef: MatDialogRef<DialogFormComponent>) { }
