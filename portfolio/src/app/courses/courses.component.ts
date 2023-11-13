@@ -43,9 +43,8 @@ export class CoursesComponent implements OnInit {
       if (result !== null) {
         this.dataService.addCourse(result).subscribe(result => {
           if (result) {
-            this.courses.push(result as ICourse);
+            this.courses.push(result);
             this.table.renderRows();
-            console.log(this.courses);
           }
         })
       }
