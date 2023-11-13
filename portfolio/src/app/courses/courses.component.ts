@@ -12,10 +12,12 @@ import { MatTable } from '@angular/material/table';
 })
 export class CoursesComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove']; 
+  displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove'];
 
-  courses:ICourse[] = [];
- 
+  courses: ICourse[] = [];
+
+
+
   @ViewChild(MatTable)
   table!: MatTable<ICourse>;
 
@@ -29,7 +31,7 @@ export class CoursesComponent implements OnInit {
 
   deleteData(course: ICourse): void {
     this.courses = this.courses.filter(c => c !== course);
-    this.dataService.deleteCourse(course.id).subscribe();  
+    this.dataService.deleteCourse(course.id).subscribe();
   };
 
 
@@ -40,14 +42,15 @@ export class CoursesComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogFormComponent);
-    dialogRef.afterClosed().subscribe(result => {      
-      this.dataService.addCourse(result).subscribe(result => {
-        if (result) {
-          this.courses.push(result);
-          this.table.renderRows();    
-        }
-      });
-    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result !== null) {
+        this.dataService.addCourse(result).subscribe(result => {
+          if (result) {
+            this.courses.push(result);
+            this.table.renderRows();
+          }
+        })
+      }
+    })
   }
-
 }
