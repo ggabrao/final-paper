@@ -6,13 +6,12 @@ import { EditComponent } from './edit/edit.component';
 const routes: Routes = [
   {
     path: '',
-    component: CoursesComponent,
-    children: [{
-      path: ':id/edit',
-      component: EditComponent,
-    }         
-    ]
-  }      
+    component: CoursesComponent
+  },
+  {
+    path: ':id/edit',
+    component: EditComponent
+  }
 ];
 
 
