@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../courses.service';
 import { ICourse } from '../course.model';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'crs-edit',
@@ -26,7 +25,4 @@ export class EditComponent implements OnInit {
   onSubmit(): void {
     this.dataService.updateCourse(this.selectedCourse).subscribe(() => this.router.navigate(['/courses']));
   }
-
-
-
 }
