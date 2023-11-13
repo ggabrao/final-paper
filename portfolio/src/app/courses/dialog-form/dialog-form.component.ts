@@ -19,18 +19,16 @@ export class DialogFormComponent {
   };
 
   constructor(
-    public dialogRef: MatDialogRef<DialogFormComponent>, private dataService:CoursesService) { }
+    public dialogRef: MatDialogRef<DialogFormComponent>, private dataService: CoursesService) { }
 
 
   onSubmit(newCourse: ICourse): void {   
-    this.dataService.addCourse(newCourse).subscribe((data:ICourse) => {
-      console.log("New course posted");
-      this.dialogRef.close(); });           
+      this.dialogRef.close(newCourse);
   };
 
   onCancel() {
-      this.dialogRef.close();
-    };
-  
+    this.dialogRef.close();
+  };
+
 
 }

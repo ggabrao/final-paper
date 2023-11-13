@@ -3,6 +3,7 @@ import { CoursesService } from './courses.service';
 import { ICourse } from './course.model';
 import { DialogFormComponent } from './dialog-form/dialog-form.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'crs-courses',
@@ -14,6 +15,9 @@ export class CoursesComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove']; 
 
   courses:ICourse[] = [];
+ 
+  @ViewChild(MatTable)
+  table!: MatTable<ICourse>;
 
   constructor(private dataService: CoursesService, public dialog: MatDialog) {
   }
@@ -23,8 +27,8 @@ export class CoursesComponent implements OnInit {
   };
 
 
-  delete(course: ICourse): void {
-    this.courses = this.courses.filter(c => c !== course);    
+  deleteData(course: ICourse): void {
+    this.courses = this.courses.filter(c => c !== course);
     this.dataService.deleteCourse(course.id).subscribe();  
   };
 
@@ -36,8 +40,13 @@ export class CoursesComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogFormComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      console.log("Dialog Closed");
+    dialogRef.afterClosed().subscribe(result => {      
+      this.dataService.addCourse(result).subscribe(result => {
+        if (result) {
+          this.courses.push(result);
+          this.table.renderRows();    
+        }
+      });
     });
   }
 
