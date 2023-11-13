@@ -32,11 +32,6 @@ export class CoursesComponent implements OnInit {
     this.dataService.deleteCourse(course.id).subscribe();
   };
 
-
-  updateData(id:number) {
-    
-  }
-
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogFormComponent);
     dialogRef.afterClosed().subscribe(result => {
