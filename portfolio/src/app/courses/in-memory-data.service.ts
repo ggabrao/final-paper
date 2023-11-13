@@ -19,6 +19,6 @@ export class InMemoryDataService implements InMemoryDbService {
   }
 
   genId(courses: ICourse[]): number {
-    return courses.length > 0 ? Math.max(...courses.map(course => course.id)) + 1 : 11;
+    return courses.length > 0 ? Math.max(...courses.map(course => course.id)) + 1 : 0;
   }
 }
