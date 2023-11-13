@@ -41,7 +41,7 @@ import { EditComponent } from './courses/edit/edit.component';
     SharedModule,
   
   ],
-  providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
