@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CoursesComponent } from './courses.component';
 import { EditComponent } from './edit/edit.component';
+import { courseResolver } from './courses.service';
 
 const routes: Routes = [
   {
@@ -10,7 +11,8 @@ const routes: Routes = [
   },
   {
     path: ':id/edit',
-    component: EditComponent
+    component: EditComponent,
+    resolve: { courseResolver: courseResolver}
   }
 ];
 

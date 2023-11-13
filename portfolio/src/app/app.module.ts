@@ -17,6 +17,9 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './courses/in-memory-data.service';
 import { MatIconRegistry } from '@angular/material/icon';
 import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
+import { provideRouter } from '@angular/router';
+import { courseResolver } from './courses/courses.service';
+import { EditComponent } from './courses/edit/edit.component';
 
 @NgModule({
   declarations: [
