@@ -12,22 +12,18 @@ import { CoursesService } from '../courses.service';
 export class DialogFormComponent {
 
   course: ICourse = {
-    id: 0,
-    name: "",
-    duration: undefined,
-    rating: undefined
+    id: 6,
+    name: "teste",
+    duration: 20,
+    rating: 3
   };
 
   constructor(
-    public dialogRef: MatDialogRef<DialogFormComponent>, private dataService: CoursesService) { }
+    public dialogRef: MatDialogRef<DialogFormComponent>) { }
 
-
-  onSubmit(newCourse: ICourse): void {   
-      this.dialogRef.close(newCourse);
-  };
 
   onCancel() {
-    this.dialogRef.close();
+    this.dialogRef.close(null);
   };
 
 
