@@ -26,21 +26,22 @@ export class CoursesService {
   constructor(private http: HttpClient) { }
 
   getCourses(): Observable<ICourse[]> {
-    return this.http.get<ICourse[]>('api/courses').pipe(catchError(this.handleError<ICourse[]>('getCourses')));
-  } 
+    return this.http.get<ICourse[]>('api/courses/error').pipe(catchError(this.handleError<ICourse[]>('getCourses')));
+  }
 
   getCourse(id: number): Observable<ICourse> {
     return this.http.get<ICourse>(`api/courses/${id}`).pipe(catchError(this.handleError<ICourse>('getCoursebyId')));
   }
 
-  private handleError<T>(operation:string, result?: T) {
+  private handleError<T>(operation: string, result?: T) {
     return (error: any): Observable<T> => {
 
-      console.error(`${operation} has error ${error.message}`);
+      console.error(`${operation} has error`);
 
       return of(result as T);
     };
   }
+
   addCourse(newCourse: ICourse): Observable<ICourse> {
     return this.http.post<ICourse>('api/courses', newCourse, this.httpOptions
     )
