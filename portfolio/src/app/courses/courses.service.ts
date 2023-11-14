@@ -30,28 +30,30 @@ export class CoursesService {
   }
 
   getCourse(id: number): Observable<ICourse> {
-    return this.http.get<ICourse>(`api/courses/${id}`).pipe(catchError(this.handleError<ICourse>('getCoursebyId')));
-  }
-
-  //generic error Handler for getCourses and getCourse
-  private handleError<T>(operation: string, result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(`${operation} has error`);
-      return of(result as T);
-    };
+    return this.http.get<ICourse>(`api/courses/${id}`).pipe(catchError(this.handleError<ICourse>('getCourse')));
   }
 
   addCourse(newCourse: ICourse): Observable<ICourse> {
     return this.http.post<ICourse>('api/courses', newCourse, this.httpOptions
-    )
+    ).pipe(catchError(this.handleError<ICourse>('addCourse')))
   };
 
   updateCourse(course: ICourse): Observable<any> {
     return this.http.put('api/courses', course, this.httpOptions)
+    .pipe(catchError(this.handleError<any>('updateCourse')))
   }
 
   deleteCourse(id: number): Observable<ICourse> {
     return this.http.delete<ICourse>(`api/courses/${id}`,
-      this.httpOptions)
+      this.httpOptions).pipe(catchError(this.handleError<ICourse>('deleteCourse')))
   }
+
+  //generic error Handler
+  private handleError<T>(operation: string, result?: T) {
+    return (error: any): Observable<T> => {
+      console.log(`${operation} has the following error: ${error.body.error}`);
+      return of(result as T);
+    };
+  }
+
 }
