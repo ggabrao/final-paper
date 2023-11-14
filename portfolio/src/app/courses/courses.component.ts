@@ -36,10 +36,10 @@ export class CoursesComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogFormComponent);
     dialogRef.afterClosed().subscribe(result => {
-      if (result !== null) {
-        this.dataService.addCourse(result).subscribe(result => {
-          if (result) {
-            this.courses.push(result);
+      if (result) {
+        this.dataService.addCourse(result).subscribe(data => {
+          if (data) {
+            this.courses.push(data);
             this.table.renderRows();
           }
         })
