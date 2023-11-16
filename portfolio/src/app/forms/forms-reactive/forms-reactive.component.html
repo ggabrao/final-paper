@@ -51,7 +51,7 @@
     </div>
 
     <mat-error class="notMatch" *ngIf="confirmMessage">{{ confirmMessage }}</mat-error>
-    <!-- This validation is reactive -->  
+    <!-- This validation is reactive -->
 
 
     <mat-checkbox formControlName="agreement" class="agreement-checkbox">I agree with the terms</mat-checkbox>
@@ -66,4 +66,8 @@
       Sign Up
     </button>
   </form>
+
+  <div *ngIf="submitted" class="submitted">
+    <p>Submitted <mat-icon inline="true">done</mat-icon></p>
+  </div>
 </main>

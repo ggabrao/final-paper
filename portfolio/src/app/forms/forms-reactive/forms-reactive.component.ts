@@ -37,6 +37,7 @@ export const passwordCompareValidator: ValidatorFn = (
 export class FormsReactiveComponent implements OnInit {
   userForm!: FormGroup;
   confirmMessage!: string;
+  submitted:boolean = false;
 
   private validationMessage: any = {
     passwordCompare: 'Passwords do not match',
@@ -76,8 +77,7 @@ export class FormsReactiveComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("Form was submitted");
-    console.log(this.userForm.value);
+    this.submitted = true;    
   }
 
   setNotification(notificationInput: string): void {
