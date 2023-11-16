@@ -4,7 +4,7 @@
   <form class="form" #frm="ngForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
       <mat-label>Id</mat-label>
-      <input #id="ngModel" type="number" name="id" [(ngModel)]="selectedCourse.id" matInput required min="1" max="99"
+      <input #id="ngModel" type="number" name="id" [ngModel]="selectedCourse.id" matInput required min="1" max="99"
         pattern="[0-9]*" disabled="true"/>
     </mat-form-field>
 
