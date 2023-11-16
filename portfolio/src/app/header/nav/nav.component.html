@@ -1,18 +1,13 @@
-<header class="nav">
-  <div>
-    <button class="nav-button" mat-button routerLink="/home">Home</button>
-  </div>
-  <div>
+<nav>
+  <ul class="nav">
+    <a class="nav-button" mat-button routerLink="/home" color="primary">Home</a>
     <button class="nav-button" mat-button [matMenuTriggerFor]="menu">Demonstrations</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/forms">Forms</button>
-      <button mat-menu-item routerLink="/courses">Courses</button>
+      <a mat-menu-item routerLink="/forms">Forms</a>
+      <a mat-menu-item routerLink="/courses">Courses</a>
+      <a mat-menu-item routerLink="/website">Courses</a>      
     </mat-menu>
-  </div>
-  <div>
-    <button class="nav-button" routerLink="/resume" mat-button>Resume</button>   
-  </div>
-  <div>
-    <button class="nav-button" mat-button>Hire Me</button>
-  </div>
-</header>
+    <a class="nav-button" routerLink="/resume" mat-button>Resume</a>
+    <a class="nav-button" mat-button color="warn">Hire Me</a>
+  </ul>
+</nav>
