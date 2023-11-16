@@ -26,7 +26,7 @@ export const passwordCompareValidator: ValidatorFn = (
 };
 
 @Directive({
-  selector: '[appConfirmPassword]',
+  selector: '[frmConfirmPassword]',
   providers: [
     {
       provide: NG_VALIDATORS,
