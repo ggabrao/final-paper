@@ -9,6 +9,8 @@ import { NgForm } from '@angular/forms';
 })
 export class FormsTdComponent {
 
+  submitted:boolean = false;
+
   user: IUser = {
     name: "",
     phone: "",
@@ -20,7 +22,8 @@ export class FormsTdComponent {
   }
 
   onSubmit(f: NgForm): void {
-    console.log("Form was submitted");
-    console.log(f.value);
+    this.submitted = true;
   }
+
+  
 }
