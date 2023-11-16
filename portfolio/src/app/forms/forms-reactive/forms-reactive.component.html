@@ -1,126 +1,68 @@
 <main class="container">
-  <h1 class="form-title">Reactive Form Example</h1>
+  <h2 class="form-title">Reactive</h2>
   <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
     <mat-form-field class="full-width">
       <mat-label>Name</mat-label>
       <input formControlName="name" type="text" matInput />
-      <mat-error *ngIf="userForm.get('name')?.errors?.['required']"
-        >Name is required</mat-error
-      >
-      <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']"
-        >Name must contain only letters</mat-error
-      >
+      <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Name is required</mat-error>
+      <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Name must contain only letters</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="full-width"
-      ><mat-label>Email</mat-label>
-      <input
-        formControlName="email"
-        type="email"
-        matInput
-        placeholder="name@domain.com"
-      />
-      <mat-error *ngIf="userForm.get('email')?.errors?.['required']"
-        >Email is required</mat-error
-      >
-      <mat-error *ngIf="userForm.get('email')?.errors?.['email']"
-        >Email must be valid</mat-error
-      >
+    <mat-form-field class="full-width"><mat-label>Email</mat-label>
+      <input formControlName="email" type="email" matInput placeholder="name@domain.com" />
+      <mat-error *ngIf="userForm.get('email')?.errors?.['required']">Email is required</mat-error>
+      <mat-error *ngIf="userForm.get('email')?.errors?.['email']">Email must be valid</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="full-width"
-      ><mat-label>Phone number</mat-label>
-      <input
-        formControlName="phone"
-        type="tel"
-        matInput
-        placeholder="1 555 5555555"
-      />
-      <mat-hint *ngIf="!userForm.get('phone')?.valid"
-        >Only numbers and spaces</mat-hint
-      >
-      <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']"
-        >Phone number must follow the pattern</mat-error
-      >
-      <mat-error *ngIf="userForm.get('phone')?.errors?.['required']"
-        >Phone number is required</mat-error
-      >
+    <mat-form-field class="full-width"><mat-label>Phone number</mat-label>
+      <input formControlName="phone" type="tel" matInput placeholder="1 555 5555555" />
+      <mat-hint *ngIf="!userForm.get('phone')?.valid">Only numbers and spaces</mat-hint>
+      <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone number must follow the pattern</mat-error>
+      <mat-error *ngIf="userForm.get('phone')?.errors?.['required']">Phone number is required</mat-error>
     </mat-form-field>
 
-    <button
-      type="button"
-      (click)="addAddress()"
-      mat-raised-button
-      color="accent"
-    >
-      Add another Address
-    </button>
 
     <div formArrayName="addresses">
-      <mat-form-field
-        class="full-width"
-        *ngFor="let address of addresses.controls; let i = index"
-      >
+      <mat-form-field class="full-width" *ngFor="let address of addresses.controls; let i = index">
         <mat-label>Address {{i+1}}</mat-label>
         <input [formControlName]="i" type="text" matInput />
       </mat-form-field>
+      <button class="address-button" type="button" (click)="addAddress()" mat-icon-button color="primary">
+        <mat-icon>add_circle</mat-icon>
+      </button>
     </div>
 
     <div formGroupName="passwordGroup">
-      <mat-form-field class="full-width"
-        ><mat-label>Password</mat-label>
-        <input
-          formControlName="password"
-          type="password"
-          matInput
-          maxlength="6"
-        />
-        <mat-hint *ngIf="!userForm.get('passwordGroup.password')?.valid"
-          >Lenght must be between 4 and 6 characteres</mat-hint
-        >
-        <mat-error
-          *ngIf="userForm.get('passwordGroup.password')?.errors?.['required']"
-          >Password is required</mat-error
-        >
-        <mat-error
-          *ngIf="userForm.get('passwordGroup.password')?.errors?.['minlength']"
-        >
-          Password must have at least 4 characteres</mat-error
-        >
+      <mat-form-field class="full-width"><mat-label>Password</mat-label>
+        <input formControlName="password" type="password" matInput maxlength="6" />
+        <mat-hint *ngIf="!userForm.get('passwordGroup.password')?.valid">Lenght must be between 4 and 6
+          characteres</mat-hint>
+        <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['required']">Password is required</mat-error>
+        <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['minlength']">
+          Password must have at least 4 characteres</mat-error>
       </mat-form-field>
 
-      <mat-form-field class="full-width"
-        ><mat-label>Confirm Password</mat-label>
-        <input
-          formControlName="confirmPassword"
-          type="password"
-          matInput
-        />
-        <mat-error
-          *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']"
-          >This field is required</mat-error
-        >
+
+      <mat-form-field class="full-width"><mat-label>Confirm Password</mat-label>
+        <input formControlName="confirmPassword" type="password" matInput />
+        <mat-error *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">This field is
+          required</mat-error>
       </mat-form-field>
-      <mat-error>{{ confirmMessage }}</mat-error>
-      <!-- This validation is reactive -->
     </div>
 
-    <mat-label>Receive notifications:</mat-label>
+    <mat-error class="notMatch" *ngIf="confirmMessage">{{ confirmMessage }}</mat-error>
+    <!-- This validation is reactive -->  
+
+
+    <mat-checkbox formControlName="agreement" class="agreement-checkbox">I agree with the terms</mat-checkbox>
+
     <mat-radio-group formControlName="notifications">
+      <mat-label class="radio-label">Receive notifications via:</mat-label>
       <mat-radio-button value="email">Email</mat-radio-button>
       <mat-radio-button value="text">Phone</mat-radio-button>
-    </mat-radio-group>
+    </mat-radio-group><br><br>
 
-    <mat-checkbox formControlName="agreement" class="agreement-checkbox"
-      >I agree with the terms</mat-checkbox
-    >
-    <br /><br />
-    <button
-      type="submit"
-      mat-raised-button
-      color="primary"
-      [disabled]="!userForm.valid"
-    >
+    <button type="submit" mat-raised-button color="primary" [disabled]="!userForm.valid">
       Sign Up
     </button>
   </form>
