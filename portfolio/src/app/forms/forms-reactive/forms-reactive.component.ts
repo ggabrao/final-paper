@@ -46,7 +46,7 @@ export class FormsReactiveComponent implements OnInit {
     return <FormArray>this.userForm.get('addresses');
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.userForm = this.fb.group({
@@ -76,18 +76,8 @@ export class FormsReactiveComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log("Form was submitted");
     console.log(this.userForm.value);
-  }
-
-  populateTest(): void {
-    this.userForm.setValue({
-      name: 'Gabriel',
-      email: 'gabriel@test.com',
-      phone: null,
-      passwordGroup: { password: '1234', confirmPassword: '1234' },
-      agreement: false,
-      notifications: 'email',
-    });
   }
 
   setNotification(notificationInput: string): void {

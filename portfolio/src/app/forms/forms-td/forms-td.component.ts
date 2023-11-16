@@ -9,22 +9,18 @@ import { NgForm } from '@angular/forms';
 })
 export class FormsTdComponent {
 
-  user:IUser = {
+  user: IUser = {
     name: "",
     phone: "",
     email: "",
     address: "",
     password: "",
-    confirmPassword: "",   
+    confirmPassword: "",
     agreement: false
   }
 
-  submitted = false;
-
   onSubmit(f: NgForm): void {
-    console.log(f.form.value);
-    console.log("Form was submitted");   
-    this.submitted = true;   
-   
+    console.log("Form was submitted");
+    console.log(f.value);
   }
 }
