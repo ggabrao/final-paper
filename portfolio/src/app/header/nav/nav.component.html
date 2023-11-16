@@ -3,14 +3,14 @@
     <button class="nav-button" mat-button routerLink="/home">Home</button>
   </div>
   <div>
-    <button class="nav-button" mat-button [matMenuTriggerFor]="menu">Demos</button>
+    <button class="nav-button" mat-button [matMenuTriggerFor]="menu">Demonstrations</button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item routerLink="/forms">Forms</button>
       <button mat-menu-item routerLink="/courses">Courses</button>
     </mat-menu>
   </div>
   <div>
-    <button class="nav-button"  mat-button>App</button>   
+    <button class="nav-button" routerLink="/resume" mat-button>Resume</button>   
   </div>
   <div>
     <button class="nav-button" mat-button>Hire Me</button>

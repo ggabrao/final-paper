@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { ResumeComponent } from './resume/resume.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./courses/courses.module').then((m) => m.CoursesModule),
   },
+  { path: 'resume', component: ResumeComponent },
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
@@ -28,4 +30,4 @@ export const routingConfiguration: ExtraOptions = {
   imports: [RouterModule.forRoot(routes, routingConfiguration)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
