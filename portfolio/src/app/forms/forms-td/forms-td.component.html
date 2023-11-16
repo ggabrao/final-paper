@@ -1,5 +1,5 @@
 <main class="container">
-  <h1 class="form-title">Template Driven Form Example</h1>
+  <h2 class="form-title">Template Driven</h2>
   <form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm)" frmConfirmPassword>
     <mat-form-field class="full-width">
       <mat-label>Name</mat-label>
@@ -44,7 +44,7 @@
       <mat-error *ngIf="confirmPassword.errors?.['required']">This field is required</mat-error>
     </mat-form-field>
     <mat-error *ngIf="frm.errors?.['passwordCompare']">
-      The confirmation does not match the password</mat-error>
+      Passwords do not match</mat-error>
 
     <mat-checkbox #agreement="ngModel" name="agreement" [(ngModel)]="user.agreement" required>I agree with the
       terms</mat-checkbox>
