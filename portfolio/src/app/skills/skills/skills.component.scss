@@ -7,7 +7,12 @@
   margin-bottom: 50px;
 }
 
-.centralize {    
-    display:block;
-    text-align: center;
+.skill {
+  display: flex;
+  flex-direction: column;   
+  text-align: center;
+}
+
+.skill-icon {
+  align-self: center;
 }
