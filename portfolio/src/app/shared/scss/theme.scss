@@ -2,30 +2,30 @@
 
 @include mat.core();
 
-$my-primary: mat.define-palette(mat.$blue-palette, 600);
-$my-accent: mat.define-palette(mat.$blue-gray-palette, 200);
-$my-warn: mat.define-palette(mat.$red-palette, A700);
+$primary: mat.define-palette(mat.$blue-palette, 600);
+$accent: mat.define-palette(mat.$blue-gray-palette, 200);
+$warn: mat.define-palette(mat.$red-palette, A700);
 
-$my-theme: mat.define-light-theme((
+$theme: mat.define-light-theme((
  color: (
-   primary: $my-primary,
-   accent: $my-accent,
-   warn: $my-warn,
+   primary: $primary,
+   accent: $accent,
+   warn: $warn,
  ),
  typography: mat.define-typography-config(),
  density: 0,
 ));
 
-@include mat.core-theme($my-theme); 
+@include mat.core-theme($theme); 
 
-@include mat.button-theme($my-theme);
-@include mat.icon-theme($my-theme);
-@include mat.menu-theme($my-theme);
-@include mat.checkbox-theme($my-theme);
-@include mat.dialog-theme($my-theme);
-@include mat.form-field-theme($my-theme);
-@include mat.input-theme($my-theme);
-@include mat.progress-spinner-theme($my-theme);
-@include mat.radio-theme($my-theme);
-@include mat.table-theme($my-theme);
+@include mat.button-theme($theme);
+@include mat.icon-theme($theme);
+@include mat.menu-theme($theme);
+@include mat.checkbox-theme($theme);
+@include mat.dialog-theme($theme);
+@include mat.form-field-theme($theme);
+@include mat.input-theme($theme);
+@include mat.progress-spinner-theme($theme);
+@include mat.radio-theme($theme);
+@include mat.table-theme($theme);
 
