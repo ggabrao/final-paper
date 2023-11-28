@@ -28,25 +28,3 @@ $theme: mat.define-light-theme((
 @include mat.progress-spinner-theme($theme);
 @include mat.radio-theme($theme);
 @include mat.table-theme($theme);
-
-/* FONT SIZE SYSTEM (px)
-h1   h2   h3                  p     small
-48 / 40 / 33 / 28 / 23 / 19 / 16 /    13  / 11
- 
-Normal sized text -> 16 / 19 / 23 / 28
-Long text -> 23 / 28
-Headlines -> 48 / 40 / 33
-
-*/
-
-/* LINE HEIGHT
-
-Normal sized text -> 1.5 - 2
-Big Text ->  1 - 1.5
------Rule: The smaller font size or longer, the larger
-*/
-
-/* LETTER SPACING
-  -Headers -> Decrease if they look unnatural (0 to -4px)
-  -Short titles -> try SMALL + BOLD + INCREASED LETTER SPACING
-*/
