@@ -1,3 +1,7 @@
+.skills {
+  height: 25vh;
+}
+
 .header {
   font-size: 1.9rem;
 }
@@ -6,13 +10,10 @@
   color: red;   
 }
 
-.skills {
+.skills-grid {
   display: grid;
-  grid-template-columns: 170px 170px 170px;
-  row-gap: 30px;
-  column-gap: 30px;
-  justify-content: center;  
-  margin-bottom: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; 
 }
 
 .skill {
@@ -38,7 +39,7 @@
 .content {
   font-size: 1.6rem; 
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 
