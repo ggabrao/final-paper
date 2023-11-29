@@ -30,7 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/app/shared/scss/theme.scss",
+              "src/app/theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -94,7 +94,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/app/shared/scss/theme.scss",
+              "src/app/theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
