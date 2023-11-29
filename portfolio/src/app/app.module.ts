@@ -8,7 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { IntroComponent } from './informations/intro/intro.component';
-import { WhoComponent } from './introduction/who/who.component';
+import { WhoComponent } from './about/who.component';
 import { SkillsComponent } from './skills/skills/skills.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 import { HomeComponent } from './home/home.component';
