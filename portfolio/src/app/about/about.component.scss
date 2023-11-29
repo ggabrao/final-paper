@@ -1,16 +1,24 @@
-.info {   
-      display: flex;
-      justify-content: center;
-      margin-bottom: 50px;
+:host {
+    display:block;
+    max-width: 30vh;
 }
 
-
-.info-quote {
-   font-size: 19px;  
-   text-align: center; 
-   width: 760px;   
+.header {
+    font-size: 1.9rem;
 }
 
-.red {
-    color: red;
+.divider {
+    color: #3949AB;   
+}
+
+.content {
+    font-size: 1.6rem;
+    font-weight: 300;  
+    line-height: 1.5;   
+    text-align: center;   
+}
+
+.prm {
+    font-weight: 500;
+    color: #D50000;
 }
