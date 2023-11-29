@@ -1,0 +1,14 @@
+<header>
+  <nav>
+    <ul class="nav">
+      <a mat-button routerLink="/home">Home</a>
+      <button mat-button [matMenuTriggerFor]="menu">Demonstrations</button>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="/forms">Forms</a>
+        <a mat-menu-item routerLink="/courses">Courses</a>
+      </mat-menu>
+      <a routerLink="/resume" mat-button>Resume</a>
+      <a mat-button color="primary">Hire Me</a>
+    </ul>
+  </nav>
+</header>
