@@ -1,3 +1,11 @@
+.header {
+  font-size: 1.9rem;
+}
+
+.divider {
+  color: red;   
+}
+
 .skills {
   display: grid;
   grid-template-columns: 170px 170px 170px;
@@ -29,6 +37,8 @@
 
 .content {
   font-size: 1.6rem; 
+  font-weight: 300;
+  line-height: 1.4;
 }
 
 
