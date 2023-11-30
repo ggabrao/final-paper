@@ -1,8 +1,24 @@
 .nav {
     display: flex;   
-    justify-content: center;   
+    align-items: center;
+    justify-content: space-between;    
 }
 
+.flx {
+    display: flex;
+    gap: 3rem;
+}
 
+.logo {
+    padding-left: 10rem;
+    height: 2.3rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-right: 10rem;
+}
 
 
