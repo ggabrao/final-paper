@@ -17,6 +17,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './courses/in-memory-data.service';
 import { SpinnerComponent } from './spinner.component';
 import { ResumeComponent } from './resume/resume.component';
+import { FeaturesComponent } from './features/features.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ResumeComponent } from './resume/resume.component';
     PageNotFoundComponent,
     HomeComponent,
     SpinnerComponent,
-    ResumeComponent
+    ResumeComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,
