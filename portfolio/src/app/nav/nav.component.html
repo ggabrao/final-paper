@@ -1,18 +1,16 @@
 <header>
   <mat-toolbar class="toolbar">
     <img class="logo" src="./../../assets/gga logo.png" alt="Gabriel's logo">
-    <ul class="nav">
-      <div class="flx">
-        <a mat-button routerLink="/home">Home</a>
-        <button mat-button [matMenuTriggerFor]="menu">Demonstrations</button>
-        <mat-menu #menu="matMenu">
-          <a mat-menu-item routerLink="/forms">Forms</a>
-          <a mat-menu-item routerLink="/courses">API</a>
-          <a mat-menu-item routerLink="/website">Website</a>
-        </mat-menu>
-        <a routerLink="/resume" mat-button>Resume</a>
-      </div>
-    </ul>
+    <mat-nav-list class="nav">
+      <a mat-list-item routerLink="/home">Home</a>
+      <a mat-list-item [matMenuTriggerFor]="menu">Demonstrations</a>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="/forms">Forms</a>
+        <a mat-menu-item routerLink="/courses">API</a>
+        <a mat-menu-item routerLink="/website">Website</a>
+      </mat-menu>
+      <a mat-list-item routerLink="/resume">Resume</a>
+    </mat-nav-list>
     <div class="social">
       <a href="https://mail.google.com/mail/u/0/?fs=1&to=gguimaraesabrao@gmail.com&tf=cm" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25px" viewBox="0 0 48 48">
