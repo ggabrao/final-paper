@@ -5,7 +5,30 @@
     padding-right: 10rem;
 }
 
+.quote {
+    flex-basis:20rem;
+}
+
+.header {
+    font-size: 1.9rem;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;   
+    justify-content: space-between;
+    text-align: center;
+}
+
+.contact-prg {
+    margin-bottom:0.5rem;
+}
+
 .logo {
+  justify-self: flex-end;
+}
+
+.logo-image {
     height: 4rem;
 }
 
@@ -16,16 +39,12 @@
 
 .list {
     display: flex;
-    flex-direction: column;   
-    
+    flex-direction: column;        
 }
 
-.header {
-    font-size: 20px;
-}
-
-.footer-social {
+.social {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 2rem;
 }
 
