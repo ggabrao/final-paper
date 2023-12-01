@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    text-align: center;    
 }
 
 .header {
@@ -11,6 +10,10 @@
 
 .footer-social {
     display: flex;
-    justify-content: center;
     gap: 10px;
+}
+
+.logo {
+    padding-left: 10rem;
+    height: 2.3rem;
 }
