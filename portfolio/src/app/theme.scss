@@ -26,3 +26,4 @@ $theme: mat.define-light-theme((color: (primary: $primary,
 @include mat.progress-spinner-theme($theme);
 @include mat.radio-theme($theme);
 @include mat.table-theme($theme);
+@include mat.toolbar-theme($theme);
