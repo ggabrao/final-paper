@@ -1,12 +1,44 @@
+
+.demonstrations {
+  padding-right: 10rem;
+  padding-left:10rem;
+}
+
+.card-header {
+  font-size:4.3rem;
+  text-align: center;
+}
+
 .cards {
-    
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card {
-    max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  max-width: 18rem;
+  gap: 1rem;
+  }
+
+  .card-link {
+    align-self: center; 
   }
   
   .card-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+    width: 12rem;
   }
+
+  .title {   
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+ 
+
+  .button {       
+    width: 120px;
+    font-size: 3rem;
+  }
+
+  
