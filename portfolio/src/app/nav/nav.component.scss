@@ -1,24 +1,25 @@
 .toolbar {
     display: flex;   
-    align-items: center;
-    justify-content: space-between; 
-}
-
-.flx {
-    display: flex;
-    gap: 3rem;
+    justify-content: space-between;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    background: none;
 }
 
 .logo {
-    padding-left: 10rem;
     height: 2.3rem;
 }
 
-.social {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding-right: 10rem;
+.nav {
+    display: flex; 
+    text-align: center;  
+    flex-basis: 50rem;     
+}
+
+.social {    
+    display: flex;    
+    gap: 1rem;
+    padding-top: .8rem
 }
 
 
