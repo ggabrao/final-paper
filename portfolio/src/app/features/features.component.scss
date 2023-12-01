@@ -1,17 +1,23 @@
-
 .demonstrations {
   padding-right: 10rem;
-  padding-left:10rem;
+  padding-left: 10rem;
 }
 
-.card-header {
-  font-size:4.3rem;
+.header {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
   text-align: center;
 }
 
 .cards {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
 }
 
 .card {
@@ -19,26 +25,44 @@
   flex-direction: column;
   max-width: 18rem;
   gap: 1rem;
-  }
+}
 
-  .card-link {
-    align-self: center; 
-  }
-  
-  .card-image {
-    width: 12rem;
-  }
+.card-header {
+  font-size: 1.9rem;
+  text-align: center;
+}
 
-  .title {   
-    font-size: 1.6rem;
-    font-weight: 500;
-  }
+.card-link {
+  align-self: center;
+}
 
- 
+.card-image {
+  width: 12rem;
+}
 
-  .button {       
-    width: 120px;
-    font-size: 3rem;
-  }
+.acc {
+  scale: .85;
+}
 
-  
+.acc-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.acc-content {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.button {
+  width: 120px;
+  font-size: 3rem;
+}
+
+.start {
+  justify-self: start;
+}
+
+.end {
+  justify-self: end;
+}
