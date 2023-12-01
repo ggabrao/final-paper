@@ -2,14 +2,14 @@
   <mat-toolbar class="toolbar">
     <img class="logo" src="./../../assets/gga logo.png" alt="Gabriel's logo">
     <mat-nav-list class="nav">
-      <a mat-list-item routerLink="/home">Home</a>
-      <a mat-list-item [matMenuTriggerFor]="menu">Demonstrations</a>
+      <a mat-list-item routerLink="/home" class="item">Home</a>
+      <a mat-list-item [matMenuTriggerFor]="menu" class="item">Demonstrations</a>
       <mat-menu #menu="matMenu">
         <a mat-menu-item routerLink="/forms">Forms</a>
         <a mat-menu-item routerLink="/courses">API</a>
         <a mat-menu-item routerLink="/website">Website</a>
       </mat-menu>
-      <a mat-list-item routerLink="/resume">Resume</a>
+      <a mat-list-item routerLink="/resume" class="item">Resume</a>
     </mat-nav-list>
     <div class="social">
       <a href="https://mail.google.com/mail/u/0/?fs=1&to=gguimaraesabrao@gmail.com&tf=cm" target="_blank">
