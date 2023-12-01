@@ -23,7 +23,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  max-width: 18rem;
   gap: 1rem;
 }
 
@@ -37,11 +36,12 @@
 }
 
 .card-image {
-  width: 12rem;
+  width: 15rem;
 }
 
 .acc {
   scale: .85;
+  max-width: 22rem;
 }
 
 .acc-title {
