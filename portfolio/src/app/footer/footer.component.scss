@@ -6,7 +6,11 @@
 }
 
 .quote {
-    flex-basis:20rem;
+    flex-basis: 25rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .header {
@@ -15,17 +19,17 @@
 
 .contact {
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     justify-content: space-between;
     text-align: center;
 }
 
 .contact-prg {
-    margin-bottom:0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .logo {
-  justify-self: flex-end;
+    justify-self: flex-end;
 }
 
 .logo-image {
@@ -39,7 +43,7 @@
 
 .list {
     display: flex;
-    flex-direction: column;        
+    flex-direction: column;
 }
 
 .social {
@@ -48,3 +52,7 @@
     gap: 2rem;
 }
 
+.left {
+    text-align: left;
+    margin-bottom: 2rem;
+}
