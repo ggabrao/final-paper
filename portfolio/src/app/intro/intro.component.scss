@@ -1,5 +1,5 @@
 .intro {  
-  display: flex;  
+  display: flex; 
   gap: 2rem;
   justify-content: center; 
 }
@@ -26,10 +26,20 @@
 }
 
 .intro-occupation {
-  font-size: 4rem;
-  font-weight: 500;   
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+}
+
+.occupation {
+  font-size: 4.8rem;
+  font-weight: 700;
+  letter-spacing: -1px;  
+  line-height: 5.5rem;
+}
+
+.logo {
+  max-width: 8.5%; 
 }
 
 .learn {
