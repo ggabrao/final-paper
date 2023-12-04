@@ -1,18 +1,4 @@
 :host {
     display: block;
-    max-width:120rem;
+    max-width: 120rem;
 }
-
-.grd {
-    display: grid; 
-    grid-template-columns: 50rem 50rem; 
-    grid-template-rows: 1fr 1fr;  
-    justify-content: center;   
-}
-
-.skills {
-    grid-column: 2;
-    grid-row: 2; 
-}
-
-
