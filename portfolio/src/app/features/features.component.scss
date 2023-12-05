@@ -27,7 +27,9 @@
 .card {
   display: flex;
   flex-direction: column;
- 
+  align-items: center; 
+  gap: 1.5rem; 
+  flex: 1 0 22rem;
 }
 
 .card-header {
@@ -37,26 +39,23 @@
   line-height: 1.15;
 }
 
-.card-link {
- 
-}
-
-.card-image {
-  
+.card-link {  
+  max-width: 60%;
+  cursor:pointer;
 }
 
 .acc {
-  // scale: .85;
-  // max-width: 22rem;
+  scale: .8;
+  width: 22rem;  
 }
 
 .acc-title {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 500;
 }
 
 .acc-content {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 400;
 }
 
