@@ -1,5 +1,5 @@
-.toolbar {      
-   background: none;
+.toolbar {
+    background: none;
 }
 
 .logo {
@@ -7,23 +7,17 @@
 }
 
 .nav {
-    display: flex; 
-    text-align: center;   
+    display: flex;
     flex: 1 0 auto;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .item {
-   padding: 0; 
-   flex: 0 0 15rem;
+    flex: 0 1 9rem;
 }
 
-.social {    
-    display: flex;    
+.social {
+    display: flex;
     gap: 1rem;
-    padding-top: 0.8rem;
+    padding-top: 0.2rem;
 }
-
-
-
-
