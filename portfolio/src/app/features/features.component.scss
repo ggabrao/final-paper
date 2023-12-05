@@ -25,11 +25,11 @@
 }
 
 .card {
+  max-width: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center; 
   gap: 1.5rem; 
-  flex: 1 0 22rem;
 }
 
 .card-header {
@@ -39,35 +39,23 @@
   line-height: 1.15;
 }
 
-.card-link {  
-  max-width: 60%;
+.card-img {  
+  max-width: 12rem;
   cursor:pointer;
 }
 
-.acc {
-  scale: .8;
-  width: 22rem;  
+.centralize {
+ text-align: center;
 }
 
-.acc-title {
-  font-size: 1.9rem;
-  font-weight: 500;
+.card-item {
+  margin-left: 6.5rem;
+ }
+
+.card-item2 {
+  margin-left: 1rem;
 }
 
-.acc-content {
-  font-size: 1.9rem;
-  font-weight: 400;
-}
-
-.button {
-  width: 120px;
-  font-size: 3rem;
-}
-
-.start {
-  justify-self: start;
-}
-
-.end {
-  justify-self: end;
+.card-item3 {
+  margin-left: 2.7rem;
 }
