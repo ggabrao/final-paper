@@ -4,14 +4,18 @@
 }
 
 .header {
-  font-size: 2.8rem;
+  font-size: 3.3rem;
+  font-weight: 700;
+  letter-spacing: -0.8px;  
+  line-height: 3.6;
   text-align: center;
 }
 
 .paragraph {
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.5;
+  font-size: 1.9rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 3;
   text-align: center;
 }
 
@@ -24,11 +28,14 @@
   display: flex;
   flex-direction: column;
   flex-basis: 21rem;
-  gap: 1rem;
+  flex: 0 1 21rem;
 }
 
 .card-header {
-  font-size: 1.9rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 2.6;
   text-align: center;
 }
 
