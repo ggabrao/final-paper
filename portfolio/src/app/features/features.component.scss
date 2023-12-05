@@ -6,8 +6,8 @@
 .header {
   font-size: 3.3rem;
   font-weight: 700;
-  letter-spacing: -0.8px;  
-  line-height: 3.6;
+  letter-spacing: -0.5px;  
+  line-height: 2;
   text-align: center;
 }
 
@@ -15,20 +15,18 @@
   font-size: 1.9rem;
   font-weight: 400;
   letter-spacing: normal;
-  line-height: 3;
+  line-height: 1.6;
   text-align: center;
 }
 
 .cards {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .card {
   display: flex;
-  flex-direction: column;
-  flex-basis: 21rem;
-  flex: 0 1 21rem;
+  flex-direction: column;   
 }
 
 .card-header {
@@ -40,11 +38,12 @@
 }
 
 .card-link {
-  align-self: center;
+  display: inline-block;
+  justify-self: center;
 }
 
 .card-image {
-  width: 15rem;
+  width: 50%;
 }
 
 .acc {
