@@ -1,10 +1,7 @@
 :host {
-  display: block;
-  margin-bottom: 80px;
-  align-self: flex-end;
-}
-
-.skills {
+  width: 85%;  
+  margin: auto;
+  margin-bottom: 128px;
 }
 
 .header {
@@ -18,14 +15,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 4rem;
-  
+
 }
 
 .skill {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 
 .material-symbols-outlined {
