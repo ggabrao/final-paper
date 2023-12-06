@@ -1,14 +1,10 @@
-:host {
-    display: block;
+.toolbar {    
+    height: 5rem;
     margin-bottom: 24px;
-  }
-
-.toolbar {
-    background: none;
 }
 
 .logo {
-    height: 2.3rem;
+    height: 2.5rem;
 }
 
 .nav {
@@ -21,8 +17,3 @@
     flex: 0 1 9rem;
 }
 
-.social {
-    display: flex;
-    gap: 1rem;
-    padding-top: 0.2rem;
-}
