@@ -33,7 +33,25 @@
 .header {
     font-size: 1.9rem;
     font-weight: 500;
-    line-height: 1.15;
+    line-height: 1.15;  
+}
+
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;    
+    gap: 3rem;
+}
+
+.item {
+    color:white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+
+.item:hover {
+    color:white;
+    text-decoration: underline;
 }
 
 .contact-prg {
@@ -45,12 +63,15 @@
 .logo-image {
     width: 12rem;
     margin-top:5rem; 
-    align-self: center;
-     
+    align-self: center;     
 }
 
 .copy {
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 1.6;
+}
+
+.hlist {
+    margin-bottom:1.5rem;
 }
