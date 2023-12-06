@@ -1,11 +1,15 @@
-.footer {
-    max-width: 80rem;
-    margin: auto;
+:host {
+    display: block;
+    background-color: #3949AB;
+    height: 25rem;
 }
 
-.footer-container {
+.footer {
+    max-width: 72rem;
+    margin: auto;
     display: flex;
     justify-content: space-between;
+    color: white;
 }
 
 .quote {
@@ -13,12 +17,6 @@
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.6;
-}
-
-.header {
-    font-size: 1.9rem;
-    font-weight: 700;
-    line-height: 1.15;
 }
 
 .left {
@@ -29,33 +27,29 @@
 .contact {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     text-align: center;
+    align-items: center;
 }
 
-.social {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+.header {
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 1.15;
 }
 
 .contact-prg {
     font-size: 1.6rem;
     font-weight: 400;
-    line-height: 1.6; 
+    line-height: 1.6;
 }
 
 .logo-image {
-    height: 4rem;
+    width: 12rem;
+    margin-top:5rem;
 }
 
 .copy {
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 1.6;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
 }
