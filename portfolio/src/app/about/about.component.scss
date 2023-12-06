@@ -1,13 +1,13 @@
-.about {
-    max-width: 80rem;  
-    margin: auto;   
+:host {
+    width: 50rem;
+    margin-bottom: 80px;  
 }
 
 .header {
     font-size: 2.3rem;
     font-weight: 700;
     letter-spacing: -0.5px;
-    line-height: 1.15;
+    line-height: 1.15;   
 }
 
 .content {
