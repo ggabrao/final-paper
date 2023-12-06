@@ -1,22 +1,24 @@
 .footer {
-        max-width: 80rem;  
-        margin: auto;       
+    max-width: 80rem;
+    margin: auto;
 }
+
 .footer-container {
     display: flex;
     justify-content: space-between;
 }
 
 .quote {
-    flex-basis: 25rem;
+    flex: 0 1 25rem;
     font-size: 1.6rem;
-    font-weight: 300;
-    line-height: 1.5;
-    text-align: center;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 .header {
     font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.15;
 }
 
 .left {
@@ -38,7 +40,9 @@
 }
 
 .contact-prg {
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6; 
 }
 
 .logo-image {
@@ -48,6 +52,7 @@
 .copy {
     font-size: 1.3rem;
     font-weight: 300;
+    line-height: 1.6;
 }
 
 .list {
