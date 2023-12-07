@@ -1,10 +1,16 @@
+:host {
+    display:block;
+    max-width: 100rem;
+    margin: auto;
+}
+
 .description {
     margin-bottom: 30px;
 }
 
 .forms {
     display:flex;  
-    justify-content: space-around;   
+    justify-content: space-between;      
 }
 
 

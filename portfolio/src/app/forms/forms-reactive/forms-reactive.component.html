@@ -17,7 +17,7 @@
     <mat-form-field class="full-width"><mat-label>Phone number</mat-label>
       <input formControlName="phone" type="tel" matInput placeholder="1 555 5555555" />
       <mat-hint *ngIf="!userForm.get('phone')?.valid">Only numbers and spaces</mat-hint>
-      <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone number must follow the pattern</mat-error>
+      <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone must follow the pattern</mat-error>
       <mat-error *ngIf="userForm.get('phone')?.errors?.['required']">Phone number is required</mat-error>
     </mat-form-field>
 

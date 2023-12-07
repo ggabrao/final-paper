@@ -1,20 +1,21 @@
+:host {
+  flex: 0 1 40rem;
+  margin-left: 2%;
+}
+
 .form-title {
     margin-bottom: 30px;
 }
-
-.form {
-    min-width: 150px;
-    max-width: 400px;
-    width: 100%;   
-  }
   
   .full-width {
     width: 70%;
-  }
+  } 
 
-  .mat-mdc-radio-button ~ .mat-mdc-radio-button {
-    margin-left: 16px;
+  .submitted {
+    display: flex;
+    color: green;
   }
+ 
 
  .radio-label {
   display:block;
@@ -24,7 +25,3 @@
   font-size:14px;
 }
 
-.submitted {
-  display: flex;
-  color: green;
-}
