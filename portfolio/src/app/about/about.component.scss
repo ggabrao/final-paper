@@ -1,6 +1,5 @@
 :host {    
-    max-width: 85%;  
-    margin: auto; 
+    max-width: 47%;      
     margin-bottom: 6.4rem;       
 }
 
@@ -12,7 +11,7 @@
 }
 
 .divider {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .content {
@@ -20,6 +19,7 @@
     font-weight: 400;
     letter-spacing: normal;
     line-height: 1.6; 
+    text-align: justify;
 }
 
 .prm {
