@@ -1,6 +1,7 @@
 .toolbar {
     height: 5rem;
     margin-bottom: 48px;
+    justify-content: space-between;
 }
 
 .logo {
@@ -8,14 +9,13 @@
 }
 
 .nav {
-    display: flex;
     flex: 1 0 auto;
-    justify-content: center;
-    transform: translateY(1px);
+    position: absolute;  
+    left: 50%; 
+    transform: translate(-50%, 1px);
 }
 
 .item {
-    flex: 0 1 9rem;
     font-size: 1.5rem;
 }
 
