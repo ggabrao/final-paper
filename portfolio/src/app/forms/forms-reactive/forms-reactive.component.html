@@ -21,13 +21,12 @@
       <mat-error *ngIf="userForm.get('phone')?.errors?.['required']">Phone number is required</mat-error>
     </mat-form-field>
 
-
     <div formArrayName="addresses">
       <mat-form-field class="full-width" *ngFor="let address of addresses.controls; let i = index">
         <mat-label>Address {{i+1}}</mat-label>
         <input [formControlName]="i" type="text" matInput />
       </mat-form-field>
-      <button class="address-button" type="button" (click)="addAddress()" mat-icon-button color="primary">
+      <button class="material-symbols-outlined" mat-icon-button (click)="addAddress()" >
         <mat-icon>add_circle</mat-icon>
       </button>
     </div>
@@ -42,7 +41,6 @@
           Password must have at least 4 characteres</mat-error>
       </mat-form-field>
 
-
       <mat-form-field class="full-width"><mat-label>Confirm Password</mat-label>
         <input formControlName="confirmPassword" type="password" matInput />
         <mat-error *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">This field is
@@ -52,7 +50,6 @@
 
     <mat-error class="notMatch" *ngIf="confirmMessage">{{ confirmMessage }}</mat-error>
     <!-- This validation is reactive -->
-
 
     <mat-checkbox formControlName="agreement" class="agreement-checkbox">I agree with the terms</mat-checkbox>
 
@@ -71,3 +68,4 @@
     <p>Submitted <mat-icon inline="true">done</mat-icon></p>
   </div>
 </main>
+

@@ -27,3 +27,5 @@ $theme: mat.define-light-theme((color: (primary: $primary,
 @include mat.radio-theme($theme);
 @include mat.table-theme($theme);
 @include mat.toolbar-theme($theme);
+@include mat.icon-button-theme($theme);
+
