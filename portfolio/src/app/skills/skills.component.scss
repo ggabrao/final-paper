@@ -1,7 +1,7 @@
 :host {
   width: 85%;  
   margin: auto;
-  margin-bottom: 128px;
+  margin-bottom: 8rem;
 }
 
 .header {
@@ -9,6 +9,10 @@
   font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1.15;
+}
+
+.divider {
+  margin-bottom: 10px;
 }
 
 .skills-grid {
