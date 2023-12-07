@@ -1,5 +1,5 @@
 :host {  
-  margin-bottom: 10rem; 
+  margin-bottom: 6.4rem; 
 }
 
 .demonstrations {
@@ -13,15 +13,17 @@
   letter-spacing: -0.5px;  
   line-height: 1.15;
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
+
 .paragraph {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.6;
   text-align: center;
-  margin-bottom: 7rem;
+  margin-bottom: 4.5rem;
 }
 
 .cards {
@@ -34,7 +36,6 @@
   display: flex;
   flex-direction: column;
   align-items: center; 
-  gap: 1.5rem; 
 }
 
 .card-header {
@@ -42,6 +43,7 @@
   font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1.15;
+  margin-bottom:1.5rem;
 }
 
 .card-img {  
@@ -54,7 +56,7 @@
 }
 
 .card-item {
-  margin-left: 6.5rem;
+  margin-left: 6.5rem;  
  }
 
 .card-item2 {
