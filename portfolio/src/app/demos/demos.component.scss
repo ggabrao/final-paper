@@ -32,10 +32,25 @@
 }
 
 .card {
-  max-width: 15rem;
+  width: 24rem;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;  
+  cursor:pointer;
+ 
+}
+
+.card:hover.red {
+  box-shadow: 0 10px 15px 0 rgba(255, 0, 0, 0.706); 
+  
+}
+
+.card:hover.blue {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 255, 0.752); 
+}
+
+.card:hover.green {
+  box-shadow: 0 10px 15px 0 rgba(0, 128, 0, 0.697); 
 }
 
 .card-header {
@@ -44,11 +59,12 @@
   letter-spacing: -0.5px;
   line-height: 1.15;
   margin-bottom:1.5rem;
+  padding-top:2rem
+
 }
 
 .card-img {  
   max-width: 12rem;
-  cursor:pointer;
 }
 
 .centralize {
@@ -56,7 +72,7 @@
 }
 
 .card-item {
-  margin-left: 6.5rem;  
+  margin-left: 2.5rem;  
  }
 
 .card-item2 {
