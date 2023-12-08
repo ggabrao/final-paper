@@ -1,17 +1,18 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CoursesService } from './courses.service';
 import { ICourse } from './course.model';
 import { DialogFormComponent } from './dialog-form/dialog-form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
+import { FooterService } from '../footer.service';
 
 @Component({
   selector: 'crs-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss']
 })
-export class CoursesComponent implements OnInit {
+export class CoursesComponent implements OnInit, OnDestroy {
 
   displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove'];
 
@@ -20,12 +21,20 @@ export class CoursesComponent implements OnInit {
   @ViewChild(MatTable)
   table!: MatTable<ICourse>;
 
-  constructor(private dataService: CoursesService, public dialog: MatDialog, private route:ActivatedRoute) {
+  constructor(private dataService: CoursesService, public dialog: MatDialog, private route: ActivatedRoute,
+    private footerService: FooterService) {
   }
 
   ngOnInit() {
+    this.footerService.hide();
     this.route.data.subscribe(({ coursesResolver }) => this.courses = coursesResolver);
+
   };
+
+  ngOnDestroy(): void {
+    this.footerService.show();
+  }
+
 
 
   deleteData(course: ICourse): void {
