@@ -1,20 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FooterService } from '../footer.service';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-resume',
+  selector: 'rsm-resume',
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.scss'
 })
-export class ResumeComponent implements OnInit, OnDestroy {
-
-  constructor(private footerService:FooterService) {}
-
-  ngOnInit(): void {
-    this.footerService.hide();
-  }
-  ngOnDestroy(): void {
-    this.footerService.show();
-  }
+export class ResumeComponent {
 
 }

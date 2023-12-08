@@ -16,7 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './courses/in-memory-data.service';
 import { SpinnerComponent } from './spinner.component';
-import { ResumeComponent } from './resume/resume.component';
 import { DemosComponent } from './demos/demos.component';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { DemosComponent } from './demos/demos.component';
     PageNotFoundComponent,
     HomeComponent,
     SpinnerComponent,
-    ResumeComponent,
     DemosComponent
   ],
   imports: [
