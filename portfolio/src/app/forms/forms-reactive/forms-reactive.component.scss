@@ -4,24 +4,23 @@
 }
 
 .form-title {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
-  
-  .full-width {
-    width: 70%;
-  } 
 
-  .submitted {
-    display: flex;
-    color: green;
-  }
- 
+.field {
+  width: 70%;
+}
 
- .radio-label {
-  display:block;
- }
+.submitted {
+  display: flex;
+  color: green;
+}
+
+
+.radio-label {
+  display: block;
+}
 
 .notMatch {
-  font-size:14px;
+  font-size: 14px;
 }
-
