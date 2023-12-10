@@ -1,7 +1,72 @@
 <section>
-  <h1>Basic Knowledge</h1>
-  <p class="description">Description of forms...</p>
+  <h1>Basics</h1>
+  <p class="description">Angular provides two techniques for building forms: template&hyphen;driven and reactive.
+  </p>
+  <p>Selecting the right approach should be a decision of the team, but in general lines, complex scenarios can be
+    handled better with reactive forms.
+  </p>
+  <p>Here are some pros and cons of each one: </p>
+  <div>
+    <h2>Reactive</h2>
+    <mat-chip class="good">
+      <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
+      Scalable, reusable and testable
+    </mat-chip>
+    <mat-chip class="good">
+      <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
+      Easier to perform actions on value changes
+    </mat-chip>
+    <mat-chip class="good">
+      <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
+      Easier to dynamically add input elements
+    </mat-chip>
+    <mat-chip class="good">
+      <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
+      Can benefit from reactive transformations
+    </mat-chip>
+    <mat-chip class="good">
+      <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
+      No template between code and data structures
+    </mat-chip>
+    <mat-chip class="bad">
+      <mat-icon matChipAvatar class="material-symbols-outlined">thumb_down</mat-icon>
+      Require more code
+    </mat-chip>
+    <mat-chip class="bad">
+      <mat-icon matChipAvatar class="material-symbols-outlined">thumb_down</mat-icon>
+      Harder to be implemented
+    </mat-chip>
+  </div>
+  <div>
+    <h2>Template&hyphen;Driven</h2>
+    <mat-chip class="good">
+      <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
+      Straightforward and easier to be implemented
+    </mat-chip>
+    <mat-chip class="good">
+      <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
+      Very similar to HTML forms
+    </mat-chip>
+    <mat-chip class="good">
+      <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
+      Most of the work is in the template
+    </mat-chip>
+    <mat-chip class="bad">
+      <mat-icon matChipAvatar class="material-symbols-outlined">thumb_down</mat-icon>
+      Not as scalable, reusable or testable
+    </mat-chip>
+    <mat-chip class="bad">
+      <mat-icon matChipAvatar class="material-symbols-outlined">thumb_down</mat-icon>
+      Harder to use features required in complex scenarios
+    </mat-chip>
+    <mat-chip class="bad">
+      <mat-icon matChipAvatar class="material-symbols-outlined">thumb_down</mat-icon>
+      Less flexibility and control over the form
+    </mat-chip>
+  </div>
 </section>
+
+
 
 <main class="forms">
   <frm-reactive></frm-reactive>
