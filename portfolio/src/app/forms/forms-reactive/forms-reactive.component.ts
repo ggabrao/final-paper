@@ -11,6 +11,7 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
+import { MatTooltip } from '@angular/material/tooltip';
 import { debounceTime } from 'rxjs';
 
 export const passwordCompareValidator: ValidatorFn = (
@@ -37,7 +38,7 @@ export const passwordCompareValidator: ValidatorFn = (
 export class FormsReactiveComponent implements OnInit {
   userForm!: FormGroup;
   confirmMessage!: string;
-  submitted:boolean = false;
+  submitted: boolean = false;
 
   private validationMessage: any = {
     passwordCompare: 'Passwords do not match',
@@ -77,7 +78,7 @@ export class FormsReactiveComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted = true;    
+    this.submitted = true;
   }
 
   setNotification(notificationInput: string): void {
@@ -108,4 +109,5 @@ export class FormsReactiveComponent implements OnInit {
   addAddress(): void {
     this.addresses.push(this.fb.control(''));
   }
+
 }
