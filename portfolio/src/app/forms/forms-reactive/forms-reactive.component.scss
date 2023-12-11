@@ -10,15 +10,6 @@
   width: 28rem;
 }
 
-.submitted {
-  display: flex;
-  color: green;
-}
-
-.radio-label {
-  display: block;
-}
-
 .notMatch {
   margin-top: -20px;
   margin-left: 20px;
@@ -26,4 +17,14 @@
   font-weight: 400;
   letter-spacing: 0.4px;
   line-height: 20px;
+}
+
+.checkbox {
+  margin-bottom: 5px;
+}
+
+
+.submitted {
+  color: green;
+  margin-left: 10px;
 }

@@ -67,20 +67,24 @@
     <mat-error class="notMatch" *ngIf="confirmMessage">{{ confirmMessage }}</mat-error>
     <!-- This validation is reactive -->
 
-    <mat-checkbox formControlName="agreement" class="checkbox">I agree with the terms</mat-checkbox>
+    <div class="radio">
+      <mat-radio-group formControlName="notifications">
+        <mat-label>Notifications:</mat-label>
+        <mat-radio-button value="email">Email</mat-radio-button>
+        <mat-radio-button value="text">Phone</mat-radio-button>
+      </mat-radio-group>
+    </div>
 
-    <mat-radio-group formControlName="notifications">
-      <mat-label class="radio-label">Receive notifications via:</mat-label>
-      <mat-radio-button value="email">Email</mat-radio-button>
-      <mat-radio-button value="text">Phone</mat-radio-button>
-    </mat-radio-group><br><br>
+    <div>
+      <mat-checkbox formControlName="agreement" class="checkbox">I agree with the terms</mat-checkbox>
+    </div>
 
-    <button type="submit" mat-raised-button color="primary" [disabled]="!userForm.valid">
-      Sign Up
-    </button>
+    <div class="submit">
+      <button type="submit" mat-raised-button color="primary" [disabled]="!userForm.valid">
+        Sign Up
+      </button>
+      <span *ngIf="submitted" class="submitted">Submitted</span>
+    </div>
   </form>
 
-  <div *ngIf="submitted" class="submitted">
-    <p>Submitted <mat-icon inline="true">done</mat-icon></p>
-  </div>
 </main>
