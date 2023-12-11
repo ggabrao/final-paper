@@ -30,7 +30,7 @@
 
     <mat-form-field class="field"><mat-label>Password</mat-label>
       <input #password="ngModel" type="password" name="password" [(ngModel)]="user.password" matInput required
-        minlength="4" maxlength="6" placeholder="Between 4 and 6 characteres"/>
+        minlength="4" maxlength="6" placeholder="Between 4 and 6 characteres" />
       <mat-error *ngIf="password.errors?.['required']">Password is required</mat-error>
       <mat-error *ngIf="password.errors?.['minlength']">
         Password must have at least 4 characteres</mat-error>
@@ -41,19 +41,18 @@
         matInput required />
       <mat-error *ngIf="confirmPassword.errors?.['required']">This field is required</mat-error>
     </mat-form-field>
-    <mat-error *ngIf="frm.errors?.['passwordCompare']">
+    <mat-error *ngIf="frm.errors?.['passwordCompare']" class="notMatch">
       Passwords do not match</mat-error>
 
-    <mat-checkbox #agreement="ngModel" name="agreement" [(ngModel)]="user.agreement" required>I agree with the
+    <mat-checkbox class="checkbox" #agreement="ngModel" name="agreement" [(ngModel)]="user.agreement" required>I agree
+      with the
       terms</mat-checkbox>
-    <br /><br />
-    <button type="submit" [disabled]="!frm.form.valid" mat-raised-button color="primary">
-      Sign Up
-    </button>
+
+    <div class="submit">
+      <button type="submit" mat-raised-button color="primary" [disabled]="!frm.form.valid">
+        Sign Up
+      </button>
+      <span *ngIf="submitted" class="submitted">Submitted</span>
+    </div>
   </form>
-
-  <div *ngIf="submitted" class="submitted">
-    <p>Submitted <mat-icon inline="true">done</mat-icon></p>
-  </div>
-
 </main>
