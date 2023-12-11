@@ -11,7 +11,6 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
-import { MatTooltip } from '@angular/material/tooltip';
 import { debounceTime } from 'rxjs';
 
 export const passwordCompareValidator: ValidatorFn = (

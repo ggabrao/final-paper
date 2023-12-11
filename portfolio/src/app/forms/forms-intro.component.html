@@ -1,16 +1,22 @@
 <section class="container">
-  <h1>Basics</h1>
-  <p class="description">Angular provides two techniques for building forms: template&hyphen;driven and reactive.
+  <h1 class="title">Basics</h1>
+  <p class="prg">Angular provides two techniques for building forms: <b>template&hyphen;driven</b> and
+    <b>reactive</b>.
   </p>
-  <p>They share the same basic concepts, but template&hyphen;driven forms are built mostly in the template, relying
+  <p class="prg">They share the same basic concepts, but template&hyphen;driven forms are built mostly in the
+    <b>template</b>,
+    relying
     heavily on
-    two&hyphen;way data binding. Reactive forms are centered in the component class. </p>
-  <p>Selecting the right approach should be a decision of the team, but in general lines, complex scenarios can be
+    two&hyphen;way data binding, while reactive forms are centered in the <b>component class</b>.
+  </p>
+  <p class="prg">Selecting the right approach should be a decision of the team, but in general lines, complex
+    scenarios
+    can be
     handled better with reactive forms.
   </p>
-  <p>Here are some pros and cons of each one: </p>
-  <div>
-    <h2>Reactive</h2>
+  <p class="prg">Here are some <b>pros and cons</b> of each one: </p>
+  <div class="chips">
+    <h2 class="title">Reactive</h2>
     <mat-chip class="good">
       <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
       Scalable, reusable and testable
@@ -27,24 +33,20 @@
       <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
       Can benefit from reactive transformations
     </mat-chip>
-    <mat-chip class="good">
-      <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
-      No template between code and data structures
-    </mat-chip>
     <mat-chip class="bad">
       <mat-icon matChipAvatar class="material-symbols-outlined">thumb_down</mat-icon>
       Require more code
     </mat-chip>
     <mat-chip class="bad">
       <mat-icon matChipAvatar class="material-symbols-outlined">thumb_down</mat-icon>
-      Harder to be implemented
+      Harder to use
     </mat-chip>
   </div>
-  <div>
-    <h2>Template&hyphen;Driven</h2>
+  <div class="chips">
+    <h2 class="title">Template&hyphen;Driven</h2>
     <mat-chip class="good">
       <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
-      Straightforward and easier to be implemented
+      Straightforward and easier to use
     </mat-chip>
     <mat-chip class="good">
       <mat-icon matChipAvatar class="material-symbols-outlined">favorite</mat-icon>
@@ -60,19 +62,20 @@
     </mat-chip>
     <mat-chip class="bad">
       <mat-icon matChipAvatar class="material-symbols-outlined">thumb_down</mat-icon>
-      Harder to use features required in complex scenarios
+      Harder to use in complex scenarios
     </mat-chip>
     <mat-chip class="bad">
       <mat-icon matChipAvatar class="material-symbols-outlined">thumb_down</mat-icon>
       Less flexibility and control over the form
     </mat-chip>
   </div>
-  <h2>Demos</h2>
-  <p>The following forms don't submit anything. They were build for testing purpose. </p>
-  <p>They contain a variety of different techniques that could be applied in real application forms, as well as the
-    application of the best
-    practices and Angular Material components.</p>
-  <p>The blue info buttons have common content between the two types, while the red ones show more complex features,
+  <h2 class="title">Demos</h2>
+  <p class="prg">The following forms <b>don't submit anything</b>. They were build for <b>testing purpose</b>. </p>
+  <p class="prg">They contain a variety of different techniques that could be applied in a real application, with best
+    practices in use and Angular Material components.</p>
+  <p class="prg">The <b class="blue">blue info</b> have common content between the two types, while the <b
+      class="red">red ones</b> show more complex
+    features,
     which are easily done with the Reactive approach.</p>
 </section>
 
