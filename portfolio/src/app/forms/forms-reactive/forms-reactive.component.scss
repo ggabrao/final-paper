@@ -1,6 +1,5 @@
 :host {
   flex: 0 1 45rem;
-  margin-left: 2%;
 }
 
 .form-title {
@@ -10,6 +9,7 @@
 .field {
   width: 28rem;
 }
+
 
 .submitted {
   display: flex;
@@ -22,5 +22,10 @@
 }
 
 .notMatch {
-  font-size: 14px;
+  margin-top: -20px;
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 20px;
 }

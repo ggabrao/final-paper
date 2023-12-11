@@ -7,10 +7,9 @@
       <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Name is required</mat-error>
       <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Name must contain only letters</mat-error>
     </mat-form-field>
-    <button type="button" mat-flat-button
+    <button type="button" mat-icon-button
       matTooltip="This field uses Angular's build-in validations and display different error messages accordingly to the type of error"
-      matTooltipPosition="after" color="accent">Info</button>
-
+      matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
 
     <mat-form-field class="field"><mat-label>Email</mat-label>
       <input formControlName="email" type="email" matInput placeholder="name@domain.com" />
@@ -24,19 +23,18 @@
       <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone must follow the pattern</mat-error>
       <mat-error *ngIf="userForm.get('phone')?.errors?.['required']">Phone number is required</mat-error>
     </mat-form-field>
-    <button type="button" mat-flat-button 
+    <button type="button" mat-icon-button
       matTooltip="This field has a validation rule adjusted at runtime: becomes required only if the user selects to receive notifications via phone"
-      matTooltipPosition="after" color="warn">Info</button>
+      matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="warn">info</mat-icon></button>
 
     <div formArrayName="addresses">
       <mat-form-field class="field" *ngFor="let address of addresses.controls; let i = index">
         <mat-label>Address {{i+1}}</mat-label>
         <input [formControlName]="i" type="text" matInput />
       </mat-form-field>
-      <button type="button" class="material-symbols-outlined" mat-icon-button (click)="addAddress()" color="warn"
-      matTooltip="Add another line"
+      <button type="button" mat-icon-button (click)="addAddress()" matTooltip="Add another line"
         matTooltipPosition="after">
-        <mat-icon>add_circle</mat-icon>
+        <mat-icon class="material-symbols-outlined" color="warn">add_circle</mat-icon>
       </button>
     </div>
 
@@ -48,27 +46,28 @@
         <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['minlength']">
           Password must have at least 4 characteres</mat-error>
       </mat-form-field>
-      <button type="button" mat-flat-button
+      <button type="button" mat-icon-button
         matTooltip="This field uses a custom validator instead of the Angular's build-in validators"
-        matTooltipPosition="after" color="accent">Info</button>
+        matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
 
       <mat-form-field class="field"><mat-label>Confirm Password</mat-label>
         <input formControlName="confirmPassword" type="password" matInput />
         <mat-error *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">This field is
           required</mat-error>
       </mat-form-field>
-      <button type="button" mat-flat-button
+
+      <button type="button" mat-icon-button
         matTooltip="Here we have a Cross-Field Validator, used to perform validation for a group, which in case is the password and the its confirmation"
-        matTooltipPosition="after" color="accent">Info</button>
-      <button type="button" mat-flat-button
+        matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
+      <button type="button" mat-icon-button
         matTooltip="In the password group, we also have a reactive transformation (debounceTime) that allows the user to finish typing before showing the error message, providing a better experience"
-        matTooltipPosition="after" color="warn">Info</button>
+        matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="warn">info</mat-icon></button>
     </div>
 
     <mat-error class="notMatch" *ngIf="confirmMessage">{{ confirmMessage }}</mat-error>
     <!-- This validation is reactive -->
 
-    <mat-checkbox formControlName="agreement" class="agreement-checkbox">I agree with the terms</mat-checkbox>
+    <mat-checkbox formControlName="agreement" class="checkbox">I agree with the terms</mat-checkbox>
 
     <mat-radio-group formControlName="notifications">
       <mat-label class="radio-label">Receive notifications via:</mat-label>
