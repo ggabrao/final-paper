@@ -10,7 +10,20 @@
   width: 100%;
 }
 
+.notMatch {
+  margin-top: -20px;
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 20px;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+}
+
 .submitted {
-  display: flex;
   color: green;
+  margin-left: 10px;
 }
