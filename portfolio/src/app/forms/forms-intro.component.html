@@ -2,6 +2,9 @@
   <h1>Basics</h1>
   <p class="description">Angular provides two techniques for building forms: template&hyphen;driven and reactive.
   </p>
+  <p>They share the same basic concepts, but template&hyphen;driven forms are built mostly in the template, relying
+    heavily on
+    two&hyphen;way data binding. Reactive forms are centered in the component class. </p>
   <p>Selecting the right approach should be a decision of the team, but in general lines, complex scenarios can be
     handled better with reactive forms.
   </p>
@@ -64,10 +67,14 @@
       Less flexibility and control over the form
     </mat-chip>
   </div>
+  <h2>Demos</h2>
+  <p>The following forms don't submit anything. They were build for testing purpose. </p>
+  <p>They contain a variety of different techniques that could be applied in real application forms, as well as the
+    application of the best
+    practices and Angular Material components.</p>
+  <p>The blue info buttons have common content between the two types, while the red ones show more complex features,
+    which are easily done with the Reactive approach.</p>
 </section>
-
-
-
 <main class="forms">
   <frm-reactive></frm-reactive>
   <frm-td></frm-td>
