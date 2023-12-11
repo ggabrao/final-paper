@@ -1,16 +1,16 @@
-:host {
-    display: block;
-    background-color: #3949AB;
+.footer {
     height: 27rem;
+    background-color: #3949AB;
 }
 
-.footer {
+.content {
     max-width: 100rem;
     margin: auto;
     display: flex;
     justify-content: space-between;
     color: white;
     padding-top:1.5rem;
+
 }
 
 .quote {
