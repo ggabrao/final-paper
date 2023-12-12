@@ -1,9 +1,32 @@
 <section class="container">
-  <h1 class="title">Title</h1>
-  <p class="prg">Description</p>
+  <h1 class="title">API</h1>
+  <p class="prg">The following table emulates the main <b>CRUD</b> operations over a <b>REST API</b>, using an
+    <b>In-Memory
+      Web
+      Api for Angular</b>. It allow us to simulate data persistence operations without a real backend server, using
+    <b>Angular's HTTP Client</b> to perform HTTP requests.
+  </p>
+  <p>
+    You can add a new course, edit or delete, and then see the updated list.
+  </p>
+  <h2 class="title">Main Features</h2>
+  <h3>Route Resolvers</h3>
+  <p>Were applied in some routes so that the view can only be displayed after the data from HTTP requests have been
+    gathered. That can improve the user experience, since the view will not appear with empty values and suddenly
+    refresh and fill up.</p>
+  <h3>In-Memory Data</h3>
+  <p>Allow us to simulate data persistence operations for testing purpose, including auto-generating id's. It's a better
+    option than hard-coding the data.</p>
+  <h3>Component Communication</h3>
+  <p>Table, Dialog and Edit component are all integrated and communicating with each other, so the data can flow among
+    them with consistency, allowing any changes to be shared.
+  </p>
+  <h3>Angular Material</h3>
+  <p>The table, the dialog and the forms were build using Angular Material components.</p>
 </section>
 
 <main class="container">
+  <h3>Courses Table</h3>
   <table mat-table [dataSource]="courses" class="mat-elevation-z6">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>Id</th>
