@@ -17,6 +17,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './courses/in-memory-data.service';
 import { SpinnerComponent } from './spinner.component';
 import { DemosComponent } from './demos/demos.component';
+import { StarRatingModule } from 'angular-star-rating';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { DemosComponent } from './demos/demos.component';
     PageNotFoundComponent,
     HomeComponent,
     SpinnerComponent,
-    DemosComponent
+    DemosComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,7 @@ import { DemosComponent } from './demos/demos.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-  
+    StarRatingModule.forRoot()  
   ],
   providers: [],
   bootstrap: [AppComponent],
