@@ -50,6 +50,7 @@ export class CoursesComponent implements OnInit, OnDestroy {
           if (data) {
             this.courses.push(data);
             this.table.renderRows();
+            console.log(data);
           }
         })
       }
