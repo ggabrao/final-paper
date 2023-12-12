@@ -10,7 +10,7 @@ export class DialogFormComponent {
 
   course: any = {
     name: "",
-    duration: "",
+    duration: undefined,
     rating: 3
   }
 
@@ -21,6 +21,4 @@ export class DialogFormComponent {
   onCancel() {
     this.dialogRef.close(null);
   };
-
-
 }
