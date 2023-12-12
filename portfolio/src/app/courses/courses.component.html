@@ -9,23 +9,6 @@
   <p class="prg">
     You can add a new course, edit or delete, and then see the updated list.
   </p>
-  <p class="prg">Here are the <b>main features</b> used in this demo:</p>
-  <h3 class="subtitle margin-2">Route Resolvers</h3>
-  <p class="prg">Were applied in some routes so that the view can only be displayed after the data from HTTP requests
-    have been
-    gathered. That can improve the user experience, since the view will not appear with empty values and suddenly
-    refresh and fill up.</p>
-  <h3 class="subtitle">In-Memory Data</h3>
-  <p class="prg">Allow us to simulate data persistence operations for testing purpose, including auto-generating id's.
-    It's a better
-    option than hard-coding the data.</p>
-  <h3 class="subtitle">Component Communication</h3>
-  <p class="prg">Table, Dialog and Edit component are all integrated and communicating with each other, so the data can
-    flow among
-    them with consistency, allowing any changes to be shared.
-  </p>
-  <h3 class="subtitle">Angular Material</h3>
-  <p class="prg">The table, the dialog and the forms were build using Angular Material components.</p>
 </section>
 
 <main class="container">
@@ -79,5 +62,26 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-
 </main>
+
+<section class="container">
+  <h2 class="title center">Main Features</h2>
+  <mat-divider></mat-divider>
+  <h3 class="subtitle margin1">Route Resolvers</h3>
+  <p class="prg">Were applied in some routes so that the view can only be displayed after the data from HTTP requests
+    have been
+    gathered. That can improve the user experience, since the view will not appear with empty values and suddenly
+    refresh and fill up.</p>
+  <h3 class="subtitle">In-Memory Data</h3>
+  <p class="prg">Allow us to simulate data persistence operations for testing purpose, including auto-generating id's.
+    It's a better
+    option than hard-coding the data.</p>
+  <h3 class="subtitle">Component Communication</h3>
+  <p class="prg">Table, Dialog and Edit component are all integrated and communicating with each other, so the data can
+    flow among
+    them with consistency, allowing any changes to be shared.
+  </p>
+  <h3 class="subtitle">Angular Material</h3>
+  <p class="prg">The table, the dialog and the forms were build using Angular Material components.</p>
+
+</section>
