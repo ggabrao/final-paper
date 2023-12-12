@@ -1,36 +1,30 @@
 <div *ngIf="selectedCourse">
 
-<h1>Update course</h1>
+  <h1>Update course</h1>
   <form class="form" #frm="ngForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
       <mat-label>Id</mat-label>
       <input #id="ngModel" type="number" name="id" [ngModel]="selectedCourse.id" matInput required min="1" max="99"
-        pattern="[0-9]*" disabled="true"/>
+        pattern="[0-9]*" disabled="true" />
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Name</mat-label>
-      <input #name="ngModel" type="text" name="name" [(ngModel)]="selectedCourse.name" matInput required maxlength="15" />
+      <input #name="ngModel" type="text" name="name" [(ngModel)]="selectedCourse.name" matInput required
+        maxlength="15" />
       <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Duration</mat-label>
-      <input #duration="ngModel" type="number" name="duration" [(ngModel)]="selectedCourse.duration" matInput required min="1"
-        max="99" pattern="[0-9]*" />
+      <input #duration="ngModel" type="number" name="duration" [(ngModel)]="selectedCourse.duration" matInput required
+        min="1" max="99" pattern="[0-9]*" />
       <mat-error *ngIf="duration.errors?.['required']">Duration is required</mat-error>
       <mat-error *ngIf="duration.errors?.['min']">Duration must be between 1 and 99</mat-error>
       <mat-error *ngIf="duration.errors?.['max']">Duration must be between 1 and 99</mat-error>
     </mat-form-field>
 
-    <mat-form-field>
-      <mat-label>Rating</mat-label>
-      <input #rating="ngModel" type="number" step="0.5" name="rating" [(ngModel)]="selectedCourse.rating" matInput required min="0.5" max="5"
-        pattern="[1-5]*" />
-      <mat-error *ngIf="rating.errors?.['required']">Rating is required</mat-error>
-      <mat-error *ngIf="rating.errors?.['min']">Rating must be between 0 and 5</mat-error>
-      <mat-error *ngIf="rating.errors?.['max']">Rating must be between 0 and 5</mat-error>
-    </mat-form-field>
+    <star-rating-control name="rating" [(ngModel)]="selectedCourse.rating" size="large"></star-rating-control>
 
     <button [disabled]="!frm.form.valid" mat-raised-button color="primary" type="submit">
       Save
