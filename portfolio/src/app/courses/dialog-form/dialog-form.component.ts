@@ -11,7 +11,7 @@ export class DialogFormComponent {
   course: any = {
     name: "",
     duration: "",
-    rating: ""
+    rating: 3
   }
 
   constructor(
