@@ -1,8 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { ICourse } from '../course.model';
-import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
-import { CoursesService } from '../courses.service';
 
 @Component({
   selector: 'crs-dialog',
