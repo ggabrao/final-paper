@@ -22,7 +22,10 @@
 
     <ng-container matColumnDef="rating">
       <th mat-header-cell *matHeaderCellDef>Rating</th>
-      <td mat-cell *matCellDef="let course">{{ course.rating }}</td>
+      <td mat-cell *matCellDef="let course"><star-rating [starType]="'svg'" [id]="course.id" [rating]="course.rating"
+          [labelText]="course.rating" staticColor="default" direction="ltr" [readOnly]="true"
+          [showHalfStars]="true"></star-rating></td>
+
     </ng-container>
 
     <ng-container matColumnDef="edit">
@@ -51,5 +54,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-  <star-rating [starType]="'svg'" [rating]="4"></star-rating>
+
 </main>
