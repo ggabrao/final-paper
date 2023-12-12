@@ -28,14 +28,11 @@ export class CoursesComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.footerService.hide();
     this.route.data.subscribe(({ coursesResolver }) => this.courses = coursesResolver);
-
   };
 
   ngOnDestroy(): void {
     this.footerService.show();
   }
-
-
 
   deleteData(course: ICourse): void {
     this.courses = this.courses.filter(c => c !== course);
@@ -50,7 +47,6 @@ export class CoursesComponent implements OnInit, OnDestroy {
           if (data) {
             this.courses.push(data);
             this.table.renderRows();
-            console.log(data);
           }
         })
       }
