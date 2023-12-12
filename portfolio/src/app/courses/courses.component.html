@@ -22,10 +22,7 @@
 
     <ng-container matColumnDef="rating">
       <th mat-header-cell *matHeaderCellDef>Rating</th>
-      <td mat-cell *matCellDef="let course"><star-rating [starType]="'svg'" [id]="course.id" [rating]="course.rating"
-          [labelText]="course.rating" staticColor="default" direction="ltr" [readOnly]="true"
-          [showHalfStars]="true"></star-rating></td>
-
+      <td mat-cell *matCellDef="let course"><star-rating [rating]="course.rating" [readOnly]="true"></star-rating></td>
     </ng-container>
 
     <ng-container matColumnDef="edit">
