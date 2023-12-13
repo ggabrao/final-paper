@@ -1,11 +1,13 @@
 <h1 class="title" mat-dialog-title>Add a new course</h1>
 <mat-dialog-content align="center">
   <form class="form" #frm="ngForm">
+
     <mat-form-field>
       <mat-label>Name</mat-label>
       <input #name="ngModel" type="text" name="name" [(ngModel)]="course.name" matInput required maxlength="15" />
       <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
     </mat-form-field>
+
     <mat-form-field>
       <mat-label>Duration</mat-label>
       <input #duration="ngModel" type="number" name="duration" [(ngModel)]="course.duration" matInput required min="1"
@@ -13,8 +15,10 @@
       <mat-error *ngIf="duration.errors?.['required']">Duration is required</mat-error>
       <mat-error *ngIf="duration.errors?.['min']">Min duration is 1</mat-error>
       <mat-error *ngIf="duration.errors?.['max']">Max duration is 100</mat-error>
-    </mat-form-field>
+    </mat-form-field>    
+
     <star-rating-control name="rating" [(ngModel)]="course.rating" size="large"></star-rating-control>
+
   </form>
 
   <mat-dialog-actions align="center" class="buttons">
