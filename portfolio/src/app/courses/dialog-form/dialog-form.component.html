@@ -9,10 +9,10 @@
     <mat-form-field>
       <mat-label>Duration</mat-label>
       <input #duration="ngModel" type="number" name="duration" [(ngModel)]="course.duration" matInput required min="1"
-        max="99" pattern="[0-9]*" />
+        max="100" />
       <mat-error *ngIf="duration.errors?.['required']">Duration is required</mat-error>
-      <mat-error *ngIf="duration.errors?.['min']">Duration must be between 1 and 99</mat-error>
-      <mat-error *ngIf="duration.errors?.['max']">Duration must be between 1 and 99</mat-error>
+      <mat-error *ngIf="duration.errors?.['min']">Min duration is 1</mat-error>
+      <mat-error *ngIf="duration.errors?.['max']">Max duration is 100</mat-error>
     </mat-form-field>
     <star-rating-control name="rating" [(ngModel)]="course.rating" size="large"></star-rating-control>
   </form>
