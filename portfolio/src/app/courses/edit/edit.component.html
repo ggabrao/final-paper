@@ -1,5 +1,5 @@
-<div *ngIf="selectedCourse">
-  <h1>Update course</h1>
+<main *ngIf="selectedCourse">
+  <h1 class="title">Update course</h1>
   <form class="form" #frm="ngForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
       <mat-label>Id</mat-label>
@@ -22,13 +22,15 @@
       <mat-error *ngIf="duration.errors?.['max']">Max duration is 100</mat-error>
     </mat-form-field>
 
-    <star-rating-control name="rating" [(ngModel)]="selectedCourse.rating" size="large"></star-rating-control>
-
-    <button [disabled]="!frm.form.valid" mat-raised-button color="primary" type="submit">
-      Save
-    </button>
-    <button mat-raised-button type="button" color="warn" (click)="onCancel()">
-      Cancel
-    </button>
+    <star-rating-control name="rating" [(ngModel)]="selectedCourse.rating" size="large"
+      class="rating"></star-rating-control>
+    <div class="buttons">
+      <button [disabled]="!frm.form.valid" mat-raised-button color="accent" type="submit">
+        Save
+      </button>
+      <button mat-raised-button type="button" color="warn" (click)="onCancel()">
+        Cancel
+      </button>
+    </div>
   </form>
-</div>
+</main>
