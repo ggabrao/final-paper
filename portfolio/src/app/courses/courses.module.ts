@@ -6,10 +6,11 @@ import { CoursesComponent } from './courses.component';
 import { DialogFormComponent } from './dialog-form/dialog-form.component';
 import { EditComponent } from './edit/edit.component';
 import { StarRatingModule } from 'angular-star-rating';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
-    CoursesComponent, DialogFormComponent, EditComponent
+    CoursesComponent, DialogFormComponent, EditComponent, TableComponent
   ],
   imports: [
     SharedModule,
