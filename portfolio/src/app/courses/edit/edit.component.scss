@@ -1,25 +1,35 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 40rem;
+  width: 30rem;
+  margin: auto;
+  margin-top: 3rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.512);
+}
 
-.form-title {
-    margin-bottom: 30px;
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .form {
-    min-width: 150px;
-    max-width: 400px;
-    width: 100%;   
-  }
-  
-  .full-width {
-    width: 100%;
-  }
+  max-width: 25rem;
+}
 
-  .mat-mdc-radio-button ~ .mat-mdc-radio-button {
-    margin-left: 16px;
-  }
+.rating {
+  margin-bottom: 2rem;
+}
 
- 
+.buttons {
+  display:flex;
+  justify-content: center;
+  gap: 1rem;
+}
