@@ -5,7 +5,7 @@
 
 .intro {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
 }
 
@@ -52,7 +52,7 @@
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6;
-  padding-left: 0.3rem;
+  margin-right: 1rem;
 }
 
 .blue {
@@ -91,3 +91,37 @@
     line-height: 1.4;
   }
 }
+
+// // Below 624px
+// @media (max-width: 39em) {
+
+//   .intro {
+//     flex-direction: column;
+//     text-align: center;
+//   }
+
+//   .intro-photo {
+//     width: 18rem;
+//     margin: auto;
+//   }
+
+//   .intro-text {
+//     flex: 0 1 auto;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 0.5rem;
+//   }
+
+//   .occupation {
+//     font-size: 3.3rem;
+//     margin: auto;
+//   }
+
+//   .logo {
+//     display: none;
+//   }
+
+//   .sub {   
+//    padding: 0 1rem 0;
+//   }
+// }
