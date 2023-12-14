@@ -60,32 +60,33 @@
   color: #3949AB;
 }
 
-// ======= QUERIES ========
+// // ======= QUERIES ========
 
-// Below 880px
-@media (max-width: 55em) {
+// // Below 880px
+// @media (max-width: 55em) {
 
-  :host {
-    margin-bottom: 8rem;
-  }
+//   :host {
+//     margin-bottom: 8rem;
+//   }
 
-  .intro {
-    gap: 1.2rem;
-  }
+//   .intro {
+//     gap: 1.2rem;
+//   }
 
-  .intro-photo {
-    width: 13rem;
-  }
+//   .intro-photo {
+//     width: 13rem;
+//     margin-left: 2.5rem;
+//   }
 
-  .occupation {
-    font-size: 3.9rem;
-  }
+//   .occupation {
+//     font-size: 3.9rem;
+//   }
 
-  .logo {
-    width: 5.3rem;
-  }
+//   .logo {
+//     width: 5.3rem;
+//   }
 
-  .sub {
-    line-height: 1.4;
-  }
-}
+//   .sub {
+//     line-height: 1.4;
+//   }
+// }
