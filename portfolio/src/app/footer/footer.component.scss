@@ -1,41 +1,31 @@
 .footer {
-    height: 27rem;
     background-color: #3949AB;
 }
 
 .content {
-    max-width: 100rem;
+    max-width: 90rem;
     margin: auto;
     display: flex;
     justify-content: space-between;
     color: white;
-    padding:1.5rem 5rem 0;
+    padding: 1.5rem 5rem 3rem;
+    text-align: center;
 }
 
 .quote {
-    flex: 0 1 25rem;
+    flex: 0 1 16rem;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.6;
-    text-align: justify;    
+    text-align: justify;
 }
 
-.left {
-    text-align: left;
-    margin-bottom: 3rem;
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    
-}
 
 .header {
     font-size: 1.9rem;
     font-weight: 500;
-    line-height: 1.15;  
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
 }
 
 .list-container {
@@ -45,21 +35,30 @@
 .list {
     list-style-type: none;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     gap: 1.5rem;
 }
 
 .item {
-    color:white;
+    color: white;
     text-decoration: none;
-    margin-left: 1.5rem;
     font-size: 1.6rem;
-    font-weight: 400;   
+    font-weight: 400;
 }
 
 .item:hover {
-    color:white;
+    color: white;
     text-decoration: underline;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-icons {
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
 }
 
 .contact-prg {
@@ -70,16 +69,12 @@
 
 .logo-image {
     width: 12rem;
-    margin-top:5rem; 
-    align-self: center;     
+    margin-top: 3rem;
+    align-self: center;
 }
 
 .copy {
     font-size: 1.3rem;
     font-weight: 300;
     line-height: 1.6;
-}
-
-.hlist {
-    margin-bottom:2.5rem;
 }
