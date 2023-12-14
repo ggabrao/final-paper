@@ -3,10 +3,10 @@
   margin-bottom: 12rem;
 }
 
-.intro {  
-  display: flex; 
+.intro {
+  display: flex;
   gap: 2rem;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .intro-photo {
@@ -15,7 +15,7 @@
 
 .photo {
   max-width: 100%;
-  border-radius: 50%; 
+  border-radius: 50%;
 }
 
 .intro-text {
@@ -25,7 +25,7 @@
 
 .cheering {
   font-size: 1.3rem;
-  font-weight: 700;  
+  font-weight: 700;
   letter-spacing: 1.5px;
   color: #FF1744;
   padding-left: 0.5rem;
@@ -41,21 +41,89 @@
 .occupation {
   font-size: 4.8rem;
   font-weight: 700;
-  letter-spacing: -1px;  
+  letter-spacing: -1px;
 }
 
 .logo {
-  max-width: 11%;  
+  width: 6rem;
 }
 
 .sub {
   font-size: 1.6rem;
-  font-weight: 400; 
-  line-height: 1.6; 
+  font-weight: 400;
+  line-height: 1.6;
   padding-left: 0.3rem;
 }
 
 .blue {
   font-weight: 500;
-  color:  #3949AB;
+  color: #3949AB;
+}
+
+// QUERIES
+
+// Below 880px
+@media (max-width: 55em) {
+
+  :host {
+    margin-top: 8rem;
+    margin-bottom: 12rem;
+  }
+
+  .intro {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+
+  .intro-photo {
+    width: 13rem;
+  }
+
+  .occupation {
+    font-size: 3.9rem;
+  }
+
+  .photo {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+
+  .intro-text {
+    align-self: center;
+    flex: 0 1 55rem;
+  }
+
+  .cheering {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #FF1744;
+    padding-left: 0.5rem;
+  }
+
+  .intro-occupation {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+
+  .logo {
+    width: 5.3rem;
+  }
+
+  .sub {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    padding-left: 0.3rem;
+  }
+
+  .blue {
+    font-weight: 500;
+    color: #3949AB;
+  }
+
 }

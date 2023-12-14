@@ -38,7 +38,31 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  padding: 2rem 0;
+}
 
+.card-header {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.card-img {
+  max-width: 11rem;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.6;
+  margin-top: 2rem;
 }
 
 .card:hover.red {
@@ -52,17 +76,4 @@
 
 .card:hover.green {
   box-shadow: 0 10px 15px 0 rgba(0, 128, 0, 0.697);
-}
-
-.card-header {
-  font-size: 2.3rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  line-height: 1.15;
-  margin-bottom: 1.5rem;
-  padding-top: 2rem
-}
-
-.card-img {
-  max-width: 12rem;
 }
