@@ -19,7 +19,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 4rem;
-
 }
 
 .skill {
@@ -59,5 +58,16 @@
   }
 }
 
-// Below 624px
-@media (max-width: 39em) {}
+// Below 592px
+@media (max-width: 37em) {
+
+  .skills-grid {
+    grid-template-columns: 12rem 12rem 12rem;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    row-gap: 3rem;
+    column-gap: 2.5%;
+  }
+
+
+}
