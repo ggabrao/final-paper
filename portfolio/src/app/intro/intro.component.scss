@@ -52,7 +52,10 @@
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6;
-  margin-right: 1rem;
+}
+
+.mobile {
+  display: none;
 }
 
 .blue {
@@ -80,7 +83,7 @@
   }
 
   .occupation {
-    font-size: 3.9rem;
+    font-size: 4rem;
   }
 
   .logo {
@@ -109,19 +112,29 @@
     flex: 0 1 auto;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .occupation {
     font-size: 3.3rem;
-    margin: auto;
+    margin: auto;  
+    margin-bottom: -0.3rem; 
+  }
+
+  .sub {
+    line-height: 1.15;
   }
 
   .logo {
     display: none;
   }
 
-  .sub {
-    padding: 0 1rem 0;
+  .desk {
+    display: none;
   }
+
+  .mobile {
+    display: block;
+  }
+
 }
