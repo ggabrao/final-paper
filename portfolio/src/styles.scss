@@ -17,3 +17,12 @@ body {
     height: 100%;
     color: rgba(0, 0, 0, 0.87);
 }
+
+// QUERIES
+
+// Below 880px
+@media (max-width: 55em) {
+    html {
+        font-size: 56.25%;
+    }
+}
