@@ -25,16 +25,17 @@
 
 .social {
     scale: .90;
+    transform: translateX(10%);
 }
 
-// ======= QUERIES ========
+// // ======= QUERIES ========
 
-// Below 880px
-@media (max-width: 55em) {
+// // Below 880px
+// @media (max-width: 55em) {
 
-    .social {
-        scale: .8;
-        transform: translateX(20%);
-    }
+//     .social {
+//         scale: .8;
+//         transform: translateX(20%);
+//     }
 
-}
+// }
