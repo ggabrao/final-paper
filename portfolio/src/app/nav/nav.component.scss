@@ -11,7 +11,7 @@
     flex: 1 0 auto;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 1px);
+    transform: translate(-50%, 0.1rem);
 }
 
 .item {
@@ -20,7 +20,7 @@
 }
 
 .adj {
-    transform: translateX(-4px);
+    transform: translateX(-0.4rem);
 }
 
 .social {
@@ -28,14 +28,18 @@
     transform: translateX(10%);
 }
 
-// // ======= QUERIES ========
+// ======= QUERIES ========
 
-// // Below 880px
-// @media (max-width: 55em) {
+// Below 816px
+@media (max-width: 51em) {
 
-//     .social {
-//         scale: .8;
-//         transform: translateX(20%);
-//     }
+    .social {
+        scale: .8;
+        transform: translateX(20%);
+    }
 
-// }
+    .item {
+        width: 8rem;
+    }
+
+}

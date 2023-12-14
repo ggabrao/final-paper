@@ -49,13 +49,13 @@
   text-align: center;
 }
 
-// // ======= QUERIES ========
+// ======= QUERIES ========
 
-// // Below 880px
-// @media (max-width: 55em) {
+// Below 816px
+@media (max-width: 51em) {
 
-//   :host {
-//     margin-bottom: 8rem;
-//   }
+  :host {
+    margin-bottom: 8rem;
+  }
 
-// }
+}
