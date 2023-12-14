@@ -92,36 +92,36 @@
   }
 }
 
-// // Below 624px
-// @media (max-width: 39em) {
+// Below 592px
+@media (max-width: 37em) {
 
-//   .intro {
-//     flex-direction: column;
-//     text-align: center;
-//   }
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
 
-//   .intro-photo {
-//     width: 18rem;
-//     margin: auto;
-//   }
+  .intro-photo {
+    width: 18rem;
+    margin: auto;
+  }
 
-//   .intro-text {
-//     flex: 0 1 auto;
-//     display: flex;
-//     flex-direction: column;
-//     gap: 0.5rem;
-//   }
+  .intro-text {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-//   .occupation {
-//     font-size: 3.3rem;
-//     margin: auto;
-//   }
+  .occupation {
+    font-size: 3.3rem;
+    margin: auto;
+  }
 
-//   .logo {
-//     display: none;
-//   }
+  .logo {
+    display: none;
+  }
 
-//   .sub {   
-//    padding: 0 1rem 0;
-//   }
-// }
+  .sub {
+    padding: 0 1rem 0;
+  }
+}
