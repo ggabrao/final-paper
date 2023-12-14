@@ -18,7 +18,7 @@ body {
     color: rgba(0, 0, 0, 0.87);
 }
 
-// QUERIES
+// =============QUERIES==============
 
 // Below 816px
 @media (max-width: 51em) {
@@ -26,3 +26,10 @@ body {
         font-size: 56.25%;
     }
 }
+
+// // Below 624px
+// @media (max-width: 39em) {
+//     html {
+//         font-size: 50%;
+//     }
+// }
