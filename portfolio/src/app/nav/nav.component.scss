@@ -9,8 +9,8 @@
 
 .nav {
     flex: 1 0 auto;
-    position: absolute;  
-    left: 50%; 
+    position: absolute;
+    left: 50%;
     transform: translate(-50%, 1px);
 }
 
@@ -25,4 +25,16 @@
 
 .social {
     scale: .90;
+}
+
+// ======= QUERIES ========
+
+// Below 880px
+@media (max-width: 55em) {
+
+    .social {
+        scale: .8;
+        transform: translateX(20%);
+    }
+
 }

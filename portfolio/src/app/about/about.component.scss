@@ -28,3 +28,14 @@
     color: #FF1744;
 }
 
+// ======= QUERIES ========
+
+// Below 880px
+@media (max-width: 55em) {
+
+    :host {    
+        margin-bottom: 8rem;       
+    }
+    
+}
+

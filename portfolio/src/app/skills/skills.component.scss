@@ -1,5 +1,5 @@
-:host {     
-  width: 90%;  
+:host {
+  width: 90%;
   margin: auto;
   margin-bottom: 12rem;
 }
@@ -47,4 +47,15 @@
   letter-spacing: normal;
   line-height: 1.4;
   text-align: center;
+}
+
+// ======= QUERIES ========
+
+// Below 880px
+@media (max-width: 55em) {
+
+  :host {
+    margin-bottom: 8rem;
+  }
+
 }
