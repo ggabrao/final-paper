@@ -62,12 +62,32 @@
 @media (max-width: 37em) {
 
   .skills-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     row-gap: 3rem;
     text-wrap: nowrap;
   }
 
+  .mob1 {
+    grid-row: 1;
+    grid-column: span 2;
+  }
 
+  .mob2 {
+    grid-row: 2;
+    grid-column: span 2;
+  }
+
+  .mob3 {
+    grid-row: 3;
+    grid-column: span 3;
+  }
+
+  .left {
+    margin-left: 34%;
+  }
+
+  .right {
+    margin-right: 34%;
+  }
 
 }
