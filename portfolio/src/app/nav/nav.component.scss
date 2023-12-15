@@ -55,7 +55,7 @@
     }
 
     .logo {
-        height: 3.5rem;
+        height: 3.2rem;
     }
 
     .nav {
@@ -65,16 +65,17 @@
         grid-column: 1/-1;
         grid-row:2;
         text-align: center; 
+        
     }
 
     .item {
-        width: 12rem;
+        width: 11rem;
     }
 
 
     .social {
-        scale: 1;
-        transform: translateX(5%);
+        scale: .90;
+        transform: translateX(10%);
         justify-self: end;
     }
 
