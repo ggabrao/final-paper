@@ -47,6 +47,36 @@
 @media (max-width: 37em) {
 
 
+    .toolbar {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 11rem;
+        align-content: start;
+    }
+
+    .logo {
+        height: 3.5rem;
+    }
+
+    .nav {
+        position: relative;
+        left: 0;
+        transform: translate(0);
+        grid-column: 1/-1;
+        grid-row:2;
+        text-align: center; 
+    }
+
+    .item {
+        width: 12rem;
+    }
+
+
+    .social {
+        scale: 1;
+        transform: translateX(5%);
+        justify-self: end;
+    }
 
 
 }
