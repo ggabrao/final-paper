@@ -20,3 +20,26 @@
 .add {
     margin-left: 0.43rem;
 }
+
+.mobile {
+    display:none;
+}
+
+// ======= QUERIES ========
+
+// Below 592px
+@media (max-width: 37em) {
+
+    .container {
+        overflow: auto;
+    }
+
+    .rating {
+        display:none;
+    }
+
+    .mobile {
+        display:inline;
+    }
+
+}

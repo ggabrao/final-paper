@@ -18,8 +18,11 @@
 
         <ng-container matColumnDef="rating">
             <th mat-header-cell *matHeaderCellDef>Rating</th>
-            <td mat-cell *matCellDef="let course"><star-rating class="rating" [rating]="course.rating"
-                    [readOnly]="true"></star-rating></td>
+            <td mat-cell *matCellDef="let course">
+                <star-rating class="rating" [rating]="course.rating" [readOnly]="true"></star-rating>
+                <span class="mobile">{{ course.rating }}</span>
+            </td>
+
         </ng-container>
 
         <ng-container matColumnDef="edit">
