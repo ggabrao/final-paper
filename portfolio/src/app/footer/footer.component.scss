@@ -37,7 +37,7 @@
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;    
+    gap: 1.5rem;
 }
 
 .item {
@@ -79,5 +79,36 @@
 .copy {
     font-size: 1.2rem;
     font-weight: 300;
-    line-height: 1.6;    
+    line-height: 1.6;
+}
+
+// Below 592px
+@media (max-width: 37em) {
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+        padding-left: 0;
+    }
+
+    .quote {
+        grid-column: 1 / -1;
+        width:30rem;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .list-container {
+        padding-left: 0;
+        padding-right: 2rem;
+    }
+
+    .contact {
+        padding-left: 0;
+        padding-right: 2rem;
+    }
+    
+    
+
 }
