@@ -24,6 +24,7 @@
   line-height: 1.6;
   text-align: center;
   margin-bottom: 2.5rem;
+  padding: 0 4%;
 }
 
 .cards {
@@ -93,4 +94,11 @@
 }
 
 // Below 624px
-@media (max-width: 37em) {}
+@media (max-width: 37em) {
+
+  .cards {
+    display: grid;
+    justify-items: center;
+  }
+
+}
