@@ -1,5 +1,5 @@
 :host {
-  width: 350px;
+  max-width: 350px;
 }
 
 .title {
@@ -8,8 +8,7 @@
   letter-spacing: -0.5px;
   line-height: 1.15;
   margin-bottom: 2rem;
-  margin-left: 15.5rem;
-  transform: translateX(-50%);
+  margin-left: 5.5rem;
 }
 
 .field {
@@ -19,7 +18,7 @@
 .notMatch {
   margin-top: -2rem;
   margin-left: 2rem;
-  font-size: 1.2rem;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.4px;
   line-height: 2rem;
@@ -40,6 +39,35 @@
 @media (max-width: 51em) {
 
   :host {
-   margin:auto;
+    margin: auto;
+  }
+
+  .title {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  form {
+    margin-left: 5.5rem;
+  }
+
+  .submit {
+    margin-left: 7.5rem;
+  }
+}
+
+// Below 400px
+@media (max-width: 25em) {
+
+  form {
+    margin-left: 0;
+  }
+
+  .field {
+    max-width: 80%;
+  }
+
+  .submit {
+    margin-left: 0;
   }
 }
