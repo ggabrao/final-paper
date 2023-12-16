@@ -67,7 +67,7 @@ mat-chip {
 
 .forms {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -104,7 +104,15 @@ mat-chip {
     .demos {
         margin-top: 4rem;
     }
+
+    .forms {
+        flex-direction: column;
+        gap:3rem;       
+    }
 }
+
+
+
 
 // Below 400px
 @media (max-width: 25em) {
