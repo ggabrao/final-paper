@@ -47,20 +47,17 @@
           Password must have at least 4 characteres</mat-error>
       </mat-form-field>
       <button type="button" mat-icon-button
-        matTooltip="This field uses a custom validator instead of the Angular's build-in validators"
+        matTooltip="Here we have a Cross-Field Validator to check if the password and its confirmation matches, also with a custom validation rule"
         matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
+
 
       <mat-form-field class="field"><mat-label>Confirm Password</mat-label>
         <input formControlName="confirmPassword" type="password" matInput />
         <mat-error *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">This field is
           required</mat-error>
       </mat-form-field>
-
       <button type="button" mat-icon-button
-        matTooltip="Here we have a Cross-Field Validator, used to perform validation for a group, which in case is the password and the its confirmation"
-        matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
-      <button type="button" mat-icon-button
-        matTooltip="In the password group, we also have a reactive transformation (debounceTime) that allows the user to finish typing before showing the error message, providing a better experience"
+        matTooltip="In the password group, we have a reactive transformation to allow the user finish typing before displaying any error message, providing a better experience"
         matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="warn">info</mat-icon></button>
     </div>
 
@@ -86,5 +83,4 @@
       <span *ngIf="submitted" class="submitted">Submitted</span>
     </div>
   </form>
-
 </main>
