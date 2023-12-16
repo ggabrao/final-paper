@@ -1,5 +1,5 @@
 :host {
-  flex: 0 1 45rem;
+  width: 350px;
 }
 
 .title {
@@ -12,7 +12,7 @@
 }
 
 .field {
-  width: 28rem;
+  width: 250px;
 }
 
 .notMatch {
@@ -32,4 +32,13 @@
   color: green;
   font-weight: 500;
   margin-left: 1rem;
+}
+
+
+// Below 816px
+@media (max-width: 51em) {
+
+  :host {
+   margin:auto;
+  }
 }
