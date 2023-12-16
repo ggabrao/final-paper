@@ -52,6 +52,11 @@
         'opsz' 20;
 }
 
+mat-chip {
+    margin: 0.3rem;
+}
+
+
 .good {
     background-color: rgba(0, 128, 0, 0.103) !important;
 }
@@ -63,4 +68,51 @@
 .forms {
     display: flex;
     justify-content: space-between;
+}
+
+
+// Below 816px
+@media (max-width: 51em) {
+
+    .chips {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    mat-chip {
+        scale: 0.94;
+        margin: 0;
+        padding-right: 0;
+        height: fit-content;
+    }
+
+    .reactive-chips {
+        margin-top: 2rem;
+    }
+
+    .mobile {
+        text-wrap: wrap;
+    }
+
+    .title {
+        margin-bottom: 0.3rem;
+    }
+
+    .demos {
+        margin-top: 4rem;
+    }
+}
+
+// Below 400px
+@media (max-width: 25em) {
+
+    .chips {
+        align-items: stretch;
+        width: 30rem;
+        margin: auto;
+        margin-bottom: 2.5rem;
+    }
 }
