@@ -20,8 +20,8 @@ export class AppComponent {
       this.loading = true;
     }
 
-    // if (routerEvent instanceof NavigationEnd || routerEvent instanceof NavigationCancel || routerEvent instanceof NavigationError) {
-    //   this.loading = false;
-    // }
+    if (routerEvent instanceof NavigationEnd || routerEvent instanceof NavigationCancel || routerEvent instanceof NavigationError) {
+      this.loading = false;
+    }
   }
 }
