@@ -10,7 +10,6 @@ export class AppComponent {
   title = 'portfolio';
   loading = true;
 
-
   constructor(public router: Router) {
     router.events.subscribe((routerEvent: Event) => this.checkRouterEvent(routerEvent));
   }
