@@ -21,10 +21,10 @@
     font-size: 1.6rem;
     font-weight: 500;
     cursor: pointer;
-    padding: 2px 15px;
+    padding: 2px 30px;
 }
 
-.nav-item:hover, .nav-active {
+.nav-item:hover {
     background-color: rgba(0, 0, 0, 0.249);
     border-radius: 8%;
 }
