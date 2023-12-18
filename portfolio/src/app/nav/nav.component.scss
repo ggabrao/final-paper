@@ -11,7 +11,7 @@
     flex: 1 0 auto;
     position: absolute;
     left: 50%;
-    transform: translate(-50%, 0.1rem);
+    transform: translate(-47.7%, 0.1rem);
     display: flex;
 }
 
@@ -45,8 +45,8 @@
         transform: translateX(20%);
     }
 
-    .nav {
-        gap: 1rem;
+    .nav-item {
+        padding: 1px 18px;
     }
 }
 
@@ -64,19 +64,23 @@
 
     .logo {
         height: 2.8rem;
-        transform: translateX(10px)
+        transform: translateX(10px);
     }
 
     .nav {
         position: relative;
         left: 0;
-        transform: translateX(4.5px);
+        transform: translateX(5.4px);
         grid-column: 1/-1;
         grid-row: 2;
         justify-content: center;
         align-self: start;
-        gap: 3rem;
     }
+
+    .nav-item {
+        padding: 1px 25px;
+    }
+
 
     .social {
         scale: .90;
