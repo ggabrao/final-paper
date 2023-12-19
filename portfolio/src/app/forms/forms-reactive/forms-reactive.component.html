@@ -3,7 +3,7 @@
   <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
     <mat-form-field class="field">
       <mat-label>Name</mat-label>
-      <input formControlName="name" type="text" matInput />
+      <input formControlName="name" type="text" matInput maxlength="30"/>
       <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Name is required</mat-error>
       <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Name must contain only letters</mat-error>
     </mat-form-field>
@@ -30,7 +30,7 @@
     <div formArrayName="addresses">
       <mat-form-field class="field" *ngFor="let address of addresses.controls; let i = index">
         <mat-label>Address {{i+1}}</mat-label>
-        <input [formControlName]="i" type="text" matInput />
+        <input [formControlName]="i" type="text" matInput maxlength="50"/>
       </mat-form-field>
       <button type="button" mat-icon-button (click)="addAddress()" matTooltip="Add another line"
         matTooltipPosition="after">
