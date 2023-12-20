@@ -68,3 +68,21 @@
 .red {
     color: #D50000;
 }
+
+.social {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: center;  
+    padding-bottom: 4rem;  
+}
+
+.social-logo {
+    width: 44.45px;
+    height: 37.8px;    
+}
+
+.social-text {
+    font-weight: 500;
+    font-size: 16px;   
+}
