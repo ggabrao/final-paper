@@ -51,13 +51,7 @@
 .sub {
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 1.6;
-  padding-right: 7%;
-  text-wrap: nowrap;
-}
-
-.mobile {
-  display: none;
+  line-height: 1.6;  
 }
 
 .blue {
@@ -127,19 +121,10 @@
 
   .sub {
     line-height: 1.15;
-    padding-right: 0;
+    padding: 0 20px;
   }
 
   .logo {
     display: none;
   }
-
-  .desk {
-    display: none;
-  }
-
-  .mobile {
-    display: block;
-  }
-
 }
