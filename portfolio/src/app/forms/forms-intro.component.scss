@@ -54,15 +54,17 @@
 
 mat-chip {
     margin: 0.3rem;
+    background-color: rgba(128, 128, 128, 10%) !important;
 }
 
-
 .good {
-    background-color: rgba(0, 128, 0, 0.103) !important;
+    color: green !important;
+
 }
 
 .bad {
-    background-color: #ff00d02c !important;
+    color: red !important;
+
 }
 
 .forms {
