@@ -1,18 +1,11 @@
 <section class="container">
   <h1 class="title">Form Basics</h1>
-  <p class="prg">Angular provides two techniques for building forms: <b>template&hyphen;driven</b> and
+  <p class="prg">Angular provides two types of forms: <b>template&hyphen;driven</b> and
     <b>reactive</b>.
   </p>
-  <p class="prg">They share the same basic concepts, but template&hyphen;driven forms are built mostly in the
-    <b>template</b>,
-    relying
-    heavily on
-    two&hyphen;way data binding, while reactive forms are centered in the <b>component class</b>.
-  </p>
-  <p class="prg">Selecting the right approach should be a decision of the team, but in general lines, complex
-    scenarios
-    can be
-    handled better with reactive forms.
+  <p class="prg">They share the same basic concepts, but have some differences concerning setup, data
+    management, testing, etc. </p>
+  <p class="prg">Each approach offers different advantages. Selecting the right one should be a decision of the team.
   </p>
   <p class="prg">Here are some <b>pros and cons</b> of each one: </p>
   <section class="reactive-chips">
@@ -20,7 +13,7 @@
       <h2 class="title">Reactive</h2>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Scalable, reusable and testable</span>
+        <span class="mobile">More scalable, reusable and testable</span>
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
@@ -40,7 +33,7 @@
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Harder to use</span>
+        <span class="mobile">Harder to setup</span>
       </mat-chip>
     </div>
   </section>
@@ -49,23 +42,15 @@
       <h2 class="title">Template-Driven</h2>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Straightforward and easier to use</span>
+        <span class="mobile">Straightforward and easier to setup</span>
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
         <span class="mobile">Very similar to HTML forms</span>
       </mat-chip>
       <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Most of the work is in the template</span>
-      </mat-chip>
-      <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Not as scalable, reusable or testable</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Harder to use in complex scenarios</span>
+        <span class="mobile">Harder to use in complex and robust scenarios</span>
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
