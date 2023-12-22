@@ -1,7 +1,7 @@
 <nav>
   <mat-toolbar class="toolbar" color="primary">
     <img class="logo" src="./../../assets/gga-logo.png" alt="Gabriel's logo">
-    <ul class="nav">
+    <div class="nav">
       <a class="nav-item" routerLink="/home">Home</a>
       <a class="nav-item" [matMenuTriggerFor]="menu">Demos</a>
       <mat-menu #menu="matMenu">
@@ -10,7 +10,7 @@
         <a class="menu-item" mat-menu-item routerLink="/website">Website</a>
       </mat-menu>
       <a class="nav-item" routerLink="/resume">Resume</a>
-    </ul>
+    </div>
     <div class="social">
       <a class="icon" mat-icon-button href="https://mail.google.com/mail/u/0/?fs=1&to=gguimaraesabrao@gmail.com&tf=cm"
         target="_blank">
