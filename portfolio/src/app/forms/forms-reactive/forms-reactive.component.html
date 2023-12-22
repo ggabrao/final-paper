@@ -1,7 +1,7 @@
 <main>
   <h2 class="title">Reactive Form</h2>
   <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
-    <mat-form-field class="field">
+    <mat-form-field color="accent" class="field">
       <mat-label>Username</mat-label>
       <input formControlName="name" type="text" matInput maxlength="20"/>
       <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Username is required</mat-error>
@@ -11,13 +11,13 @@
       matTooltip="This field uses Angular's built-in validators and display different messages accordingly to the type of error"
       matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
 
-    <mat-form-field class="field"><mat-label>Email</mat-label>
+    <mat-form-field color="accent" class="field"><mat-label>Email</mat-label>
       <input formControlName="email" type="email" matInput placeholder="name@domain.com" />
       <mat-error *ngIf="userForm.get('email')?.errors?.['required']">Email is required</mat-error>
       <mat-error *ngIf="userForm.get('email')?.errors?.['email']">Email must be valid</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="field">
+    <mat-form-field color="accent" class="field">
       <mat-label>Phone number</mat-label>
       <input formControlName="phone" type="tel" matInput placeholder="1 555 5555555" />
       <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone must follow the pattern</mat-error>
@@ -28,7 +28,7 @@
       matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="warn">info</mat-icon></button>
 
     <div formArrayName="addresses">
-      <mat-form-field class="field" *ngFor="let address of addresses.controls; let i = index">
+      <mat-form-field color="accent" class="field" *ngFor="let address of addresses.controls; let i = index">
         <mat-label>Address {{i+1}}</mat-label>
         <input [formControlName]="i" type="text" matInput maxlength="50" />
       </mat-form-field>
@@ -39,7 +39,7 @@
     </div>
 
     <div formGroupName="passwordGroup">
-      <mat-form-field class="field"><mat-label>Password</mat-label>
+      <mat-form-field color="accent" class="field"><mat-label>Password</mat-label>
         <input formControlName="password" type="password" matInput maxlength="6"
           placeholder="Between 4 and 6 chars" />
         <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['required']">Password is required</mat-error>
@@ -51,7 +51,7 @@
         matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
 
 
-      <mat-form-field class="field"><mat-label>Confirm Password</mat-label>
+      <mat-form-field color="accent" class="field"><mat-label>Confirm Password</mat-label>
         <input formControlName="confirmPassword" type="password" matInput />
         <mat-error *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">This field is
           required</mat-error>
