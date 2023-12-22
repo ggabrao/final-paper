@@ -2,16 +2,16 @@
   <h2 class="title">TD Form</h2>
   <form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm)" frmConfirmPassword>
     <mat-form-field class="field">
-      <mat-label>Name</mat-label>
-      <input #name="ngModel" type="text" name="name" [(ngModel)]="user.name" matInput required
-        pattern="[a-zA-Z ]*" maxlength="30" /><!--OBS: Regex for all letters + spaces-->
-      <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
-      <mat-error *ngIf="name.errors?.['pattern']">Name must contain only letters</mat-error>
+      <mat-label>Username</mat-label>
+      <input #name="ngModel" type="text" name="name" [(ngModel)]="user.name" matInput required pattern="[a-zA-Z]*"
+        maxlength="20" /><!--OBS: Regex for all letters + spaces-->
+      <mat-error *ngIf="name.errors?.['required']">Username is required</mat-error>
+      <mat-error *ngIf="name.errors?.['pattern']">Only letters allowed</mat-error>
     </mat-form-field>
 
     <mat-form-field class="field"><mat-label>Email</mat-label>
       <input #email="ngModel" type="email" name="email" [(ngModel)]="user.email" matInput required email
-        placeholder="name@domain.com"/>
+        placeholder="name@domain.com" />
       <mat-error *ngIf="email.errors?.['required']">Email is required</mat-error>
       <mat-error *ngIf="email.errors?.['email']">
         Email must be valid</mat-error>
@@ -25,7 +25,7 @@
     </mat-form-field>
 
     <mat-form-field class="field"><mat-label>Address</mat-label>
-      <input #address="ngModel" type="text" name="address" [(ngModel)]="user.address" matInput maxlength="50"/>
+      <input #address="ngModel" type="text" name="address" [(ngModel)]="user.address" matInput maxlength="50" />
     </mat-form-field>
 
     <mat-form-field class="field"><mat-label>Password</mat-label>
