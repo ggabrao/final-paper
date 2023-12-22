@@ -3,12 +3,12 @@
   <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
     <mat-form-field class="field">
       <mat-label>Name</mat-label>
-      <input formControlName="name" type="text" matInput maxlength="30"/>
+      <input formControlName="name" type="text" matInput maxlength="30" />
       <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Name is required</mat-error>
       <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Name must contain only letters</mat-error>
     </mat-form-field>
     <button type="button" mat-icon-button
-      matTooltip="This field uses Angular's build-in validations and display different error messages accordingly to the type of error"
+      matTooltip="This field uses Angular's built-in validators and display different messages accordingly to the type of error"
       matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
 
     <mat-form-field class="field"><mat-label>Email</mat-label>
@@ -30,7 +30,7 @@
     <div formArrayName="addresses">
       <mat-form-field class="field" *ngFor="let address of addresses.controls; let i = index">
         <mat-label>Address {{i+1}}</mat-label>
-        <input [formControlName]="i" type="text" matInput maxlength="50"/>
+        <input [formControlName]="i" type="text" matInput maxlength="50" />
       </mat-form-field>
       <button type="button" mat-icon-button (click)="addAddress()" matTooltip="Add another line"
         matTooltipPosition="after">
@@ -57,7 +57,7 @@
           required</mat-error>
       </mat-form-field>
       <button type="button" mat-icon-button
-        matTooltip="In the password group, we have a reactive transformation to allow the user finish typing before displaying any error message, providing a better experience"
+        matTooltip="In the password group, we have a reactive transformation to allow the user to finish typing before displaying any error message, providing a better experience"
         matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="warn">info</mat-icon></button>
     </div>
 
