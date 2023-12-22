@@ -6,7 +6,7 @@
       <input #name="ngModel" type="text" name="name" [(ngModel)]="user.name" matInput required pattern="[a-zA-Z]*"
         maxlength="20" /><!--OBS: Regex for all letters + spaces-->
       <mat-error *ngIf="name.errors?.['required']">Username is required</mat-error>
-      <mat-error *ngIf="name.errors?.['pattern']">Only letters allowed</mat-error>
+      <mat-error *ngIf="name.errors?.['pattern']">Only letters. No spaces</mat-error>
     </mat-form-field>
 
     <mat-form-field class="field"><mat-label>Email</mat-label>
