@@ -5,7 +5,9 @@
   </p>
   <p class="prg">They share the same basic concepts, but have some differences concerning setup, data
     management, testing, etc. </p>
-  <p class="prg">Each approach offers different advantages. Selecting the right one should be a decision of the team.
+  <p class="prg">Each approach offers different advantages. Selecting which one to use should be a decision of the team,
+    but template-driven usually are not the best choice when it comes to robust forms or forms that require more
+    complex features.
   </p>
   <p class="prg">Here are some <b>pros and cons</b> of each one: </p>
   <section class="reactive-chips">
@@ -17,11 +19,11 @@
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Easier to perform actions on value changes</span>
+        <span class="mobile">Clearer separation between business and presentation logic</span>
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Easier to dynamically add input elements</span>
+        <span class="mobile">Better support for advanced use cases</span>
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
@@ -29,11 +31,11 @@
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile"> Require more code</span>
+        <span class="mobile">Require more code</span>
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Harder to setup</span>
+        <span class="mobile">Initial setup can be harder</span>
       </mat-chip>
     </div>
   </section>
@@ -42,19 +44,23 @@
       <h2 class="title">Template-Driven</h2>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Straightforward and easier to setup</span>
+        <span class="mobile">Straightforward and easier to first setup</span>
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Very similar to HTML forms</span>
+        <span class="mobile">Can benefit from two-way data binding</span>
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Harder to use in complex and robust scenarios</span>
+        <span class="mobile">Template tends to become messy as the form grows</span>
       </mat-chip>
       <mat-chip>
         <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
         <span class="mobile">Less flexibility and control over the form</span>
+      </mat-chip>
+      <mat-chip>
+        <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+        <span class="mobile">Some functionalities are harder to implement</span>
       </mat-chip>
     </div>
   </section>
