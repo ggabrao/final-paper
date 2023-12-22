@@ -2,10 +2,10 @@
   <h2 class="title">Reactive Form</h2>
   <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
     <mat-form-field class="field">
-      <mat-label>Name</mat-label>
-      <input formControlName="name" type="text" matInput maxlength="30" />
-      <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Name is required</mat-error>
-      <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Name must contain only letters</mat-error>
+      <mat-label>Username</mat-label>
+      <input formControlName="name" type="text" matInput maxlength="20" />
+      <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Username is required</mat-error>
+      <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Only letters allowed</mat-error>
     </mat-form-field>
     <button type="button" mat-icon-button
       matTooltip="This field uses Angular's built-in validators and display different messages accordingly to the type of error"
@@ -21,7 +21,7 @@
       <mat-label>Phone number</mat-label>
       <input formControlName="phone" type="tel" matInput placeholder="1 555 5555555" />
       <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone must follow the pattern</mat-error>
-      <mat-error *ngIf="userForm.get('phone')?.errors?.['required']">Phone number is required</mat-error>
+      <mat-error *ngIf="userForm.get('phone')?.errors?.['required']">Phone is required</mat-error>
     </mat-form-field>
     <button type="button" mat-icon-button
       matTooltip="This field has a validation rule adjusted at runtime: becomes required only if the user selects to receive notifications via phone"
