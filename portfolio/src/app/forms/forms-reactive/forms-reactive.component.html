@@ -3,7 +3,7 @@
   <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
     <mat-form-field color="accent" class="field">
       <mat-label>Username</mat-label>
-      <input formControlName="name" type="text" matInput maxlength="20"/>
+      <input formControlName="name" type="text" matInput maxlength="20" />
       <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Username is required</mat-error>
       <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Only letters. No spaces</mat-error>
     </mat-form-field>
@@ -40,8 +40,7 @@
 
     <div formGroupName="passwordGroup">
       <mat-form-field color="accent" class="field"><mat-label>Password</mat-label>
-        <input formControlName="password" type="password" matInput maxlength="6"
-          placeholder="Between 4 and 6 chars" />
+        <input formControlName="password" type="password" matInput maxlength="6" placeholder="Between 4 and 6 chars" />
         <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['required']">Password is required</mat-error>
         <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['minlength']">
           Password must have at least 4 characteres</mat-error>
@@ -61,7 +60,9 @@
         matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="warn">info</mat-icon></button>
     </div>
 
-    <mat-error class="notMatch" *ngIf="confirmMessage">{{ confirmMessage }}</mat-error>
+    <mat-error class="notMatch"
+      *ngIf="confirmMessage && !userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">{{ confirmMessage
+      }}</mat-error>
     <!-- This validation is reactive -->
 
     <div class="radio">

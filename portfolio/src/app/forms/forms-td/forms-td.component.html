@@ -41,7 +41,7 @@
         matInput required />
       <mat-error *ngIf="confirmPassword.errors?.['required']">This field is required</mat-error>
     </mat-form-field>
-    <mat-error *ngIf="frm.errors?.['passwordCompare']" class="notMatch">
+    <mat-error *ngIf="frm.errors?.['passwordCompare'] && !confirmPassword.errors?.['required']" class="notMatch">
       Passwords do not match</mat-error>
 
     <mat-checkbox class="checkbox" #agreement="ngModel" name="agreement" [(ngModel)]="user.agreement" required>I agree
