@@ -1,4 +1,4 @@
-<main *ngIf="selectedCourse">
+<div *ngIf="selectedCourse">
   <h1 class="title">Update course</h1>
   <form class="form" #frm="ngForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
@@ -33,4 +33,4 @@
       </button>
     </div>
   </form>
-</main>
+</div>
