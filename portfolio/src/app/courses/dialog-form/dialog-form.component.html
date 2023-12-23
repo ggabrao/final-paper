@@ -15,7 +15,7 @@
       <mat-error *ngIf="duration.errors?.['required']">Duration is required</mat-error>
       <mat-error *ngIf="duration.errors?.['min']">Min duration is 1</mat-error>
       <mat-error *ngIf="duration.errors?.['max']">Max duration is 100</mat-error>
-    </mat-form-field>    
+    </mat-form-field>
 
     <star-rating-control name="rating" [(ngModel)]="course.rating" size="large"></star-rating-control>
 
