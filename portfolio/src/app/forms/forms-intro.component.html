@@ -1,4 +1,4 @@
-<section class="container">
+<header class="container">
   <h1 class="title">Form Basics</h1>
   <p class="prg">Angular provides two types of forms: <b>template&hyphen;driven</b> and
     <b>reactive</b>.
@@ -10,73 +10,72 @@
     complex features.
   </p>
   <p class="prg">Here are some <b>pros and cons</b> of each one: </p>
-  <section class="reactive-chips">
-    <div class="chips">
-      <h2 class="title">Reactive</h2>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">More scalable, reusable and testable</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Clearer separation between business and presentation logic</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Better support for advanced use cases</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Can benefit from reactive transformations</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Require more code</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Initial setup can be harder</span>
-      </mat-chip>
-    </div>
-  </section>
-  <section>
-    <div class="chips">
-      <h2 class="title">Template-Driven</h2>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Straightforward and easier to first setup</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-        <span class="mobile">Can benefit from two-way data binding</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Template tends to become messy as the form grows</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Less flexibility and control over the form</span>
-      </mat-chip>
-      <mat-chip>
-        <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-        <span class="mobile">Some functionalities are harder to implement</span>
-      </mat-chip>
-    </div>
-  </section>
-  <section class="demos">
-    <h2 class="title">Demos</h2>
-    <p class="prg">The following forms <b>don't submit anything</b>. They were build for <b>testing purpose</b>. </p>
-    <p class="prg">Many different techniques were applied, along with Angular Material form components.
-    </p>
-    <p class="prg">The <b class="blue">blue info</b> have common content between the two types, while the <b
-        class="red">red ones</b> show more complex
-      features,
-      which are easily done with the Reactive approach.</p>
-  </section>
+</header>
+
+<section class="container chips reactive-chips">
+  <h2 class="title">Reactive</h2>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+    <span class="mobile">More scalable, reusable and testable</span>
+  </mat-chip>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+    <span class="mobile">Clearer separation between business and presentation logic</span>
+  </mat-chip>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+    <span class="mobile">Better support for advanced use cases</span>
+  </mat-chip>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+    <span class="mobile">Can benefit from reactive transformations</span>
+  </mat-chip>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+    <span class="mobile">Require more code</span>
+  </mat-chip>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+    <span class="mobile">Initial setup can be harder</span>
+  </mat-chip>
 </section>
 
-<main class="forms container">
-  <frm-reactive></frm-reactive>
-  <frm-td></frm-td>
+<section class="container chips">
+  <h2 class="title">Template-Driven</h2>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+    <span class="mobile">Straightforward and easier to first setup</span>
+  </mat-chip>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+    <span class="mobile">Can benefit from two-way data binding</span>
+  </mat-chip>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+    <span class="mobile">Template tends to become messy as the form grows</span>
+  </mat-chip>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+    <span class="mobile">Less flexibility and control over the form</span>
+  </mat-chip>
+  <mat-chip>
+    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+    <span class="mobile">Some functionalities are harder to implement</span>
+  </mat-chip>
+</section>
+
+<main class="container demos">
+  <h2 class="title">Demos</h2>
+  <p class="prg">The following forms <b>don't submit anything</b>. They were build for <b>testing purpose</b>. </p>
+  <p class="prg">Many different techniques were applied, along with Angular Material form components.
+  </p>
+  <p class="prg">The <b class="blue">blue info</b> have common content between the two types, while the <b
+      class="red">red ones</b> show more complex
+    features,
+    which are easily done with the Reactive approach.</p>
+
+  <div class="forms">
+    <frm-reactive></frm-reactive>
+    <frm-td></frm-td>
+  </div>
 </main>

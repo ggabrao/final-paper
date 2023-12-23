@@ -1,5 +1,5 @@
-<main>
-  <h2 class="title">TD Form</h2>
+<div>
+  <h3 class="title">TD Form</h3>
   <form class="form" #frm="ngForm" (ngSubmit)="onSubmit(frm)" frmConfirmPassword>
     <mat-form-field color="accent" class="field">
       <mat-label>Username</mat-label>
@@ -55,4 +55,4 @@
       <span *ngIf="submitted" class="submitted">Submitted</span>
     </div>
   </form>
-</main>
+</div>
