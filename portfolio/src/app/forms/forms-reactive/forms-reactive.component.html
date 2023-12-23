@@ -1,5 +1,5 @@
-<main>
-  <h2 class="title">Reactive Form</h2>
+<div>
+  <h3 class="title">Reactive Form</h3>
   <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
     <mat-form-field color="accent" class="field">
       <mat-label>Username</mat-label>
@@ -84,4 +84,4 @@
       <span *ngIf="submitted" class="submitted">Submitted</span>
     </div>
   </form>
-</main>
+</div>
