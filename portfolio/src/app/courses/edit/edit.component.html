@@ -6,14 +6,14 @@
       <input #id="ngModel" name="id" [ngModel]="selectedCourse.id" matInput required disabled="true" />
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field color="accent">
       <mat-label>Name</mat-label>
       <input #name="ngModel" type="text" name="name" [(ngModel)]="selectedCourse.name" matInput required
         maxlength="15" />
       <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field color="accent">
       <mat-label>Duration</mat-label>
       <input #duration="ngModel" type="number" name="duration" [(ngModel)]="selectedCourse.duration" matInput required
         min="1" max="100" />
