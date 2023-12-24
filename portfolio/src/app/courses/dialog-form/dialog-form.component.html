@@ -2,13 +2,13 @@
 <mat-dialog-content align="center">
   <form class="form" #frm="ngForm">
 
-    <mat-form-field>
+    <mat-form-field color="accent">
       <mat-label>Name</mat-label>
       <input #name="ngModel" type="text" name="name" [(ngModel)]="course.name" matInput required maxlength="15" />
       <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field color="accent">
       <mat-label>Duration</mat-label>
       <input #duration="ngModel" type="number" name="duration" [(ngModel)]="course.duration" matInput required min="1"
         max="100" />
@@ -22,10 +22,10 @@
   </form>
 
   <mat-dialog-actions align="center" class="buttons">
-    <button [disabled]="!frm.form.valid" mat-raised-button color="accent" [mat-dialog-close]="frm.value">
+    <button type="submit" [disabled]="!frm.form.valid" mat-raised-button color="accent" [mat-dialog-close]="frm.value">
       Save
     </button>
-    <button mat-raised-button color="warn" (click)="onCancel()">
+    <button type="button" mat-raised-button color="warn" (click)="onCancel()">
       Cancel
     </button>
   </mat-dialog-actions>
