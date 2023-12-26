@@ -3,7 +3,7 @@
     <img class="logo" src="./../../assets/gga-logo.png" alt="Gabriel's logo">
     <div class="nav">
       <a class="nav-item" routerLink="/home">Home</a>
-      <a class="nav-item" [matMenuTriggerFor]="menu">Demos</a>
+      <button class="nav-btn" [matMenuTriggerFor]="menu">Demos</button>
       <mat-menu #menu="matMenu">
         <a class="menu-item" mat-menu-item routerLink="/forms">Forms</a>
         <a class="menu-item" mat-menu-item routerLink="/courses">API</a>
