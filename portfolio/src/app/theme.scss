@@ -4,7 +4,7 @@
 
 $primary: mat.define-palette(mat.$red-palette, A700);
 $accent: mat.define-palette(mat.$indigo-palette, 600);
-$warn: mat.define-palette(mat.$red-palette, A400);
+$warn: mat.define-palette(mat.$red-palette, A700);
 
 $theme: mat.define-light-theme((color: (primary: $primary,
         accent: $accent,
@@ -29,5 +29,3 @@ $theme: mat.define-light-theme((color: (primary: $primary,
 @include mat.toolbar-theme($theme);
 @include mat.icon-button-theme($theme);
 @include mat.fab-theme($theme);
-
-
