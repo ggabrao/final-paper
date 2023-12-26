@@ -7,7 +7,7 @@
       <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Username is required</mat-error>
       <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Only letters. No spaces</mat-error>
     </mat-form-field>
-    <button type="button" mat-icon-button aria-label="Button that displays a tooltip when focused or hovered over"
+    <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
       matTooltip="This field uses Angular's built-in validators and display different messages accordingly to the type of error"
       matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
 
@@ -23,7 +23,7 @@
       <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone must follow the pattern</mat-error>
       <mat-error *ngIf="userForm.get('phone')?.errors?.['required']">Phone is required</mat-error>
     </mat-form-field>
-    <button type="button" mat-icon-button aria-label="Button that displays a tooltip when focused or hovered over"
+    <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
       matTooltip="This field has a validation rule adjusted at runtime: becomes required only if the user selects to receive notifications via phone"
       matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="primary">info</mat-icon></button>
 
@@ -33,7 +33,7 @@
         <input [formControlName]="i" type="text" matInput maxlength="50" />
       </mat-form-field>
       <button type="button" mat-icon-button (click)="addAddress()" matTooltip="Add another line"
-        matTooltipPosition="after" aria-label="Button that displays a tooltip when focused or hovered over">
+        matTooltipPosition="after" aria-label="Displays a tooltip when focused or hovered over">
         <mat-icon class="material-symbols-outlined" color="primary">add_circle</mat-icon>
       </button>
     </div>
@@ -45,7 +45,7 @@
         <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['minlength']">
           Password must have at least 4 characteres</mat-error>
       </mat-form-field>
-      <button type="button" mat-icon-button aria-label="Button that displays a tooltip when focused or hovered over"
+      <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
         matTooltip="Here we have a Cross-Field Validator to check if the password and its confirmation matches, also with a custom validation rule"
         matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
 
@@ -55,7 +55,7 @@
         <mat-error *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">This field is
           required</mat-error>
       </mat-form-field>
-      <button type="button" mat-icon-button aria-label="Button that displays a tooltip when focused or hovered over"
+      <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
         matTooltip="In the password group, we have a reactive transformation to allow the user to finish typing before displaying any error message, providing a better experience"
         matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="primary">info</mat-icon></button>
     </div>
