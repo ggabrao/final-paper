@@ -7,12 +7,25 @@
     height: 2.5rem;
 }
 
+
+
 .nav {
     flex: 1 0 auto;
     position: absolute;
     left: 50%;
     transform: translate(-47.7%, 0.1rem);
     display: flex;
+}
+
+.nav-btn {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 2px 30px;
+    background: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 .nav-item {
@@ -24,7 +37,7 @@
     padding: 2px 30px;
 }
 
-.nav-item:hover {
+.nav-item:hover, .nav-btn:hover {
     background-color: rgba(0, 0, 0, 0.249);
     border-radius: 5%;
 }
