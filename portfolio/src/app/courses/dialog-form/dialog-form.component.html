@@ -4,7 +4,8 @@
 
     <mat-form-field color="accent">
       <mat-label>Name</mat-label>
-      <input #name="ngModel" type="text" name="name" [(ngModel)]="course.name" matInput required maxlength="15" />
+      <input #name="ngModel" type="text" name="name" [(ngModel)]="course.name" matInput required maxlength="15"
+        autocomplete="off" />
       <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
     </mat-form-field>
 
