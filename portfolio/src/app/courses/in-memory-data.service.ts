@@ -9,10 +9,10 @@ import { ICourse } from './course.model';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const courses = [
-      { id: 1, name: 'HTML', duration: 5, rating: 4 },
+      { id: 1, name: 'HTML', duration: 5, rating: 4.5 },
       { id: 2, name: 'CSS', duration: 8, rating: 1 },
-      { id: 3, name: 'Javascript', duration: 15, rating: 3 },
-      { id: 4, name: 'Web Design', duration: 5, rating: 0 },
+      { id: 3, name: 'Javascript', duration: 15, rating: 3.2 },
+      { id: 4, name: 'Web Design', duration: 5, rating: 4.7 },
       { id: 5, name: 'Angular', duration: 30, rating: 5 }
     ];
     return { courses };

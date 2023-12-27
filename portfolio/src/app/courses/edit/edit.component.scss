@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 400px;
+  height: 450px;
   width: 30rem;
   margin: auto;
   margin-top: 3rem;
@@ -24,12 +24,9 @@
   max-width: 25rem;
 }
 
-.rating {
-  margin-bottom: 2rem;
-}
-
 .buttons {
-  display:flex;
+  display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 2rem;
 }

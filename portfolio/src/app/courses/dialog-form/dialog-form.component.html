@@ -18,17 +18,22 @@
       <mat-error *ngIf="duration.errors?.['max']">Max duration is 100</mat-error>
     </mat-form-field>
 
-    <star-rating-control name="rating" [(ngModel)]="course.rating" size="large"></star-rating-control>
-
+    <mat-form-field color="accent">
+      <mat-label>Rating</mat-label>
+      <input #rating="ngModel" type="number" name="rating" [(ngModel)]="course.rating" matInput required min="0"
+        max="5" />
+      <mat-error *ngIf="rating.errors?.['required']">Rating is required</mat-error>
+      <mat-error *ngIf="rating.errors?.['min']">Min rating is 0</mat-error>
+      <mat-error *ngIf="rating.errors?.['max']">Max rating is 5</mat-error>
+    </mat-form-field>
+    <mat-dialog-actions align="center" class="buttons">
+      <button type="submit" [disabled]="!frm.form.valid" mat-raised-button color="accent"
+        [mat-dialog-close]="frm.value">
+        Save
+      </button>
+      <button type="button" mat-raised-button color="warn" (click)="onCancel()">
+        Cancel
+      </button>
+    </mat-dialog-actions>
   </form>
-
-  <mat-dialog-actions align="center" class="buttons">
-    <button type="submit" [disabled]="!frm.form.valid" mat-raised-button color="accent" [mat-dialog-close]="frm.value">
-      Save
-    </button>
-    <button type="button" mat-raised-button color="warn" (click)="onCancel()">
-      Cancel
-    </button>
-  </mat-dialog-actions>
-
 </mat-dialog-content>
