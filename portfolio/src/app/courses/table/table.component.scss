@@ -13,17 +13,10 @@
     margin-top: 3.5rem;
 }
 
-.rating {
-    width: 9.6rem;
-}
-
 .add {
     margin-left: 0.43rem;
 }
 
-.mobile {
-    display:none;
-}
 
 // ======= QUERIES ========
 
@@ -33,13 +26,4 @@
     .container {
         overflow: auto;
     }
-
-    .rating {
-        display:none;
-    }
-
-    .mobile {
-        display:inline;
-    }
-
 }
