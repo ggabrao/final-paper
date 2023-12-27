@@ -12,6 +12,11 @@
     margin-top: 5rem;
 }
 
+mat-basic-chip {
+    margin: 0.5rem;
+    padding-left: 4rem;
+}
+
 .title {
     font-size: 2.3rem;
     font-weight: 700;
@@ -30,10 +35,6 @@
     margin-bottom: 1rem;
 }
 
-.chips {
-    text-align: center;
-    margin-bottom: 5rem;
-}
 
 .blue {
     color: #3949AB;
@@ -50,11 +51,6 @@
         'wght' 400,
         'GRAD' 0,
         'opsz' 20;
-}
-
-mat-chip {
-    margin: 0.3rem;
-    background-color: rgba(128, 128, 128, 10%) !important;
 }
 
 .good {
@@ -77,25 +73,6 @@ mat-chip {
 // Below 816px
 @media (max-width: 51em) {
 
-    .chips {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        margin-bottom: 2.5rem;
-    }
-
-    mat-chip {
-        scale: 0.94;
-        margin: 0;
-        padding-right: 0;
-        height: fit-content;
-    }
-
-    .reactive-chips {
-        margin-top: 2rem;
-    }
-
     .mobile {
         text-wrap: wrap;
     }
@@ -114,13 +91,11 @@ mat-chip {
     }
 }
 
-// Below 408px
-@media (max-width: 25.5em) {
+// Below 592px
+@media (max-width: 37em) {
 
-    .chips {
-        align-items: stretch;
-        width: 30rem;
-        margin: auto;
-        margin-bottom: 2.5rem;
+    mat-basic-chip {
+        margin: 0.7rem;
+        padding-left: 0;
     }
 }

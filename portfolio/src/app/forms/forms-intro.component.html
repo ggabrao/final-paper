@@ -12,56 +12,60 @@
   <p class="prg">Here are some <strong>pros and cons</strong> of each one: </p>
 </header>
 
-<section class="container chips reactive-chips">
+<section class="container">
   <h2 class="title">Reactive</h2>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-    <span class="mobile">More scalable, reusable and testable</span>
-  </mat-chip>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-    <span class="mobile">Clearer separation between business and presentation logic</span>
-  </mat-chip>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-    <span class="mobile">Better support for advanced use cases</span>
-  </mat-chip>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-    <span class="mobile">Can benefit from reactive transformations</span>
-  </mat-chip>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-    <span class="mobile">Require more code</span>
-  </mat-chip>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-    <span class="mobile">Initial setup can be harder</span>
-  </mat-chip>
+  <mat-chip-set class="mat-mdc-chip-set-stacked" role="list">
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">More scalable, reusable and testable</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Clearer separation between business and presentation logic</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Better support for advanced use cases</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Can benefit from reactive transformations</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Require more code</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Initial setup can be harder</span>
+    </mat-basic-chip>
+  </mat-chip-set>
 </section>
 
-<section class="container chips">
+<section class="container">
   <h2 class="title">Template-Driven</h2>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-    <span class="mobile">Straightforward and easier to first setup</span>
-  </mat-chip>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
-    <span class="mobile">Can benefit from two-way data binding</span>
-  </mat-chip>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-    <span class="mobile">Template tends to become messy as the form grows</span>
-  </mat-chip>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-    <span class="mobile">Less flexibility and control over the form</span>
-  </mat-chip>
-  <mat-chip>
-    <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
-    <span class="mobile">Some functionalities are harder to implement</span>
-  </mat-chip>
+  <mat-chip-set class="mat-mdc-chip-set-stacked" role="list">
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Straightforward and easier to first setup</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Can benefit from two-way data binding</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Template tends to become messy as the form grows</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Less flexibility and control over the form</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Some functionalities are harder to implement</span>
+    </mat-basic-chip>
+  </mat-chip-set>
 </section>
 
 <main class="container demos">
@@ -73,7 +77,8 @@
   <p class="prg">The <strong class="blue">blue info</strong> have common content between the two types, while the
     <strong class="red">red ones</strong> show more complex
     features,
-    which are easily done with the Reactive approach.</p>
+    which are easily done with the Reactive approach.
+  </p>
 
   <div class="forms">
     <frm-reactive></frm-reactive>
