@@ -1,7 +1,7 @@
 <nav>
   <mat-toolbar class="toolbar" color="primary">
     <img class="logo" src="./../../assets/gga-logo.png" alt="Author's logo">
-    <div class="nav">
+    <div class="nav desktop">
       <a class="nav-item" routerLink="/home">Home</a>
       <button class="nav-btn" [matMenuTriggerFor]="menu">Demos</button>
       <mat-menu #menu="matMenu">
@@ -33,5 +33,16 @@
         aria-label="Author's GitHub">
         <img src="../../assets/github-mark-white.png" alt="" aria-hidden="true"></a>
     </div>
+    <div class="nav mobile">
+      <a class="nav-item" routerLink="/home">Home</a>
+      <button class="nav-btn" [matMenuTriggerFor]="menu">Demos</button>
+      <mat-menu #menu="matMenu">
+        <a class="menu-item" mat-menu-item routerLink="/forms">Forms</a>
+        <a class="menu-item" mat-menu-item routerLink="/courses">API</a>
+        <a class="menu-item" mat-menu-item routerLink="/website">Website</a>
+      </mat-menu>
+      <a class="nav-item" routerLink="/resume">Resume</a>
+    </div>
+
   </mat-toolbar>
 </nav>
