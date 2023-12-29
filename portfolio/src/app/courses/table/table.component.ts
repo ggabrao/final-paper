@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatTable } from '@angular/material/table';
 import { ActivatedRoute } from '@angular/router';
-import { FooterService } from 'src/app/footer.service';
 import { ICourse } from '../course.model';
 import { CoursesService } from '../courses.service';
 import { DialogFormComponent } from '../dialog-form/dialog-form.component';
@@ -12,7 +11,7 @@ import { DialogFormComponent } from '../dialog-form/dialog-form.component';
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss'
 })
-export class TableComponent implements OnInit, OnDestroy {
+export class TableComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'duration', 'rating', 'edit', 'remove'];
 
@@ -21,18 +20,12 @@ export class TableComponent implements OnInit, OnDestroy {
   @ViewChild(MatTable)
   table!: MatTable<ICourse>;
 
-  constructor(private dataService: CoursesService, public dialog: MatDialog, private route: ActivatedRoute,
-    private footerService: FooterService) {
+  constructor(private dataService: CoursesService, public dialog: MatDialog, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.footerService.hide();
     this.route.data.subscribe(({ coursesResolver }) => this.courses = coursesResolver);
   };
-
-  ngOnDestroy(): void {
-    this.footerService.show();
-  }
 
   deleteData(course: ICourse): void {
     this.courses = this.courses.filter(c => c !== course);
