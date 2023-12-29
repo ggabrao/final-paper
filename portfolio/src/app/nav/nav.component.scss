@@ -8,11 +8,11 @@
 }
 
 .nav {
-    flex: 1 0 auto;
     position: absolute;
     left: 50%;
-    transform: translate(-47.7%, 0.1rem);
+    transform: translate(-50%, 0.1rem);
     display: flex;
+    gap: 8px;
 }
 
 .nav-btn {
@@ -20,10 +20,11 @@
     font-size: 1.6rem;
     font-weight: 500;
     cursor: pointer;
-    padding: 2px 30px;
     background: none;
     border: none;
     font-family: 'Roboto', sans-serif;
+    width: 10rem;
+    height: 4rem;
 }
 
 .nav-item {
@@ -31,8 +32,10 @@
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 500;
-    cursor: pointer;
-    padding: 2px 30px;
+    width: 10rem;
+    height: 4rem;
+    text-align: center;
+    line-height: 4rem;
 }
 
 .nav-item:hover,
@@ -60,10 +63,6 @@
         scale: .8;
         transform: translateX(20%);
     }
-
-    .nav-item {
-        padding: 1px 18px;
-    }
 }
 
 // Below 624px
@@ -73,7 +72,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         height: 10rem;
-        min-width: 32.8rem;
+        margin:auto;
         padding-right: 5px;
         padding-left: 5px;
     }
@@ -86,16 +85,12 @@
     .nav {
         position: relative;
         left: 0;
-        transform: translateX(5.4px);
+        transform: translateX(0px);
         grid-column: 1/-1;
         grid-row: 2;
         justify-content: center;
         align-self: start;
         display: flex;
-    }
-
-    .nav-item {
-        padding: 1px 25px;
     }
 
     .social {
