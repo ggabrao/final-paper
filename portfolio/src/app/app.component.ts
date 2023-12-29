@@ -7,7 +7,6 @@ import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Rout
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio';
   loading = true;
 
   constructor(public router: Router) {

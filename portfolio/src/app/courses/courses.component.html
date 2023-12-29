@@ -1,3 +1,7 @@
+<div *ngIf="pageTitle" aria-live="assertive">
+  <span [attr.aria-label]="pageTitle"></span>
+</div>
+
 <header class="container">
   <h1 class="title">API</h1>
   <p class="prg">The following table emulates the main <strong>CRUD</strong> operations over a <strong>REST

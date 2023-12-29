@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'crs-dialog',
@@ -7,6 +8,8 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrl: './dialog-form.component.scss'
 })
 export class DialogFormComponent {
+
+  pageTitle!: string;
 
   course: any = {
     name: "",
@@ -16,7 +19,6 @@ export class DialogFormComponent {
 
   constructor(
     public dialogRef: MatDialogRef<DialogFormComponent>) { }
-
 
   onCancel() {
     this.dialogRef.close(null);
