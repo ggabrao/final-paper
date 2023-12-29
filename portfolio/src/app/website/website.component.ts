@@ -9,14 +9,17 @@ import { Title } from '@angular/platform-browser';
 })
 export class WebsiteComponent implements OnInit, OnDestroy {
 
-  constructor(private footerService:FooterService, private title:Title) {}
-  
-    ngOnInit(): void {
-      this.footerService.hide();
-      this.title.setTitle("Website | First Angular Project");
-    }
-    ngOnDestroy(): void {
-      this.footerService.show();
-    }
-  
+  pageTitle!: string;
+
+  constructor(private footerService: FooterService, private title: Title) { }
+
+  ngOnInit(): void {
+    this.footerService.hide();
+    this.title.setTitle("Website | First Angular Project");
+    this.pageTitle = this.title.getTitle();
   }
+  ngOnDestroy(): void {
+    this.footerService.show();
+  }
+
+}

@@ -1,3 +1,7 @@
+<div *ngIf="pageTitle" aria-live="assertive">
+  <span [attr.aria-label]="pageTitle"></span>
+</div>
+
 <header class="container">
   <h1 class="title">Form Basics</h1>
   <p class="prg">Angular provides two types of forms: <strong>template&hyphen;driven</strong> and

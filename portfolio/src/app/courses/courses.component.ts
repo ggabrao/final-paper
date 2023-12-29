@@ -9,12 +9,15 @@ import { Title } from '@angular/platform-browser';
 })
 export class CoursesComponent implements OnInit, OnDestroy {
 
-  constructor(private footerService: FooterService, private title:Title) {
+  pageTitle!: string;
+
+  constructor(private footerService: FooterService, private title: Title) {
   }
 
   ngOnInit() {
     this.footerService.hide();
     this.title.setTitle("API | First Angular Project");
+    this.pageTitle = this.title.getTitle();
   };
 
   ngOnDestroy(): void {

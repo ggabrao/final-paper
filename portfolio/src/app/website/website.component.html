@@ -1,3 +1,7 @@
+<div *ngIf="pageTitle" aria-live="assertive">
+  <span [attr.aria-label]="pageTitle"></span>
+</div>
+
 <header class="container">
     <h1 class="header">Website Features</h1>
     <p class="prg">This website was build trying to use as much as possible <strong class="blue">Angular's conventions,

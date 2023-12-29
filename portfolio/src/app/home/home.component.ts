@@ -8,10 +8,13 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent {
 
+  pageTitle!: string;
+
   constructor(private title: Title) { }
 
   ngOnInit(): void {
     this.title.setTitle("Home | First Angular Project");
+    this.pageTitle = this.title.getTitle();
   }
 
 }
