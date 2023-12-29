@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FooterService } from '../footer.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'wb-website',
@@ -8,10 +9,11 @@ import { FooterService } from '../footer.service';
 })
 export class WebsiteComponent implements OnInit, OnDestroy {
 
-  constructor(private footerService:FooterService) {}
+  constructor(private footerService:FooterService, private title:Title) {}
   
     ngOnInit(): void {
       this.footerService.hide();
+      this.title.setTitle("Website | First Angular Project");
     }
     ngOnDestroy(): void {
       this.footerService.show();
