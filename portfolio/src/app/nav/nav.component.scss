@@ -1,6 +1,10 @@
 .toolbar {
     height: 5rem;
+    background-color: #D50000;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 1.6rem;
 }
 
 .logo {
@@ -43,15 +47,9 @@
     background-color: rgba(0, 0, 0, 0.249);
     border-radius: 5%;
 }
-
-
 .social {
     scale: .90;
     transform: translateX(10%);
-}
-
-.mobile {
-    display: none;
 }
 
 // ======= QUERIES ========
@@ -71,8 +69,7 @@
     .toolbar {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        height: 10rem;
-        margin: auto;
+        height: 10rem;        
         padding-right: 5px;
         padding-left: 5px;
     }
@@ -97,9 +94,5 @@
         scale: .90;
         transform: translateX(5%);
         justify-self: end;
-    }
-
-    .desktop {
-        display: none;
     }
 }
