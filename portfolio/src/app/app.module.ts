@@ -18,6 +18,7 @@ import { InMemoryDataService } from './courses/in-memory-data.service';
 import { SpinnerComponent } from './spinner.component';
 import { DemosComponent } from './demos/demos.component';
 import { ProjectComponent } from './project/project.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ProjectComponent } from './project/project.component';
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    LayoutModule
   ],
   providers: [Title],
   bootstrap: [AppComponent],
