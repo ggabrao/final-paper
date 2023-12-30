@@ -1,5 +1,10 @@
+.toolbar {
+    height: 5rem;
+    justify-content: space-between;
+}
+
 .logo {
-    height: 3rem;
+    height: 2.5rem;
 }
 
 .nav {
@@ -19,7 +24,7 @@
     border: none;
     font-family: 'Roboto', sans-serif;
     width: 10rem;
-    height: 4.8rem;
+    height: 4rem;
 }
 
 .nav-item {
@@ -28,9 +33,9 @@
     font-size: 1.6rem;
     font-weight: 500;
     width: 10rem;
-    height: 4.8rem;
+    height: 4rem;
     text-align: center;
-    line-height: 4.8rem;
+    line-height: 4rem;
 }
 
 .nav-item:hover,
@@ -39,8 +44,14 @@
     border-radius: 5%;
 }
 
-.spacer {
-    flex: 1 1 auto;
+
+.social {
+    scale: .90;
+    transform: translateX(10%);
+}
+
+.mobile {
+    display: none;
 }
 
 // ======= QUERIES ========
@@ -48,16 +59,9 @@
 // Below 816px
 @media (max-width: 51em) {
 
-    .nav-btn {
-        width: 8rem;
-    }
-    
-    .nav-item {
-        width: 8rem;  
-    }
-
-    .icon {
-        scale: .9;
+    .social {
+        scale: .8;
+        transform: translateX(20%);
     }
 }
 
@@ -67,10 +71,15 @@
     .toolbar {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        height: 10rem;
+        margin: auto;
+        padding-right: 5px;
+        padding-left: 5px;
     }
 
     .logo {
         height: 2.8rem;
+        transform: translateX(10px);
     }
 
     .nav {
@@ -84,10 +93,13 @@
         display: flex;
     }
 
-    .icon {
+    .social {
         scale: .90;
         transform: translateX(5%);
         justify-self: end;
     }
 
+    .desktop {
+        display: none;
+    }
 }
