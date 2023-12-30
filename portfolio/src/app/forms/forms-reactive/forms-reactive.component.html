@@ -67,8 +67,8 @@
     <!-- This validation is reactive -->
 
     <div class="radio">
-      <mat-radio-group formControlName="notifications">
-        <mat-label>Notifications:</mat-label>
+      <mat-radio-group formControlName="notifications" aria-labelledby="notifications-label">
+        <mat-label id="notifications-label">Notifications:</mat-label>
         <mat-radio-button value="email">Email</mat-radio-button>
         <mat-radio-button value="text">Phone</mat-radio-button>
       </mat-radio-group>
