@@ -32,8 +32,10 @@ export class TableComponent implements OnInit {
     this.dataService.deleteCourse(course.id).subscribe();
   };
 
+ 
+
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogFormComponent);
+    const dialogRef = this.dialog.open(DialogFormComponent, {ariaLabel: "Add a new course"});
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.dataService.addCourse(result).subscribe(data => {
