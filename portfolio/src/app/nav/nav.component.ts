@@ -11,15 +11,13 @@ export class NavComponent {
 
   mobile!: boolean;
 
-  constructor(public breakpointObserver: BreakpointObserver) {
+  constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([
-      '(max-width: 37em)']).subscribe(() => {
-        if (breakpointObserver.isMatched('(max-width:37em)')) {
+      '(max-width: 37em)']).subscribe((result) => {
+        if (result.matches) {
           this.mobile = true;
-          console.log("mobile")
         } else {
           this.mobile = false;
-          console.log("desktop")
         }
       }
       );
