@@ -30,9 +30,7 @@ export class TableComponent implements OnInit {
   deleteData(course: ICourse): void {
     this.courses = this.courses.filter(c => c !== course);
     this.dataService.deleteCourse(course.id).subscribe();
-  };
-
- 
+  }; 
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogFormComponent, {ariaLabel: "Add a new course"});
