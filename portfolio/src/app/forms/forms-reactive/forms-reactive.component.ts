@@ -7,6 +7,7 @@ import {
   FormBuilder,
   FormControl,
   FormGroup,
+  NgForm,
   ValidationErrors,
   ValidatorFn,
   Validators,
@@ -37,7 +38,6 @@ export const passwordCompareValidator: ValidatorFn = (
 export class FormsReactiveComponent implements OnInit {
   userForm!: FormGroup;
   confirmMessage!: string;
-  submitted: boolean = false;
 
   private validationMessage: any = {
     passwordCompare: 'Passwords do not match',
@@ -45,7 +45,7 @@ export class FormsReactiveComponent implements OnInit {
 
   get addresses(): FormArray {
     return <FormArray>this.userForm.get('addresses');
-  }
+  } 
 
   constructor(private fb: FormBuilder) { }
 
@@ -64,7 +64,7 @@ export class FormsReactiveComponent implements OnInit {
       ),
       agreement: [false, Validators.requiredTrue],
       notifications: 'email',
-    });
+    });  
 
     this.userForm
       .get('notifications')
@@ -76,8 +76,8 @@ export class FormsReactiveComponent implements OnInit {
       .subscribe(() => this.setMessage(confirmControl));
   }
 
-  onSubmit() {
-    this.submitted = true;
+  onSubmit(): void {
+    alert("Submitted");
   }
 
   setNotification(notificationInput: string): void {
