@@ -41,7 +41,8 @@
 
     <div formGroupName="passwordGroup">
       <mat-form-field color="accent" class="field"><mat-label>Password</mat-label>
-        <input formControlName="password" type="password" matInput maxlength="6" placeholder="Between 4 and 6 chars" />
+        <input formControlName="password" type="password" matInput maxlength="6" placeholder="Between 4 and 6 chars"
+          autocomplete="off" />
         <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['required']">Password is required</mat-error>
         <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['minlength']">
           Password must have at least 4 characteres</mat-error>
@@ -52,7 +53,7 @@
 
 
       <mat-form-field color="accent" class="field"><mat-label>Confirm Password</mat-label>
-        <input formControlName="confirmPassword" type="password" matInput />
+        <input formControlName="confirmPassword" type="password" matInput autocomplete="off" />
         <mat-error *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">Confirmation is
           required</mat-error>
       </mat-form-field>
