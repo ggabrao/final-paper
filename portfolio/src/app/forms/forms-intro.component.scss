@@ -23,6 +23,7 @@ mat-basic-chip {
     letter-spacing: -0.5px;
     line-height: 1.15;
     margin-bottom: 1rem;
+    margin-top: 4rem;
 }
 
 .prg {
@@ -68,7 +69,6 @@ mat-basic-chip {
     justify-content: space-around;
     margin-top: 4rem;
 }
-
 
 // Below 816px
 @media (max-width: 51em) {

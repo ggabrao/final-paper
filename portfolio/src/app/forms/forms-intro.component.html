@@ -2,8 +2,8 @@
   <span [attr.aria-label]="pageTitle"></span>
 </div>
 
-<header class="container">
-  <h1 class="title">Form Basics</h1>
+<section class="container" aria-labelledby="form-basics-title">
+  <h1 class="title" id="form-basics-title">Form Basics</h1>
   <p class="prg">Angular provides two types of forms: <strong>template&hyphen;driven</strong> and
     <strong>reactive</strong>.
   </p>
@@ -14,10 +14,7 @@
     complex features.
   </p>
   <p class="prg">Here are some <strong>pros and cons</strong> of each one: </p>
-</header>
-
-<section class="container" aria-labelledby="reactive-chips-title">
-  <h2 class="title" id="reactive-chips-title">Reactive</h2>
+  <h2 class="title">Reactive</h2>
   <mat-chip-set class="mat-mdc-chip-set-stacked" role="list">
     <mat-basic-chip role="listitem" aria-label="Vantage">
       <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
@@ -44,10 +41,8 @@
       <span class="mobile">Initial setup can be harder</span>
     </mat-basic-chip>
   </mat-chip-set>
-</section>
-
-<section class="container" aria-labelledby="td-chips-title">
-  <h2 class="title" id="td-chips-title">Template-Driven</h2>
+  
+  <h2 class="title">Template-Driven</h2>
   <mat-chip-set class="mat-mdc-chip-set-stacked" role="list">
     <mat-basic-chip role="listitem" aria-label="Vantage">
       <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
@@ -79,7 +74,6 @@
   <p class="prg">Many different techniques were applied, along with Angular Material form components. Please check the
     <strong>tooltips</strong> for more details.
   </p>
-
 
   <div class="forms">
     <frm-reactive></frm-reactive>
