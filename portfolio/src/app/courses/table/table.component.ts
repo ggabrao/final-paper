@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ICourse } from '../course.model';
 import { CoursesService } from '../courses.service';
 import { DialogFormComponent } from '../dialog-form/dialog-form.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'crs-table',
@@ -20,7 +21,7 @@ export class TableComponent implements OnInit {
   @ViewChild(MatTable)
   table!: MatTable<ICourse>;
 
-  constructor(private dataService: CoursesService, public dialog: MatDialog, private route: ActivatedRoute) {
+  constructor(private dataService: CoursesService, public dialog: MatDialog, private route: ActivatedRoute, private _snackBar: MatSnackBar) {
   }
 
   ngOnInit() {
@@ -29,16 +30,21 @@ export class TableComponent implements OnInit {
 
   deleteData(course: ICourse): void {
     this.courses = this.courses.filter(c => c !== course);
-    this.dataService.deleteCourse(course.id).subscribe();
-  }; 
+    this.dataService.deleteCourse(course.id).subscribe(() => this._snackBar.open(`Course id: ${course.id} deleted`, "", {
+      duration: 2000
+    }));
+  };
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogFormComponent, {ariaLabel: "Add a new course"});
+    const dialogRef = this.dialog.open(DialogFormComponent, { ariaLabel: "Add a new course" });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.dataService.addCourse(result).subscribe(data => {
           if (data) {
             this.courses.push(data);
+            this._snackBar.open(`Course id: ${data.id} added`, "", {
+              duration: 2000
+            });
             this.table.renderRows();
           }
         })
