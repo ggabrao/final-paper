@@ -1,23 +1,24 @@
 <footer class="footer">
   <div class="content">
-    <div class="quote">
+    <div class="quote" aria-label="Author's Message">
       <h3 class="header">First project</h3>
-      <span>"Thank you for visiting my first project using Angular! Feel free to contact
+      <span>"Thank you for visiting my first project using Angular! Feel free to
+        contact
         me
         for
         any suggestions."</span>
     </div>
     <div class="list-container">
-      <h3 class="header">Main Links</h3>
-      <ul class="list">
+      <h3 class="header" aria-hidden="true" id="links-title">Main Links</h3>
+      <ul class="list" aria-labelledby="links-title">
         <li><a routerLink="/forms" class="item">Forms</a></li>
         <li><a routerLink="/courses" class="item">API</a></li>
         <li><a routerLink="/website" class="item">Website</a></li>
         <li><a routerLink="/resume" class="item">Resume</a></li>
       </ul>
     </div>
-    <div class="contact">
-      <h3 class="header contact-header">Contact Info:</h3>
+    <div class="contact" aria-label="Contact Info">
+      <h3 class="header contact-header" aria-hidden="true">Contact Info:</h3>
       <div class="contact-icons">
         <a mat-icon-button href="https://mail.google.com/mail/u/0/?fs=1&to=gguimaraesabrao@gmail.com&tf=cm"
           target="_blank" aria-label="Talk to Gabriel via email">
