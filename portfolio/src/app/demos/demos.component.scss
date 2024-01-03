@@ -16,7 +16,6 @@
   margin-bottom: 2.5rem;
 }
 
-
 .paragraph {
   display: block;
   font-size: 1.8rem;
@@ -32,11 +31,6 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
-}
-
-.card-link {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.87);
 }
 
 .card {
@@ -68,21 +62,9 @@
   font-weight: 400;
   letter-spacing: normal;
   line-height: 1.6;
-  margin-top: 2rem;
+  margin: 2rem 0;  
 }
 
-.card:hover.red {
-  box-shadow: 0 10px 15px 0 rgba(255, 0, 0, 0.706);
-
-}
-
-.card:hover.blue {
-  box-shadow: 0 10px 15px 0 rgba(42, 163, 250, 0.752);
-}
-
-.card:hover.green {
-  box-shadow: 0 10px 15px 0 rgba(0, 128, 0, 0.697);
-}
 
 // QUERIES
 
