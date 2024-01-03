@@ -2,11 +2,11 @@
   <img class="logo" src="./../../assets/gga-logo.png" alt="Author's logo">
   <div class="nav" *ngIf="!mobile">
     <a class="nav-item" routerLink="/home">Home</a>
-    <button class="nav-btn" [matMenuTriggerFor]="menu">Demos</button>
+    <button class="nav-btn" [matMenuTriggerFor]="menu" aria-label="Show demos links">Demos</button>
     <mat-menu #menu="matMenu">
-      <a class="menu-item" mat-menu-item routerLink="/forms" aria-label="Link to Forms">Forms</a>
-      <a class="menu-item" mat-menu-item routerLink="/courses" aria-label="Link to Courses">API</a>
-      <a class="menu-item" mat-menu-item routerLink="/website" aria-label="Link to Website">Website</a>
+      <a class="menu-item" mat-menu-item routerLink="/forms" aria-label="Navigate to Forms Demo">Forms</a>
+      <a class="menu-item" mat-menu-item routerLink="/courses" aria-label="Navigate to Courses Demo">API</a>
+      <a class="menu-item" mat-menu-item routerLink="/website" aria-label="Navigate to Website Demo">Website</a>
     </mat-menu>
     <a class="nav-item" routerLink="/resume">Resume</a>
   </div>
