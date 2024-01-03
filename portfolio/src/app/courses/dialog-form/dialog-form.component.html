@@ -26,8 +26,7 @@
       <mat-error *ngIf="rating.errors?.['max']">Max rating is 5</mat-error>
     </mat-form-field>
     <mat-dialog-actions align="center" class="buttons">
-      <button type="submit" [disabled]="!frm.form.valid" mat-raised-button color="accent"
-        [mat-dialog-close]="frm.value">
+      <button type="submit" [disabled]="!frm.form.valid" mat-raised-button color="accent" [mat-dialog-close]="frm.value">
         Save
       </button>
       <button type="button" mat-raised-button color="warn" (click)="onCancel()">
