@@ -1,88 +1,86 @@
-<div>
-  <h3 class="title">Reactive Form</h3>
-  <form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
-    <mat-form-field color="accent" class="field">
-      <mat-label>Username</mat-label>
-      <input formControlName="name" type="text" matInput maxlength="20" />
-      <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Username is required</mat-error>
-      <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Only letters. No spaces</mat-error>
+<h3 class="title" id="reactive-form-title">Reactive Form</h3>
+<form class="form" (ngSubmit)="onSubmit()" [formGroup]="userForm" aria-labelledby="reactive-form-title">
+  <mat-form-field color="accent" class="field">
+    <mat-label>Username</mat-label>
+    <input formControlName="name" type="text" matInput maxlength="20" />
+    <mat-error *ngIf="userForm.get('name')?.errors?.['required']">Username is required</mat-error>
+    <mat-error *ngIf="userForm.get('name')?.errors?.['pattern']">Only letters. No spaces</mat-error>
+  </mat-form-field>
+  <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
+    matTooltip="Username and Email fields use Angular's built-in validators and display different messages accordingly to the type of error"
+    matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
+
+  <mat-form-field color="accent" class="field"><mat-label>Email</mat-label>
+    <input formControlName="email" type="email" matInput placeholder="name@domain.com" />
+    <mat-error *ngIf="userForm.get('email')?.errors?.['required']">Email is required</mat-error>
+    <mat-error *ngIf="userForm.get('email')?.errors?.['email']">Email must be valid</mat-error>
+  </mat-form-field>
+
+  <mat-form-field color="accent" class="field">
+    <mat-label>Phone number</mat-label>
+    <input formControlName="phone" type="tel" matInput placeholder="1 555 5555555" />
+    <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone must follow the pattern</mat-error>
+    <mat-error *ngIf="userForm.get('phone')?.errors?.['required']">Phone is required</mat-error>
+  </mat-form-field>
+  <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
+    matTooltip="Phone field has a validation rule adjusted at runtime: can be required based on the user's choice in the notifications select field"
+    matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
+
+  <div formArrayName="addresses">
+    <mat-form-field color="accent" class="field" *ngFor="let address of addresses.controls; let i = index">
+      <mat-label>Address {{i+1}}</mat-label>
+      <input [formControlName]="i" type="text" matInput maxlength="50" />
+    </mat-form-field>
+    <button type="button" mat-icon-button (click)="addAddress()"
+      matTooltip="Address field was designed allowing the user to add inputs dynamically" matTooltipPosition="after"
+      aria-label="Add another address line and displays a tooltip when focused or hovered over">
+      <mat-icon class="material-symbols-outlined" color="primary">add_circle</mat-icon>
+    </button>
+  </div>
+
+  <div formGroupName="passwordGroup">
+    <mat-form-field color="accent" class="field"><mat-label>Password</mat-label>
+      <input formControlName="password" type="password" matInput maxlength="6" placeholder="Between 4 and 6 chars"
+        autocomplete="off" />
+      <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['required']">Password is required</mat-error>
+      <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['minlength']">
+        Password must have at least 4 characteres</mat-error>
     </mat-form-field>
     <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
-      matTooltip="Username and Email fields use Angular's built-in validators and display different messages accordingly to the type of error"
+      matTooltip="Password and Confirmation fields have a Cross-Field Validator to check if they match, also with a custom validation rule instead of an Angular's built-in"
       matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
 
-    <mat-form-field color="accent" class="field"><mat-label>Email</mat-label>
-      <input formControlName="email" type="email" matInput placeholder="name@domain.com" />
-      <mat-error *ngIf="userForm.get('email')?.errors?.['required']">Email is required</mat-error>
-      <mat-error *ngIf="userForm.get('email')?.errors?.['email']">Email must be valid</mat-error>
-    </mat-form-field>
 
-    <mat-form-field color="accent" class="field">
-      <mat-label>Phone number</mat-label>
-      <input formControlName="phone" type="tel" matInput placeholder="1 555 5555555" />
-      <mat-error *ngIf="userForm.get('phone')?.errors?.['pattern']">Phone must follow the pattern</mat-error>
-      <mat-error *ngIf="userForm.get('phone')?.errors?.['required']">Phone is required</mat-error>
+    <mat-form-field color="accent" class="field"><mat-label>Confirm Password</mat-label>
+      <input formControlName="confirmPassword" type="password" matInput autocomplete="off" />
+      <mat-error *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">Confirmation is
+        required</mat-error>
     </mat-form-field>
     <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
-      matTooltip="Phone field has a validation rule adjusted at runtime: can be required based on the user's choice in the notifications select field"
+      matTooltip="In the password group, we have a reactive transformation to allow the user to finish typing before displaying any error message, providing a better experience"
       matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
+  </div>
 
-    <div formArrayName="addresses">
-      <mat-form-field color="accent" class="field" *ngFor="let address of addresses.controls; let i = index">
-        <mat-label>Address {{i+1}}</mat-label>
-        <input [formControlName]="i" type="text" matInput maxlength="50" />
-      </mat-form-field>
-      <button type="button" mat-icon-button (click)="addAddress()"
-        matTooltip="Address field was designed allowing the user to add inputs dynamically" matTooltipPosition="after"
-        aria-label="Add another address line and displays a tooltip when focused or hovered over">
-        <mat-icon class="material-symbols-outlined" color="primary">add_circle</mat-icon>
-      </button>
-    </div>
+  <mat-error class="notMatch"
+    *ngIf="confirmMessage && !userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">{{ confirmMessage
+    }}</mat-error>
+  <!-- This validation is reactive -->
 
-    <div formGroupName="passwordGroup">
-      <mat-form-field color="accent" class="field"><mat-label>Password</mat-label>
-        <input formControlName="password" type="password" matInput maxlength="6" placeholder="Between 4 and 6 chars"
-          autocomplete="off" />
-        <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['required']">Password is required</mat-error>
-        <mat-error *ngIf="userForm.get('passwordGroup.password')?.errors?.['minlength']">
-          Password must have at least 4 characteres</mat-error>
-      </mat-form-field>
-      <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
-        matTooltip="Password and Confirmation fields have a Cross-Field Validator to check if they match, also with a custom validation rule instead of an Angular's built-in"
-        matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
+  <div class="radio">
+    <mat-radio-group formControlName="notifications" aria-labelledby="notifications-label">
+      <mat-label id="notifications-label">Notifications:</mat-label>
+      <mat-radio-button value="email">Email</mat-radio-button>
+      <mat-radio-button value="text">Phone</mat-radio-button>
+    </mat-radio-group>
+  </div>
 
+  <div>
+    <mat-checkbox formControlName="agreement" class="checkbox">I agree with the terms</mat-checkbox>
+  </div>
 
-      <mat-form-field color="accent" class="field"><mat-label>Confirm Password</mat-label>
-        <input formControlName="confirmPassword" type="password" matInput autocomplete="off" />
-        <mat-error *ngIf="userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">Confirmation is
-          required</mat-error>
-      </mat-form-field>
-      <button type="button" mat-icon-button aria-label="Displays a tooltip when focused or hovered over"
-        matTooltip="In the password group, we have a reactive transformation to allow the user to finish typing before displaying any error message, providing a better experience"
-        matTooltipPosition="after"><mat-icon class="material-symbols-outlined" color="accent">info</mat-icon></button>
-    </div>
-
-    <mat-error class="notMatch"
-      *ngIf="confirmMessage && !userForm.get('passwordGroup.confirmPassword')?.errors?.['required']">{{ confirmMessage
-      }}</mat-error>
-    <!-- This validation is reactive -->
-
-    <div class="radio">
-      <mat-radio-group formControlName="notifications" aria-labelledby="notifications-label">
-        <mat-label id="notifications-label">Notifications:</mat-label>
-        <mat-radio-button value="email">Email</mat-radio-button>
-        <mat-radio-button value="text">Phone</mat-radio-button>
-      </mat-radio-group>
-    </div>
-
-    <div>
-      <mat-checkbox formControlName="agreement" class="checkbox">I agree with the terms</mat-checkbox>
-    </div>
-
-    <div class="submit">
-      <button type="submit" mat-raised-button color="primary" [disabled]="!userForm.valid">
-        Sign Up
-      </button>
-    </div>
-  </form>
-</div>
+  <div class="submit">
+    <button type="submit" mat-raised-button color="primary" [disabled]="!userForm.valid">
+      Sign Up
+    </button>
+  </div>
+</form>

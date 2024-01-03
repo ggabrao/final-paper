@@ -3,8 +3,8 @@
 </div>
 
 <div *ngIf="selectedCourse">
-  <h1 class="title">Update course</h1>
-  <form class="form" #frm="ngForm" (ngSubmit)="onSubmit()">
+  <h1 class="title" id="update-form-title">Update course</h1>
+  <form class="form" #frm="ngForm" (ngSubmit)="onSubmit()" aria-labelledby="update-form-title">
     <mat-form-field>
       <mat-label>Id</mat-label>
       <input #id="ngModel" name="id" [ngModel]="selectedCourse.id" matInput required disabled="true" />
