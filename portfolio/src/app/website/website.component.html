@@ -1,5 +1,5 @@
 <div *ngIf="pageTitle" aria-live="assertive">
-  <span [attr.aria-label]="pageTitle"></span>
+    <span [attr.aria-label]="pageTitle"></span>
 </div>
 
 <header class="container">
@@ -53,6 +53,6 @@
     </p>
 </main>
 
-<section class="container">
-    <h2 class="header">Results - Lighthouse <em class="emp">(to be implemented)</em></h2>
+<section class="container" aria-labelledby="lighthouse-title">
+    <h2 class="header" id="lighthouse-title">Results - Lighthouse <em class="emp">(to be implemented)</em></h2>
 </section>

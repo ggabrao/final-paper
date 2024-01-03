@@ -1,7 +1,6 @@
-<h1 class="title" mat-dialog-title>Add a new course</h1>
+<h1 class="title" mat-dialog-title id="add-form-title">Add a new course</h1>
 <mat-dialog-content align="center">
-  <form class="form" #frm="ngForm">
-
+  <form class="form" #frm="ngForm" aria-labelledby="add-form-title">
     <mat-form-field color="accent">
       <mat-label>Name</mat-label>
       <input #name="ngModel" type="text" name="name" [(ngModel)]="course.name" matInput required maxlength="15"
