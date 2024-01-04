@@ -12,6 +12,7 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { debounceTime } from 'rxjs';
 
 export const passwordCompareValidator: ValidatorFn = (
@@ -45,9 +46,9 @@ export class FormsReactiveComponent implements OnInit {
 
   get addresses(): FormArray {
     return <FormArray>this.userForm.get('addresses');
-  } 
+  }
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.userForm = this.fb.group({
@@ -64,7 +65,7 @@ export class FormsReactiveComponent implements OnInit {
       ),
       agreement: [false, Validators.requiredTrue],
       notifications: 'email',
-    });  
+    });
 
     this.userForm
       .get('notifications')
@@ -77,7 +78,10 @@ export class FormsReactiveComponent implements OnInit {
   }
 
   onSubmit(): void {
-    alert("Submitted");
+    this._snackBar.open(`Form submitted`, "", {
+      duration: 2000,
+      politeness: "assertive"
+    });
   }
 
   setNotification(notificationInput: string): void {
