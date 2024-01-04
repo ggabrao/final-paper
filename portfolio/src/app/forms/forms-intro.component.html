@@ -1,5 +1,5 @@
 <div *ngIf="pageTitle" aria-live="assertive">
-  <span [attr.aria-label]="pageTitle"></span>
+  <span [attr.aria-label]="pageTitle" role="alert"></span>
 </div>
 
 <section class="container" aria-labelledby="form-basics-title">
@@ -41,7 +41,7 @@
       <span class="mobile">Initial setup can be harder</span>
     </mat-basic-chip>
   </mat-chip-set>
-  
+
   <h2 class="title">Template-Driven</h2>
   <mat-chip-set class="mat-mdc-chip-set-stacked" role="list">
     <mat-basic-chip role="listitem" aria-label="Vantage">
