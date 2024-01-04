@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IUser } from '../user.model';
 import { NgForm } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'frm-td',
@@ -8,6 +9,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./forms-td.component.scss'],
 })
 export class FormsTdComponent {
+
+  constructor(private _snackBar: MatSnackBar) { }
 
   user: IUser = {
     name: "",
@@ -20,6 +23,10 @@ export class FormsTdComponent {
   }
 
   onSubmit(f: NgForm): void {
-    alert("Submitted");
+    this._snackBar.open(`Form submitted`, "" , {
+      duration: 2000,
+      politeness: "assertive"
+    });
   }
+
 }
