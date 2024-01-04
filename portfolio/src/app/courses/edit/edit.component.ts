@@ -32,7 +32,8 @@ export class EditComponent implements OnInit {
     this.dataService.updateCourse(this.selectedCourse).subscribe(() => {
       this.router.navigate(['/courses']);
       this._snackBar.open(`Course id: ${this.selectedCourse.id} updated`, "", {
-        duration: 2000
+        duration: 2000,
+        politeness: "assertive"
       });
     });
   }

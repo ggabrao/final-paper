@@ -31,7 +31,8 @@ export class TableComponent implements OnInit {
   deleteData(course: ICourse): void {
     this.courses = this.courses.filter(c => c !== course);
     this.dataService.deleteCourse(course.id).subscribe(() => this._snackBar.open(`Course id: ${course.id} deleted`, "", {
-      duration: 2000
+      duration: 2000,
+      politeness: "assertive"
     }));
   };
 
@@ -43,7 +44,8 @@ export class TableComponent implements OnInit {
           if (data) {
             this.courses.push(data);
             this._snackBar.open(`Course id: ${data.id} added`, "", {
-              duration: 2000
+              duration: 2000,
+              politeness: "assertive"
             });
             this.table.renderRows();
           }
