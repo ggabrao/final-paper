@@ -1,4 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.87);
+    overflow-y: scroll;
+}
+
+// =============QUERIES==============
+
+// Below 816px
+@media (max-width: 51em) {
+    html {
+        font-size: 56.25%;
+    }
+}

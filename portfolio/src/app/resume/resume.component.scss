@@ -1,0 +1,88 @@
+:host {
+    display: block;
+    max-width: 100rem;
+    margin: auto;
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.header {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+    margin-top: 4rem;
+}
+
+.prg {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1.4;
+    text-align: justify;
+    text-indent: 4rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    margin-bottom: 0.3rem;
+    margin-top: 3rem;
+    text-indent: 4rem;
+}
+
+.subtext {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 1.6;
+    text-align: justify;
+    text-indent: 4rem;
+}
+
+.job {
+    font-weight: 400;
+}
+
+.blue {
+    color: #3949AB;
+}
+
+.red {
+    color: #D50000;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: center;  
+    padding-bottom: 4rem;  
+}
+
+.social-logo {
+    width: 44.45px;
+    height: 37.8px;    
+}
+
+.social-text {
+    font-weight: 500;
+    font-size: 16px;   
+}

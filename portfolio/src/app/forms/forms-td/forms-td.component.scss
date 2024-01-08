@@ -1,0 +1,59 @@
+:host {
+  max-width: 250px;
+}
+
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.field {
+  width: 100%;
+}
+
+.notMatch {
+  margin-top: -2rem;
+  margin-left: 2rem;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 2rem;
+}
+
+.checkbox {
+  margin-bottom: 1rem;
+}
+
+// Below 816px
+@media (max-width: 51em) {
+
+  :host {
+    margin: auto;
+  }
+
+  .submit {
+    margin-left: 9rem;
+  }
+}
+
+// Below 408px
+@media (max-width: 25.5em) {
+
+  :host {
+    max-width: 350px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .field {
+    max-width: 100%;
+  }
+
+  .submit {
+    margin-left: 0;
+  }
+}

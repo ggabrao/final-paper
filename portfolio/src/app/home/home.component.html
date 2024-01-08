@@ -1,0 +1,13 @@
+<div *ngIf="pageTitle" aria-live="assertive">
+    <span [attr.aria-label]="pageTitle" role="alert"></span>
+</div>
+
+<main class="main-container">
+    <app-intro></app-intro>
+    <app-about></app-about>
+    <app-project></app-project>
+    <app-skills></app-skills>
+    <app-demos></app-demos>
+</main>
+
+<app-footer></app-footer>

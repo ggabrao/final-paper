@@ -1,0 +1,46 @@
+<div *ngIf="pageTitle" aria-live="assertive">
+  <span [attr.aria-label]="pageTitle" role="alert"></span>
+</div>
+
+<div *ngIf="selectedCourse">
+  <h1 class="title" id="update-form-title">Update course</h1>
+  <form class="form" #frm="ngForm" (ngSubmit)="onSubmit()" aria-labelledby="update-form-title">
+    <mat-form-field>
+      <mat-label>Id</mat-label>
+      <input #id="ngModel" name="id" [ngModel]="selectedCourse.id" matInput required disabled="true" />
+    </mat-form-field>
+
+    <mat-form-field color="accent">
+      <mat-label>Name</mat-label>
+      <input #name="ngModel" type="text" name="name" [(ngModel)]="selectedCourse.name" matInput required maxlength="15"
+        autocomplete="off" />
+      <mat-error *ngIf="name.errors?.['required']">Name is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field color="accent">
+      <mat-label>Duration</mat-label>
+      <input #duration="ngModel" type="number" name="duration" [(ngModel)]="selectedCourse.duration" matInput required
+        min="1" max="100" />
+      <mat-error *ngIf="duration.errors?.['required']">Duration is required</mat-error>
+      <mat-error *ngIf="duration.errors?.['min']">Min duration is 1</mat-error>
+      <mat-error *ngIf="duration.errors?.['max']">Max duration is 100</mat-error>
+    </mat-form-field>
+
+    <mat-form-field color="accent">
+      <mat-label>Rating</mat-label>
+      <input #rating="ngModel" type="number" name="rating" [(ngModel)]="selectedCourse.rating" matInput required min="0"
+        max="5" />
+      <mat-error *ngIf="rating.errors?.['required']">Rating is required</mat-error>
+      <mat-error *ngIf="rating.errors?.['min']">Min rating is 0</mat-error>
+      <mat-error *ngIf="rating.errors?.['max']">Max rating is 5</mat-error>
+    </mat-form-field>
+    <div class="buttons">
+      <button [disabled]="!frm.form.valid" mat-raised-button color="accent" (click)="onSubmit()">
+        Save
+      </button>
+      <button type="button" mat-raised-button  color="warn" (click)="onCancel()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

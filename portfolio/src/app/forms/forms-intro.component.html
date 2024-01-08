@@ -1,0 +1,82 @@
+<div *ngIf="pageTitle" aria-live="assertive">
+  <span [attr.aria-label]="pageTitle" role="alert"></span>
+</div>
+
+<section class="container" aria-labelledby="form-basics-title">
+  <h1 class="title" id="form-basics-title">Form Basics</h1>
+  <p class="prg">Angular provides two types of forms: <strong>template&hyphen;driven</strong> and
+    <strong>reactive</strong>.
+  </p>
+  <p class="prg">They share the same basic concepts, but have some differences concerning setup, data
+    management, testing, etc. </p>
+  <p class="prg">Each approach offers different advantages. Selecting which one to use should be a decision of the team,
+    but template-driven usually are not the best choice when it comes to robust forms or forms that require more
+    complex features.
+  </p>
+  <p class="prg">Here are some <strong>pros and cons</strong> of each one: </p>
+  <h2 class="title">Reactive</h2>
+  <mat-chip-set class="mat-mdc-chip-set-stacked" role="list">
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">More scalable, reusable and testable</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Clearer separation between business and presentation logic</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Better support for advanced use cases</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Can benefit from reactive transformations</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Require more code</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Initial setup can be harder</span>
+    </mat-basic-chip>
+  </mat-chip-set>
+
+  <h2 class="title">Template-Driven</h2>
+  <mat-chip-set class="mat-mdc-chip-set-stacked" role="list">
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Straightforward and easier to first setup</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Vantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined good">favorite</mat-icon>
+      <span class="mobile">Can benefit from two-way data binding</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Template tends to become messy as the form grows</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Less flexibility and control over the form</span>
+    </mat-basic-chip>
+    <mat-basic-chip role="listitem" aria-label="Disadvantage">
+      <mat-icon matChipAvatar class="material-symbols-outlined bad">thumb_down</mat-icon>
+      <span class="mobile">Some functionalities are harder to implement</span>
+    </mat-basic-chip>
+  </mat-chip-set>
+</section>
+
+<main class="container demos">
+  <h2 class="title">Demos</h2>
+  <p class="prg">The following forms <strong>don't submit anything</strong>. They were build for <strong>testing
+      purpose</strong>. </p>
+  <p class="prg">Many different techniques were applied, along with Angular Material form components. Please check the
+    <strong>tooltips</strong> for more details.
+  </p>
+
+  <div class="forms">
+    <frm-reactive></frm-reactive>
+    <frm-td></frm-td>
+  </div>
+</main>

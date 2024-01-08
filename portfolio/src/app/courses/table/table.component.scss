@@ -1,0 +1,29 @@
+.container {
+    max-width: 90%;
+    margin: auto;
+}
+
+.title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    padding: 0 5%;
+    margin-top: 3.5rem;
+}
+
+.add {
+    margin-left: 0.43rem;
+}
+
+
+// ======= QUERIES ========
+
+// Below 592px
+@media (max-width: 37em) {
+
+    .container {
+        overflow: auto;
+    }
+}

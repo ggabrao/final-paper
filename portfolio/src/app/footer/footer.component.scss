@@ -1,0 +1,114 @@
+.footer {
+    background-color: #D50000;    
+}
+
+.content {
+    max-width: 100rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding: 1.5rem 0 3rem 1.5rem;
+    text-align: center;
+}
+
+.quote {
+    flex: 0 1 16rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+.header {
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+}
+
+.list-container {
+    flex: 0 1 15rem;
+    padding-left: 2rem;
+}
+
+.list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.item {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.item:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 20rem;
+    padding-left: 2rem;
+}
+
+.contact-icons {
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-prg {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.logo-image {
+    width: 12rem;
+    margin-top: 3rem;
+    align-self: center;
+}
+
+.copy {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+// Below 592px
+@media (max-width: 37em) {
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3rem;
+        padding-left: 0;
+    }
+
+    .quote {
+        grid-column: 1 / -1;
+        width:30rem;
+        text-align: center;
+        justify-self: center;
+    }
+
+    .list-container {
+        padding-left: 0;
+        padding-right: 2rem;
+    }
+
+    .contact {
+        padding-left: 0;
+        padding-right: 2rem;
+    }
+    
+    
+
+}

@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 450px;
+  width: 30rem;
+  margin: auto;
+  margin-top: 3rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.512);
+}
+
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.form {
+  max-width: 25rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}

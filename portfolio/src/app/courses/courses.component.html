@@ -1,0 +1,40 @@
+<div *ngIf="pageTitle" aria-live="assertive">
+  <span [attr.aria-label]="pageTitle" role="alert"></span>
+</div>
+
+<section class="container" aria-labelledby="api-title">
+  <h1 class="title" id="api-title">API</h1>
+  <p class="prg">The following table emulates the main <strong>CRUD</strong> operations over a <strong>REST
+      API</strong>, using an
+    <strong>In-Memory
+      Web
+      Api for Angular</strong>. It allow us to simulate data persistence operations without a real backend server, using
+    <strong>Angular's HTTP Client</strong> to perform HTTP requests.
+  </p>
+  <p class="prg">
+    You can add a new course, edit or delete, and then see the updated list.
+  </p>
+</section>
+
+<crs-table></crs-table>
+
+<section class="container" aria-labelledby="main-features-title">
+  <h2 class="title center" id="main-features-title">Main Features</h2>
+  <mat-divider></mat-divider>
+  <h3 class="subtitle margin1">Route Resolvers</h3>
+  <p class="prg">Were applied in some routes so that the view can only be displayed after the data from HTTP requests
+    have been
+    gathered. That can improve the user experience, since the view will not appear with empty values and suddenly
+    refresh all filled up.</p>
+  <h3 class="subtitle">In-Memory Data</h3>
+  <p class="prg">Allow us to simulate data persistence operations for testing purpose, including auto-generating id's.
+    It's a better
+    option than hard-coding the data.</p>
+  <h3 class="subtitle">Component Communication</h3>
+  <p class="prg">Table, Dialog and Edit component are all integrated and communicating with each other, so the data can
+    flow among
+    them with consistency, allowing any changes to be shared.
+  </p>
+  <h3 class="subtitle">Angular Material</h3>
+  <p class="prg">The table, the dialog and the forms were build using Angular Material components.</p>
+</section>

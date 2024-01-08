@@ -1,0 +1,31 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$primary: mat.define-palette(mat.$red-palette, A700);
+$accent: mat.define-palette(mat.$indigo-palette, 600);
+$warn: mat.define-palette(mat.$red-palette, A700);
+
+$theme: mat.define-light-theme((color: (primary: $primary,
+        accent: $accent,
+        warn: $warn,
+      ),
+      typography: mat.define-typography-config(),
+      density: 0,
+    ));
+
+@include mat.core-theme($theme);
+
+@include mat.button-theme($theme);
+@include mat.icon-theme($theme);
+@include mat.menu-theme($theme);
+@include mat.checkbox-theme($theme);
+@include mat.dialog-theme($theme);
+@include mat.form-field-theme($theme);
+@include mat.input-theme($theme);
+@include mat.progress-spinner-theme($theme);
+@include mat.radio-theme($theme);
+@include mat.table-theme($theme);
+@include mat.toolbar-theme($theme);
+@include mat.icon-button-theme($theme);
+@include mat.fab-theme($theme);
