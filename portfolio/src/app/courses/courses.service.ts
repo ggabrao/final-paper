@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ICourse } from './course.model';
-import { Observable, catchError, of, tap } from 'rxjs';
-import { ActivatedRoute, ActivatedRouteSnapshot, ResolveFn, RouterStateSnapshot } from '@angular/router';
+import { Observable, catchError, of } from 'rxjs';
+import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 
 export const courseResolver: ResolveFn<ICourse> =
   (route: ActivatedRouteSnapshot) => {

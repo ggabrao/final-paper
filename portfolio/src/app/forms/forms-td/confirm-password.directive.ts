@@ -1,9 +1,7 @@
-import { Directive, Input } from '@angular/core';
+import { Directive } from '@angular/core';
 import {
   AbstractControl,
-  FormGroup,
   NG_VALIDATORS,
-  NgForm,
   ValidationErrors,
   Validator,
   ValidatorFn,

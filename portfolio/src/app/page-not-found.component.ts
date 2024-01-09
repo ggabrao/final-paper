@@ -16,6 +16,4 @@ export class PageNotFoundComponent implements OnInit {
     this.title.setTitle("Page not found | First Angular Project");
     this.pageTitle = this.title.getTitle();
   }
-}{
-
 }

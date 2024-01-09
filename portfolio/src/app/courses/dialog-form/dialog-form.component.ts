@@ -1,6 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'crs-dialog',
