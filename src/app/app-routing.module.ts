@@ -32,7 +32,8 @@ const routes: Routes = [
 export const routingConfiguration: ExtraOptions = {
   paramsInheritanceStrategy: 'always',
   preloadingStrategy: PreloadAllModules,
-  scrollPositionRestoration: 'enabled'
+  scrollPositionRestoration: 'enabled',
+  useHash:true
 };
 
 @NgModule({
