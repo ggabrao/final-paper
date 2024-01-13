@@ -34,8 +34,9 @@ export const passwordCompareValidator: ValidatorFn = (
   styleUrls: ['./forms-reactive.component.scss'],
 })
 export class FormsReactiveComponent implements OnInit {
+
   userForm!: FormGroup;
-  confirmMessage!: string;
+  confirmMessage!: string; 
 
   private validationMessage: any = {
     passwordCompare: 'Passwords do not match',
@@ -108,6 +109,10 @@ export class FormsReactiveComponent implements OnInit {
 
   addAddress(): void {
     this.addresses.push(this.fb.control(''));
+  }
+
+  removeAddress(): void {
+    this.addresses.removeAt(-1);
   }
 
 }
