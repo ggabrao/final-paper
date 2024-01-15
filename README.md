@@ -17,7 +17,7 @@ This project is hosted on **GitHub Pages**, and can be acessed and tested direct
 - API with CRUD
 - Website features
 
-### Topics applied 
+### Use of:
 - Lazy Loading and Preloading
 - Route resolvers
 - Angular Routes, HTTP, Modules, Services, Best Practices
