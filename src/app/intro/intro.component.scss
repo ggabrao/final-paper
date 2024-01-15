@@ -38,10 +38,6 @@
   letter-spacing: -1px;
 }
 
-.logo {
-  width: 6rem;
-}
-
 .sub {
   font-size: 1.6rem;
   font-weight: 400;
@@ -75,14 +71,6 @@
   .occupation {
     font-size: 4rem;
   }
-
-  .logo {
-    width: 5.3rem;
-  }
-
-  .sub {
-    line-height: 1.4;
-  }
 }
 
 // Below 592px
@@ -114,11 +102,6 @@
   }
 
   .sub {
-    line-height: 1.15;
     padding: 0 20px;
-  }
-
-  .logo {
-    display: none;
   }
 }
