@@ -8,7 +8,7 @@ It was build trying to use as much as possible Angular's conventions, patterns a
 
 # Important
 
-This project is hosted on **GitHub Pages**, and can be acessed and tested directly with the provided link in the repository page. 
+This project is hosted on **GitHub Pages**, and can be acessed and tested directly at **LINK**.
 
 # Main Content
 
