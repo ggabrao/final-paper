@@ -1,6 +1,6 @@
 # About
 
-**Front-end** project of a website built with **Angular Framework**. 
+**Front-end** project of a website built with **Angular**. 
 
 The purpose is to **introduce myself** and **demonstrate my knowledge** with the framework, along with the frontend basics. 
 
