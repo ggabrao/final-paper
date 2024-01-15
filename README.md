@@ -1,4 +1,4 @@
-# About
+## About
 
 **Front-end** project of a website built with **Angular**. 
 
@@ -6,11 +6,11 @@ The purpose is to **introduce myself** and **demonstrate my knowledge** with the
 
 It was build trying to use as much as possible Angular's conventions, patterns and best practices, along with frontend basics and web design rules, all from updated documentations and courses.
 
-# Important
+## Important
 
 This project is hosted on **GitHub Pages**, and can be acessed and tested directly at **LINK**.
 
-# Main Content
+## Main Content
 
 ### Demonstrations with theory and techniques explained:
 - Reactive and TD forms
