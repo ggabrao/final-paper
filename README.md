@@ -12,7 +12,7 @@ This project is hosted on **GitHub Pages**, and can be acessed and tested direct
 
 # Main Content
 
-### Demonstrations with theory and techniques explained
+### Demonstrations with theory and techniques explained:
 - Reactive and TD forms
 - API with CRUD
 - Website features
@@ -27,7 +27,7 @@ This project is hosted on **GitHub Pages**, and can be acessed and tested direct
 - Accessibility
 - etc
 
-### Author's info
+### Author's info:
 - About
 - Resume
 - Contact
