@@ -13,7 +13,7 @@ export class HomeComponent {
   constructor(private title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Home | First Angular Project");
+    this.title.setTitle("Home | Self-Introduction");
     this.pageTitle = this.title.getTitle();
   }
 

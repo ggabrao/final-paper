@@ -20,7 +20,7 @@ export class EditComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.data.subscribe(({ courseResolver }) => this.selectedCourse = courseResolver);
-    this.title.setTitle("Edit Course | First Angular Project");
+    this.title.setTitle("Edit Course | Self-Introduction");
     this.pageTitle = this.title.getTitle();
   }
 

@@ -13,7 +13,7 @@ export class ResumeComponent implements OnInit {
   constructor(private title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Resume | First Angular Project");
+    this.title.setTitle("Resume | Self-Introduction");
     this.pageTitle = this.title.getTitle();
   }
 }
