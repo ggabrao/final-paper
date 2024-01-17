@@ -1,4 +1,4 @@
-**IMPORTANT**: this project is hosted on **GitHub Pages** and can be acessed and tested directly with the link provided on the **About section** of this repository.
+**IMPORTANT**: this project is hosted on **GitHub Pages** and can be acessed and tested directly with the link provided on the **About** of this repository.
 
 ## About
 
