@@ -1,3 +1,11 @@
+## About
+
+**Frontend** project of a website built with **Angular 17**. 
+
+The purpose is to **introduce myself** and **demonstrate my knowledge** with the framework and the frontend basics. 
+
+**Important**: this project is hosted on **GitHub Pages** and can be acessed and tested directly on the link provided on the repository.
+
 ## Main Content
 
 ### Demonstrations with theory and techniques explained:
