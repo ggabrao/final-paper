@@ -1,8 +1,10 @@
-**IMPORTANT**: this project is hosted on **GitHub Pages** and can be acessed and tested directly with the link provided on the **About** of this repository.
+## Accessing and testing the website
+
+This project is hosted on **GitHub Pages** and can be acessed and tested directly with the link provided on the **About** of this repository.
 
 ## About
 
-**Frontend** project of a personal website built with **Angular 17**. 
+**Frontend** of a personal website built with **Angular 17**. 
 
 The purpose is to **introduce myself** and **demonstrate my knowledge** with the framework and the frontend basics. 
 
