@@ -17,5 +17,5 @@
 
 ### Author's info:
 - About
-- Experience
+- Resume
 - Contact
