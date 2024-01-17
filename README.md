@@ -1,6 +1,6 @@
 ## About
 
-**Frontend** project of a website built with **Angular 17**. 
+**Frontend** project of a personal website built with **Angular 17**. 
 
 The purpose is to **introduce myself** and **demonstrate my knowledge** with the framework and the frontend basics. 
 
