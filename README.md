@@ -1,14 +1,12 @@
 ## About
 
-**Front-end** project of a website built with **Angular**. 
+**Frontend** project of a website built with **Angular**. 
 
-The purpose is to **introduce myself** and **demonstrate my knowledge** with the framework, along with the frontend basics. 
-
-It was build trying to use as much as possible Angular's conventions, patterns and best practices, along with frontend basics and web design rules, all from updated documentations and courses.
+The purpose is to **introduce myself** and **demonstrate my knowledge** with the framework and the frontend basics. 
 
 ## Important
 
-This project is hosted on **GitHub Pages**, and can be acessed and tested directly at https://gabriel-guimaraes-abrao.github.io/self-introduction/#/home.
+This project is hosted on **GitHub Pages** and can be acessed and tested directly at https://gabriel-guimaraes-abrao.github.io/self-introduction/#/home.
 
 ## Main Content
 
@@ -29,5 +27,5 @@ This project is hosted on **GitHub Pages**, and can be acessed and tested direct
 
 ### Author's info:
 - About
-- Resume
+- Experience
 - Contact
