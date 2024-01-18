@@ -15,7 +15,7 @@ The purpose is to **introduce myself** and **demonstrate my knowledge** with the
 - API with CRUD
 - Website features
 
-### Use of:
+### Usage of:
 - Lazy Loading and Preloading
 - Route resolvers
 - Angular Routes, HTTP, Modules, Services, Best Practices
@@ -25,7 +25,7 @@ The purpose is to **introduce myself** and **demonstrate my knowledge** with the
 - Accessibility
 - etc
 
-### Author's info:
+### Informations about the Author:
 - About
 - Resume
 - Contact
