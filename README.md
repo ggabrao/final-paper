@@ -25,7 +25,7 @@ The purpose is to **introduce myself** and **demonstrate my knowledge** with the
 - Accessibility
 - etc
 
-### Infos about the Author:
+### Personal info:
 - About
 - Resume
 - Contact
