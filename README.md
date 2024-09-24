@@ -1,7 +1,3 @@
-## Accessing and testing the website
-
-This project is hosted on **GitHub Pages** and can be acessed and tested directly with the link provided on the **About** of this repository.
-
 ## About
 
 **Frontend** of a personal website built with **Angular 17**. 
