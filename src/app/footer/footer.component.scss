@@ -1,5 +1,5 @@
 .footer {
-    background-color: #D50000;    
+    background-color: black;
 }
 
 .content {
@@ -95,7 +95,7 @@
 
     .quote {
         grid-column: 1 / -1;
-        width:30rem;
+        width: 30rem;
         text-align: center;
         justify-self: center;
         transform: translateX(0);
@@ -110,7 +110,7 @@
         padding-left: 0;
         padding-right: 2rem;
     }
-    
-    
+
+
 
 }
