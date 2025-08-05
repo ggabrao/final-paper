@@ -45,6 +45,17 @@
   font-weight: 500;
 }
 
+.cheering::after {
+  content: '|';
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 // ======= QUERIES ========
 
 // Below 816px
