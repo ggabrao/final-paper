@@ -28,3 +28,4 @@ $theme: mat.define-light-theme((color: (primary: $primary,
 @include mat.table-theme($theme);
 @include mat.icon-button-theme($theme);
 @include mat.fab-theme($theme);
+@include mat.tooltip-theme($theme);
