@@ -1,6 +1,6 @@
 .toolbar {
     height: 5rem;
-    background-color: black;
+    background: linear-gradient(135deg, #4a5bbf 0%, #5a3e8b 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,6 +47,7 @@
     background-color: rgba(0, 0, 0, 0.249);
     border-radius: 5%;
 }
+
 .social {
     scale: .90;
     transform: translateX(10%);
@@ -69,7 +70,7 @@
     .toolbar {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        height: 10rem;        
+        height: 10rem;
         padding-right: 5px;
         padding-left: 5px;
     }
