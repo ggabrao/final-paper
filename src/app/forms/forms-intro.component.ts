@@ -14,7 +14,7 @@ export class FormsIntroComponent implements OnInit {
   constructor(private title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Forms | Self-Introduction");
+    this.title.setTitle("Forms | Final Paper");
     this.pageTitle = this.title.getTitle();
 
   }

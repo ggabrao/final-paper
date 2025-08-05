@@ -14,7 +14,7 @@ export class CoursesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.title.setTitle("API | Self-Introduction");
+    this.title.setTitle("API | Final Paper");
     this.pageTitle = this.title.getTitle();
   };
 

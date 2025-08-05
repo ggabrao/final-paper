@@ -13,7 +13,7 @@ export class WebsiteComponent implements OnInit {
   constructor(private title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Website | Self-Introduction");
+    this.title.setTitle("Website | Final Paper");
     this.pageTitle = this.title.getTitle();
   }
 

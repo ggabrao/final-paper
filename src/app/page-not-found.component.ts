@@ -13,7 +13,7 @@ export class PageNotFoundComponent implements OnInit {
   constructor(private title: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle("Page not found | Self-Introduction");
+    this.title.setTitle("Page not found | Final Paper");
     this.pageTitle = this.title.getTitle();
   }
 }
